@@ -8,5 +8,6 @@
 
 ## Kubernetes 最佳实践
 
-* [1. 什么是 Helm](kubernetes-zui-jia-shi-jian/untitled.md)
+* [1. 什么是 Kubernetes](kubernetes-zui-jia-shi-jian/untitled.md)
+* [2. Kubernetes 资源介绍](kubernetes-zui-jia-shi-jian/2.-kubernetes-zi-yuan-jie-shao.md)
 
