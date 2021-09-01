@@ -1,0 +1,1183 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>安装 Helm 图表 · 云原生运维指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="魏文弟">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chartsjinjie.html" />
+    
+    
+    <link rel="prev" href="bushu.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../https:/gitee.com/sretech/images/raw/master/favicon/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../https:/gitee.com/sretech/images/raw/master/favicon/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"user":"weiwendi","repo":"cloudnative-handbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.aiops.red" target="_blank" class="custom-link">博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://gitee.com/sretech/images/raw/master/wechatpublic.jpg" target="_blank" class="custom-link">公众号: sretech</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">云原生运维指南</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../cloudnative/jieshao.html">
+            
+                <a href="../cloudnative/jieshao.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    课程介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Helm 最佳实践</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="jieshao.html">
+            
+                <a href="jieshao.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Kubernetes and Helm 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="bushu.html">
+            
+                <a href="bushu.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Helm 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="anzhuangcharts.html">
+            
+                <a href="anzhuangcharts.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    安装 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chartsjinjie.html">
+            
+                <a href="chartsjinjie.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Helm 图表进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="kaifacharts.html">
+            
+                <a href="kaifacharts.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    开发 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ceshicharts.html">
+            
+                <a href="ceshicharts.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    测试 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="helmcicd.html">
+            
+                <a href="helmcicd.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    使用 CI/CD 和 GitOps 实现 Helm 自动化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    Helm 与 Operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                        <b>2.9.</b>
+                    
+                    Helm 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="security.html">
+            
+                <a href="security.html">
+            
+                    
+                        <b>2.10.</b>
+                    
+                    Helm 安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >安装 Helm 图表</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5B89;&#x88C5;-helm-&#x56FE;&#x8868;">&#x5B89;&#x88C5; Helm &#x56FE;&#x8868;</h1>
+<p>&#x5728;&#x672C;&#x4E66;&#x7684;&#x7B2C;&#x4E00;&#x7AE0;&#xFF0C;&#x6211;&#x628A; Helm &#x5B9A;&#x4E49;&#x4E3A; Kubernetes &#x7684;&#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x5E76;&#x4E0E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x8FDB;&#x884C;&#x4E86;&#x6BD4;&#x8F83;&#x3002;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x53EF;&#x4EE5;&#x4FBF;&#x6377;&#x5730;&#x5B89;&#x88C5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3001;&#x7BA1;&#x7406;&#x5B83;&#x4EEC;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#x3002;&#x8FD9;&#x4E5F;&#x662F; Helm &#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x5728; Kubernetes &#x4E0A;&#x5B89;&#x88C5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x53EA;&#x9700;&#x8F93;&#x5165;&#x5BF9;&#x5E94;&#x7684;&#x56FE;&#x8868;&#x540D;&#x79F0;&#xFF0C;Helm &#x4F1A;&#x5B8C;&#x6210;&#x5269;&#x4F59;&#x5DE5;&#x4F5C;&#x3002;Helm &#x56FE;&#x8868;&#x5305;&#x542B;&#x5B89;&#x88C5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6240;&#x9700;&#x7684;&#x903B;&#x8F91;&#x548C;&#x7EC4;&#x4EF6;&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x9700;&#x77E5;&#x9053;&#x5177;&#x4F53;&#x7684;&#x7EC6;&#x8282;&#x5373;&#x53EF;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x3002;&#x7528;&#x6237;&#x8FD8;&#x53EF;&#x4EE5;&#x5C06;&#x503C;(values)&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9; Helm &#x56FE;&#x8868;&#xFF0C;&#x7528;&#x6765;&#x914D;&#x7F6E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B9E;&#x73B0;&#x81EA;&#x5B9A;&#x4E49;&#x5B89;&#x88C5;&#x3002;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4F7F;&#x7528; Helm &#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x5B89;&#x88C5; WordPress &#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&#xFF0C;&#x6765;&#x5B66;&#x4E60; Helm &#x5305;&#x7BA1;&#x7406;&#x5668;&#x7684;&#x7279;&#x6027;&#x3002;</p>
+<h2 id="wordpress-&#x4ECB;&#x7ECD;">WordPress &#x4ECB;&#x7ECD;</h2>
+<p>WordPress &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5185;&#x5BB9;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;(CMS)&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x7F51;&#x7AD9;&#x548C;&#x535A;&#x5BA2;&#x3002;&#x5B83;&#x6709;&#x4E24;&#x4E2A;&#x7248;&#x672C;&#xFF1A;SaaS &#x7248;&#x672C;&#x548C;&#x81EA;&#x7EF4;&#x62A4;&#x7248;&#x672C;&#x3002;SaaS &#x7248;&#x9700;&#x8981;&#x7528;&#x6237;&#x82B1;&#x94B1;&#x8D2D;&#x4E70;&#x670D;&#x52A1;&#xFF0C;&#x81EA;&#x7EF4;&#x62A4;&#x5C31;&#x662F;&#x7528;&#x6237;&#x4E0B;&#x8F7D;&#x8F6F;&#x4EF6;&#x5305;&#x81EA;&#x884C;&#x90E8;&#x7F72;&#x7EF4;&#x62A4;&#x3002;&#x7B14;&#x8005;&#x7684; <a href="https://www.aiops.red" target="_blank">https://www.aiops.red</a> &#x5C31;&#x662F;&#x4F7F;&#x7528; WordPress &#x7684;&#x81EA;&#x7EF4;&#x62A4;&#x7248;&#x672C;&#x642D;&#x5EFA;&#x7684;&#x3002;</p>
+<p>WordPress &#x5C06;&#x7F51;&#x7AD9;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x8981;&#x6C42; MySQL &#x6216;&#x8005; MariaDB&#x3002;&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x90E8;&#x7F72;&#x4E00;&#x5957; WordPress &#x670D;&#x52A1;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x8D44;&#x6E90;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>Secret&#xFF1A;&#x7BA1;&#x7406;&#x6570;&#x636E;&#x5E93;&#x548C;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x51ED;&#x8BC1;</li>
+<li>ConfigMap&#xFF1A;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;</li>
+<li>Service&#xFF1A;&#x8D1F;&#x8F7D;&#x5747;&#x8861;</li>
+<li>PersistentVolumeClaim&#xFF1A;&#x6301;&#x4E45;&#x5316;&#x5B58;&#x50A8;&#x6570;&#x636E; </li>
+<li>StatefulSet&#xFF1A;&#x4EE5;&#x6709;&#x72B6;&#x6001;&#x7684;&#x65B9;&#x5F0F;&#x90E8;&#x7F72;&#x6570;&#x636E;&#x5E93;</li>
+<li>Deployment&#xFF1A;&#x90E8;&#x7F72; WordPress &#x524D;&#x7AEF;&#x670D;&#x52A1;</li>
+</ul>
+<p>&#x521B;&#x5EFA;&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x9700;&#x8981;&#x5BF9; WordPress &#x548C; Kubernetes &#x90FD;&#x6709;&#x6DF1;&#x5165;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x8981;&#x77E5;&#x9053;&#x5982;&#x4F55;&#x914D;&#x7F6E; WordPress&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5C06; WordPress &#x7684;&#x9700;&#x6C42;&#x4F5C;&#x4E3A; Kubernetes &#x7684;&#x8D44;&#x6E90;&#x8868;&#x8FF0;&#x51FA;&#x6765;&#x3002;&#x8003;&#x8651;&#x5230;&#x6240;&#x9700;&#x8D44;&#x6E90;&#x7684;&#x590D;&#x6742;&#x6027;&#x4EE5;&#x53CA;&#x9700;&#x8981;&#x7684;&#x8D44;&#x6E90;&#x7C7B;&#x578B;&#x8F83;&#x591A;&#xFF0C;&#x5728; Kubernetes &#x4E0A;&#x90E8;&#x7F72; WordPress &#x53EF;&#x80FD;&#x662F;&#x4E00;&#x9879;&#x4EE4;&#x4EBA;&#x751F;&#x754F;&#x7684;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>&#x5B8C;&#x6210;&#x8FD9;&#x4E00;&#x6311;&#x6218;&#x662F; Helm &#x7684;&#x5B8C;&#x7F8E;&#x4F7F;&#x7528;&#x6848;&#x4F8B;&#x3002;&#x7528;&#x6237;&#x4E0D;&#x5FC5;&#x4E13;&#x6CE8;&#x4E8E;&#x521B;&#x5EFA;&#x548C;&#x914D;&#x7F6E;&#x6BCF;&#x4E2A; Kubernetes &#x8D44;&#x6E90;&#xFF0C;&#x4E5F;&#x65E0;&#x9700; WordPress &#x7684;&#x4E13;&#x4E1A;&#x77E5;&#x8BC6;&#xFF0C;&#x53EA;&#x9700;&#x4F7F;&#x7528; Helm &#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x5728; Kubernetes &#x4E0A;&#x90E8;&#x7F72;&#x548C;&#x914D;&#x7F6E; WordPress&#x3002;&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5728; Helm Hub &#x5E73;&#x53F0;&#x4E0A;&#x627E;&#x5230; WordPress &#x7684; Helm &#x56FE;&#x8868;&#xFF0C;&#x4E4B;&#x540E;&#x4F7F;&#x7528; Helm &#x5C06; WordPress &#x90E8;&#x7F72;&#x5230; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#xFF0C; &#x5E76;&#x5728;&#x90E8;&#x7F72;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x63A2;&#x7D22; Helm &#x7684;&#x57FA;&#x672C;&#x7279;&#x6027;&#x3002;</p>
+<h2 id="&#x641C;&#x7D22;-wordpress-&#x56FE;&#x8868;">&#x641C;&#x7D22; WordPress &#x56FE;&#x8868;</h2>
+<p>Helm &#x56FE;&#x8868;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x5728;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#xFF0C;&#x4F9B;&#x5176;&#x4ED6;&#x4EBA;&#x4F7F;&#x7528;&#x3002;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x662F;&#x4E00;&#x4E2A; HTTP &#x670D;&#x52A1;&#xFF0C;&#x5982; GitHub&#x3001;NGINX Web &#x670D;&#x52A1;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x548C;&#x5171;&#x4EAB;&#x56FE;&#x8868;&#x5305;&#x3002;</p>
+<p>&#x5728;&#x4F7F;&#x7528; Helm &#x56FE;&#x8868;&#x5B89;&#x88C5; WordPress &#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x914D;&#x7F6E; Helm &#x80FD;&#x591F;&#x4ECE;&#x54EA;&#x4E9B;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x83B7;&#x53D6;&#x56FE;&#x8868;&#x3002;&#x6DFB;&#x52A0;&#x5B58;&#x50A8;&#x5E93;&#x7684;&#x547D;&#x4EE4;&#x5C31;&#x662F;&#x4E4B;&#x524D;&#x4ECB;&#x7ECD;&#x8FC7;&#x7684; <strong>helm repo add</strong>&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x67E5;&#x627E;&#x56FE;&#x8868;&#xFF0C;Helm &#x793E;&#x533A;&#x521B;&#x5EFA;&#x4E86; Helm Hub &#x5E73;&#x53F0;&#x3002;</p>
+<p>Helm Hub &#x65E8;&#x5728;&#x805A;&#x5408;&#x6240;&#x6709;&#x5DF2;&#x77E5;&#x7684;&#x516C;&#x5171;&#x56FE;&#x8868;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x641C;&#x7D22;&#x529F;&#x80FD;&#x3002;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; Helm Hub &#x5E73;&#x53F0;&#x641C;&#x7D22;&#x6240;&#x9700;&#x7684; WordPress Helm &#x56FE;&#x8868;&#x3002;&#x5728;&#x627E;&#x5230;&#x5408;&#x9002;&#x7684;&#x56FE;&#x8868;&#x540E;&#xFF0C;&#x6DFB;&#x52A0;&#x8BE5;&#x56FE;&#x8868;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#xFF0C;&#x4EE5;&#x4FBF;&#x6267;&#x884C;&#x5B89;&#x88C5;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x6216; Web &#x6D4F;&#x89C8;&#x5668;&#x4E0E; Helm Hub &#x4EA4;&#x4E92;&#x3002;&#x5F53;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x641C;&#x7D22; Helm &#x56FE;&#x8868;&#x65F6;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5305;&#x62EC;&#x4E86; Helm Hub &#x7684; URL&#xFF08; URL &#x53EF;&#x7528;&#x4E8E;&#x67E5;&#x627E;&#x6709;&#x5173; chart &#x7684;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#xFF09;&#x3001;&#x7248;&#x672C;&#x53CA;&#x8BF4;&#x660E;&#x3002;</p>
+<h3 id="&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x641C;&#x7D22;-wordpress-&#x56FE;&#x8868;">&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x641C;&#x7D22; WordPress &#x56FE;&#x8868;</h3>
+<p>Helm &#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x641C;&#x7D22;&#x547D;&#x4EE4;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x67E5;&#x627E; Helm &#x56FE;&#x8868;&#xFF1A;</p>
+<ul>
+<li><p>&#x5728; Helm Hub &#x4E2D;&#x641C;&#x7D22;&#x56FE;&#x8868;</p>
+<pre class="language-"><code class="lang-shell">$ helm search hub
+</code></pre>
+</li>
+<li><p>&#x901A;&#x8FC7;&#x56FE;&#x8868;&#x7684;&#x5173;&#x952E;&#x5B57;&#x5728;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x641C;&#x7D22;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm search repo
+</code></pre>
+</li>
+</ul>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6DFB;&#x52A0;&#x8FC7;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#xFF0C;&#x7528;&#x6237;&#x5E94;&#x4F7F;&#x7528; <strong>helm search hub</strong> &#x547D;&#x4EE4;&#x4ECE;&#x6240;&#x6709;&#x516C;&#x5171;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x641C;&#x7D22;&#x53EF;&#x7528;&#x7684; helm &#x56FE;&#x8868;&#x3002;&#x5728;&#x6DFB;&#x52A0;&#x5B58;&#x50A8;&#x5E93;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>helm search repo</strong> &#x547D;&#x4EE4;&#x5728;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x641C;&#x7D22;&#x56FE;&#x8868;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4ECE; Helm Hub &#x4E2D;&#x641C;&#x7D22;&#x6240;&#x6709;&#x7684; WordPress &#x56FE;&#x8868;&#x3002;Helm Hub &#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x56FE;&#x8868;&#x90FD;&#x5305;&#x62EC;&#x4E00;&#x7EC4;&#x53EF;&#x4EE5;&#x641C;&#x7D22;&#x7684;&#x5173;&#x952E;&#x5B57;&#x3002;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x641C;&#x7D22;&#x5305;&#x542B; wordpress &#x5173;&#x952E;&#x5B57;&#x7684;&#x56FE;&#x8868;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm search hub wordpress
+</code></pre>
+<p>&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#x4F1A;&#x663E;&#x793A;&#x4EE5;&#x4E0B;&#x8F93;&#x51FA;&#xFF1A;</p>
+<figure id="fig2.3.1"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.1hubouts.jpg" alt="3.1 helm search hub wordpress outputs"><figcaption>3.1 helm search hub wordpress outputs</figcaption></figure>
+<p>&#x8BE5;&#x547D;&#x4EE4;&#x8FD4;&#x56DE;&#x7684;&#x6BCF;&#x4E00;&#x884C;&#x90FD;&#x6765;&#x81EA; Helm Hub &#x7684;&#x4E00;&#x4E2A;&#x56FE;&#x8868; &#x3002;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x56FE;&#x8868; Helm Hub &#x9875;&#x9762;&#x7684; URL&#xFF0C;Helm &#x56FE;&#x8868;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x56FE;&#x8868;&#x90E8;&#x7F72;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7248;&#x672C;&#xFF0C;&#x4EE5;&#x53CA;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x6CE8;&#x610F;&#x5230;&#x6709;&#x4E9B;&#x4FE1;&#x606F;&#x88AB;&#x622A;&#x65AD;&#x4E86;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; <strong>helm  search hub</strong> &#x4EE5;&#x8868;&#x683C;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x9ED8;&#x8BA4;&#x8D85;&#x8FC7; 50 &#x4E2A;&#x5B57;&#x7B26;&#x7684;&#x5217;&#x5C06;&#x88AB;&#x622A;&#x65AD;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>--max-col-width=0</strong> &#x53C2;&#x6570;&#xFF0C;&#x663E;&#x793A;&#x5B8C;&#x6574;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm search hub wordpress --max-col-width<span class="token operator">=</span><span class="token number">0</span>
+</code></pre>
+<p>&#x8FD9;&#x6B21;&#x4EE5;&#x8868;&#x683C;&#x7684;&#x5F62;&#x5F0F;&#x5B8C;&#x6574;&#x8F93;&#x51FA;&#x4E86;&#x5B57;&#x6BB5;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>--output</strong> &#x53C2;&#x6570;&#x6307;&#x5B9A; <strong>yaml</strong> &#x6216; <strong>json</strong> &#x683C;&#x5F0F;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm search hub wordpress --output yaml
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x5C06;&#x4EE5; YAML &#x683C;&#x5F0F;&#x663E;&#x793A;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E0B;&#x56FE;&#xFF1A;</p>
+<figure id="fig2.3.2"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.2hubyamloutps.png" alt="3.2 helm search hub wordpress yaml outputs"><figcaption>3.2 helm search hub wordpress yaml outputs</figcaption></figure>
+<p>&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x8FD4;&#x56DE;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x56FE;&#x8868;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x3002;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x8BE5;&#x56FE;&#x8868;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE; <a href="https://artifacthub.io/packages/helm/bitnami/wordpress" target="_blank">https://artifacthub.io/packages/helm/bitnami/wordpress</a> &#x9875;&#x9762;&#x3002;</p>
+<h3 id="&#x4ECE;&#x6D4F;&#x89C8;&#x5668;&#x641C;&#x7D22;-wordpress-&#x56FE;&#x8868;">&#x4ECE;&#x6D4F;&#x89C8;&#x5668;&#x641C;&#x7D22; WordPress &#x56FE;&#x8868;</h3>
+<p>&#x4F7F;&#x7528; <strong>helm search hub</strong> &#x547D;&#x4EE4;&#x662F;&#x5728; helm hub &#x4E2D;&#x641C;&#x7D22;&#x56FE;&#x8868;&#x7684;&#x6700;&#x5FEB;&#x65B9;&#x5F0F;&#xFF0C;&#x4F46;&#x5B83;&#x5E76;&#x4E0D;&#x80FD;&#x63D0;&#x4F9B;&#x5B8C;&#x6574;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x7528;&#x6237;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x7684; URL&#xFF0C;&#x4EE5;&#x4FBF;&#x5B89;&#x88C5;&#x56FE;&#x8868;&#x3002;&#x56FE;&#x8868;&#x7684;Helm Hub &#x9875;&#x9762;&#x63D0;&#x4F9B;&#x4E86;&#x6B64; URL&#xFF0C;&#x4EE5;&#x53CA;&#x5176;&#x4ED6;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x628A; WordPress &#x56FE;&#x8868;&#x7684; URL &#x7C98;&#x8D34;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF1A;</p>
+<figure id="fig2.3.3"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.3wordpressdetails.jpg" alt="3.3 wordpress page details"><figcaption>3.3 wordpress page details</figcaption></figure>
+<p>Helm Hub &#x7684; WordPress &#x56FE;&#x8868;&#x9875;&#x9762;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x5185;&#x5BB9;&#xFF0C;&#x5305;&#x62EC;&#x56FE;&#x8868;&#x7B80;&#x4ECB;&#x3001;&#x7EF4;&#x62A4;&#x8005;&#x3001;&#x5B89;&#x88C5;&#x4FE1;&#x606F;&#x7B49;&#x3002;</p>
+<p>&#x70B9;&#x51FB;&#x53F3;&#x4FA7;&#x680F;&#x7684; INSTALL &#x6309;&#x94AE;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6DFB;&#x52A0; Bitnami &#x56FE;&#x8868;&#x5E93;&#x7684;&#x547D;&#x4EE4;&#xFF1A;</p>
+<ol>
+<li><p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x56FE;&#x8868;&#x5E93;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm repo <span class="token function">add</span> bitnami https://charts.bitnami.com/bitnami
+</code></pre>
+</li>
+<li><p>&#x67E5;&#x770B;&#x6DFB;&#x52A0;&#x7684;&#x56FE;&#x8868;&#x5E93;&#x5217;&#x8868;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm repo list
+</code></pre>
+</li>
+<li><p>&#x641C;&#x7D22; bitnami &#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x6216;&#x5176;&#x5B83;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x5305;&#x542B; bitnami &#x5173;&#x952E;&#x5B57;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x5E76;&#x4EE5; YAML &#x683C;&#x5F0F;&#x663E;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm search repo bitnami --output yaml
+</code></pre>
+</li>
+</ol>
+<p>&#x4E0E; <strong>helm search hub</strong> &#x547D;&#x4EE4;&#x7C7B;&#x4F3C;&#xFF0C;<strong>helm search repo</strong> &#x547D;&#x4EE4;&#x4E5F;&#x4F7F;&#x7528;&#x56FE;&#x8868;&#x5173;&#x952E;&#x5B57;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x5C06; bitnami &#x4F5C;&#x4E3A;&#x5173;&#x952E;&#x5B57;&#x5C06;&#x8FD4;&#x56DE; bitnami &#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x4EE5;&#x53CA;&#x8BE5;&#x5B58;&#x50A8;&#x5E93;&#x4E4B;&#x5916;&#x5305;&#x542B; bitnami &#x5173;&#x952E;&#x5B57;&#x7684;&#x56FE;&#x8868;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x6211;&#x4EEC;&#x641C;&#x5230;&#x7684;&#x662F; WordPress &#x76F8;&#x5173;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06; wordpress &#x4F5C;&#x4E3A; <strong>helm search repo</strong> &#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm search repo wordpress
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E0A;&#x770B;&#x5230;&#x7684; Helm Hub &#x4E0A;&#x7684; WordPress chart&#xFF1A;</p>
+<figure id="fig2.3.4"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.4bitnamiwordpress.jpg" alt="3.4 bitnami wordpress"><figcaption>3.4 bitnami wordpress</figcaption></figure>
+<p>NAME &#x5217;&#x4E2D;&#xFF0C;<code>/</code> &#x524D;&#x7684;&#x5B57;&#x6BB5;&#x8868;&#x793A; Helm &#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5199;&#x4F5C;&#x6B64;&#x6587;&#x65F6;&#x6700;&#x65B0;&#x7684;&#x56FE;&#x8868;&#x7248;&#x672C;&#x662F; 11.0.5&#xFF0C;&#x4E5F;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x5B89;&#x88C5;&#x7684;&#x7248;&#x672C;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; version &#x53C2;&#x6570;&#xFF0C;&#x67E5;&#x770B;&#x5386;&#x53F2;&#x7248;&#x672C;&#x3002;</p>
+<h3 id="&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x67E5;&#x770B;&#x56FE;&#x8868;&#x4FE1;&#x606F;">&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x67E5;&#x770B;&#x56FE;&#x8868;&#x4FE1;&#x606F;</h3>
+<p>&#x5728; Helm Hub &#x9875;&#x9762;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x4E86;&#x5F88;&#x591A;&#x6709;&#x7528;&#x7684;&#x56FE;&#x8868;&#x4FE1;&#x606F;&#x3002;&#x5C06;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x6DFB;&#x52A0;&#x5230;&#x672C;&#x5730;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>helm show</strong> &#x7684;&#x56DB;&#x4E2A;&#x5B50;&#x547D;&#x4EE4;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x67E5;&#x770B;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x4E86;&#xFF1A;</p>
+<ul>
+<li><p>&#x663E;&#x793A;&#x56FE;&#x8868;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm show chart
+</code></pre>
+</li>
+<li><p>&#x663E;&#x793A;&#x56FE;&#x8868;&#x7684;&#x81EA;&#x8FF0;(README)&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-shell">$ helm show readme
+</code></pre>
+</li>
+<li><p>&#x663E;&#x793A;&#x56FE;&#x8868;&#x7684;&#x503C;(values)&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm show values
+</code></pre>
+</li>
+<li><p>&#x663E;&#x793A;&#x56FE;&#x8868;&#x7684;&#x5B9A;&#x4E49;&#x3001;&#x81EA;&#x8FF0;&#x6587;&#x4EF6;&#x548C;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm show all
+</code></pre>
+</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x67E5;&#x770B; Bitnami WordPress &#x7684;&#x56FE;&#x8868;&#x4FE1;&#x606F;&#x6765;&#x719F;&#x6089;&#x4E00;&#x4E0B;&#x8FD9; 4 &#x4E2A;&#x5B50;&#x547D;&#x4EE4;&#xFF0C;&#x56FE;&#x8868;&#x540D;&#x79F0;&#x4E3A; bitnami/wordpress&#x3002;&#x5982;&#x679C;&#x8981;&#x67E5;&#x770B;&#x7279;&#x5B9A;&#x7248;&#x672C;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528; --version &#x6807;&#x5FD7;&#xFF0C;&#x540E;&#x8DDF;&#x7248;&#x672C;&#x53F7;&#x3002;&#x5982;&#x679C;&#x7701;&#x7565;&#x6B64;&#x6807;&#x5FD7;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;&#x56FE;&#x8868;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x8FD0;&#x884C; <strong>helm show chart</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x56FE;&#x8868;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm show chart bitnami/wordpress --version <span class="token number">11.0</span>.5
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x8F93;&#x51FA;&#x4E86;&#x56FE;&#x8868;&#x7684;&#x5B9A;&#x4E49;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x56FE;&#x8868;&#x7248;&#x672C;&#x3001;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x3001;&#x5173;&#x952E;&#x5B57;&#x548C;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&#x4FE1;&#x606F;&#x7B49;&#xFF1A;</p>
+<figure id="fig2.3.5"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.5showchart.jpg" alt="3.5 show chart"><figcaption>3.5 show chart</figcaption></figure>
+<p>&#x8FD0;&#x884C; <strong>helm show readme</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x56FE;&#x8868;&#x81EA;&#x8FF0;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm show readme bitnami/wordpress --version <span class="token number">11.0</span>.5
+</code></pre>
+<p>&#x8FD0;&#x884C; <strong>helm show values</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x56FE;&#x8868;&#x7684;&#x503C;&#x3002;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x503C;&#xFF0C;&#x5B9E;&#x73B0;&#x56FE;&#x8868;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x3002;</p>
+<p>&#x8FD0;&#x884C; <strong>helm show all</strong> &#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x524D;&#x9762;&#x4E09;&#x4E2A;&#x547D;&#x4EE4;&#x4E2D;&#x7684;&#x4FE1;&#x606F;&#x805A;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4E00;&#x6B21;&#x6027;&#x67E5;&#x770B;&#x56FE;&#x8868;&#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x6B64;&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x641C;&#x7D22;&#x5230;&#x4E86; WordPress &#x56FE;&#x8868;&#xFF0C;&#x5E76;&#x68C0;&#x67E5;&#x4E86;&#x5B83;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6765;&#x914D;&#x7F6E; Kubernetes &#x73AF;&#x5883;&#xFF0C;&#x7136;&#x540E;&#x5B89;&#x88C5;&#x56FE;&#x8868;&#x3002;</p>
+<h2 id="&#x542F;&#x52A8;-kubernetes-&#x96C6;&#x7FA4;">&#x542F;&#x52A8; Kubernetes &#x96C6;&#x7FA4;</h2>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; Minikube &#x521B;&#x5EFA;&#x4E86; Kubernetes &#x96C6;&#x7FA4;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x4FDD;&#x6301;&#x73AF;&#x5883;&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x91CD;&#x65B0;&#x542F;&#x52A8; Kubernetes &#x96C6;&#x7FA4;&#xFF1A;</p>
+<ol>
+<li><p>&#x542F;&#x52A8; Kubernetes &#x96C6;&#x7FA4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ minikube start
+</code></pre>
+</li>
+<li><p>&#x5728;&#x96C6;&#x7FA4;&#x542F;&#x52A8;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; website &#x7684; namespace&#xFF0C;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x5B89;&#x88C5; WordPress&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ kubectl create namespace website
+</code></pre>
+</li>
+</ol>
+<h2 id="&#x5B89;&#x88C5;-wordpress-&#x56FE;&#x8868;">&#x5B89;&#x88C5; WordPress &#x56FE;&#x8868;</h2>
+<p>Helm &#x56FE;&#x8868;&#x7684;&#x5B89;&#x88C5;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4E00;&#x6761;&#x547D;&#x4EE4;&#x3002;&#x4F46;&#x5728;&#x5B89;&#x88C5;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x786E;&#x8BA4;&#x56FE;&#x8868;&#x5305;&#x542B;&#x7684;&#x503C;&#xFF0C;&#x4EE5;&#x53CA;&#x81EA;&#x5B9A;&#x4E49;&#x54EA;&#x4E9B;&#x503C;&#xFF0C;&#x624D;&#x80FD;&#x8FBE;&#x5230;&#x6211;&#x4EEC;&#x671F;&#x671B;&#x7684;&#x5B89;&#x88C5;&#x6548;&#x679C;&#x3002;</p>
+<h3 id="&#x521B;&#x5EFA;&#x503C;&#x6587;&#x4EF6;">&#x521B;&#x5EFA;&#x503C;&#x6587;&#x4EF6;</h3>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x521B;&#x5EFA; YAML &#x683C;&#x5F0F;&#x7684;&#x503C;&#x6587;&#x4EF6;&#x8986;&#x76D6;&#x56FE;&#x8868;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x4E3A;&#x4E86;&#x521B;&#x5EFA;&#x6B63;&#x786E;&#x7684;&#x503C;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4F7F;&#x7528; <strong>helm show values</strong> &#x5B50;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x56FE;&#x8868;&#x652F;&#x6301;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm show values bitnami/wordpress --version <span class="token number">11.0</span>.5
+<span class="token comment">## @section Global parameters</span>
+<span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>
+image:
+  registry: docker.io
+  repository: bitnami/wordpress
+  tag: <span class="token number">5.7</span>.2-debian-10-r2
+  <span class="token comment">## Specify a imagePullPolicy</span>
+  <span class="token comment">## Defaults to &apos;Always&apos; if image tag is &apos;latest&apos;, else set to &apos;IfNotPresent&apos;</span>
+  <span class="token comment">## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images</span>
+  <span class="token comment">##</span>
+  pullPolicy: IfNotPresent
+  <span class="token comment">## Optionally specify an array of imagePullSecrets.</span>
+  <span class="token comment">## Secrets must be manually created in the namespace.</span>
+  <span class="token comment">## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/</span>
+  <span class="token comment">## e.g:</span>
+  <span class="token comment">## pullSecrets:</span>
+  <span class="token comment">##   - myRegistryKeySecretName</span>
+  <span class="token comment">##</span>
+  pullSecrets: <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token comment">## Enable debug mode</span>
+  <span class="token comment">##</span>
+  debug: <span class="token boolean">false</span>
+
+<span class="token comment">## @section WordPress Configuration parameters</span>
+<span class="token comment">## WordPress settings based on environment variables</span>
+<span class="token comment">## ref: https://github.com/bitnami/bitnami-docker-wordpress#environment-variables</span>
+
+<span class="token comment">## @param wordpressUsername WordPress username</span>
+<span class="token comment">##</span>
+wordpressUsername: user
+<span class="token comment">## @param wordpressPassword WordPress user password</span>
+<span class="token comment">## Defaults to a random 10-character alphanumeric string if not set</span>
+<span class="token comment">##</span>
+wordpressPassword: <span class="token string">&quot;&quot;</span>
+</code></pre>
+<p>&#x8BE5;&#x547D;&#x4EE4;&#x8F93;&#x51FA;&#x4E86; wordpress &#x56FE;&#x8868;&#x80FD;&#x591F;&#x8BBE;&#x7F6E;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF0C;&#x5176;&#x4E2D;&#x6709;&#x5F88;&#x591A;&#x5DF2;&#x7ECF;&#x63D0;&#x4F9B;&#x4E86;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x5728;&#x5B89;&#x88C5;&#x56FE;&#x8868;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x503C;&#xFF0C;&#x56FE;&#x8868;&#x5C06;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x7684;&#x503C;&#x6587;&#x4EF6;&#x4E2D;&#x6CA1;&#x6709;&#x8986;&#x76D6; image &#x7684;&#x503C;&#xFF0C;WordPress &#x56FE;&#x8868;&#x5C06;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x955C;&#x50CF;&#x914D;&#x7F6E;&#xFF1A;docker hub &#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x4E2D;&#x7684; bitnami/wordpress &#x955C;&#x50CF;&#xFF0C;&#x955C;&#x50CF; tag &#x662F; 5.7.2-debian-10-r2&#x3002;</p>
+<p>&#x56FE;&#x8868;&#x503C;&#x6587;&#x4EF6;&#x4E2D;&#x4EE5; <code>#</code> &#x5F00;&#x5934;&#x7684;&#x662F;&#x6CE8;&#x91CA;&#xFF0C;&#x6CE8;&#x91CA;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x67D0;&#x4E2A;&#x503C;&#x6216;&#x5757;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x4FBF;&#x4E8E;&#x7528;&#x6237;&#x7406;&#x89E3;&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6CE8;&#x91CA;&#x67D0;&#x4E2A;&#x503C;&#xFF0C;&#x4F7F;&#x5176;&#x4E0D;&#x518D;&#x751F;&#x6548;&#x3002;</p>
+<p>&#x7EE7;&#x7EED;&#x6D4F;&#x89C8;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#xFF0C;&#x4F1A;&#x770B;&#x5230;&#x8BBE;&#x7F6E; WordPress &#x5143;&#x6570;&#x636E;&#x7684;&#x503C;&#x3002;&#x8FD9;&#x4E9B;&#x503C;&#x5BF9;&#x4E8E;&#x914D;&#x7F6E; WordPress &#x535A;&#x5BA2;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x503C;&#x6587;&#x4EF6;&#x8986;&#x76D6;&#x5B83;&#x4EEC;&#x3002;&#x5728;&#x4F60;&#x7684;&#x673A;&#x5668;&#x4E0A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; wordpress-values.yaml &#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x5C06;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x8BE5;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">wordpressUsername</span><span class="token punctuation">:</span> weiwendi  <span class="token comment"># WordPress &#x63A7;&#x5236;&#x53F0;&#x767B;&#x5F55;&#x7528;&#x6237;</span>
+<span class="token key atrule">wordpressPassword</span><span class="token punctuation">:</span> Z5tOfyh   <span class="token comment"># WordPress &#x63A7;&#x5236;&#x53F0;&#x767B;&#x5F55;&#x5BC6;&#x7801;</span>
+<span class="token key atrule">wordpressEmail</span><span class="token punctuation">:</span> weiwendi@aiops.red
+<span class="token key atrule">wordpressFirstName</span><span class="token punctuation">:</span> AiOps
+<span class="token key atrule">wordpressBlogName</span><span class="token punctuation">:</span> Learn Helm<span class="token tag">!</span>
+</code></pre>
+<p>&#x9664;&#x4E86;&#x8FD9;&#x4E9B;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x503C;&#x6211;&#x4EEC;&#x8981;&#x4FEE;&#x6539;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">service</span><span class="token punctuation">:</span>
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> LoadBalancer
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x503C;&#x5728; minikube &#x5B89;&#x88C5;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x6539;&#x4E3A; NodePort&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">service</span><span class="token punctuation">:</span>
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> NodePort
+</code></pre>
+<p>&#x6700;&#x7EC8;&#xFF0C;&#x5B8C;&#x6574;&#x7684;&#x503C;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">wordpressUsername</span><span class="token punctuation">:</span> weiwendi
+<span class="token key atrule">wordpressPassword</span><span class="token punctuation">:</span> Z5tOfyh
+<span class="token key atrule">wordpressEmail</span><span class="token punctuation">:</span> weiwendi@aiops.red
+<span class="token key atrule">wordpressFirstName</span><span class="token punctuation">:</span> AiOps
+<span class="token key atrule">wordpressBlogName</span><span class="token punctuation">:</span> Learn Helm<span class="token tag">!</span>
+<span class="token key atrule">service</span><span class="token punctuation">:</span>
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> NodePort
+</code></pre>
+<p>&#x521B;&#x5EFA;&#x5B8C;&#x503C;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x5B89;&#x88C5; WordPress &#x56FE;&#x8868;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;&#x56FE;&#x8868;">&#x5B89;&#x88C5;&#x56FE;&#x8868;</h3>
+<p><strong>helm install</strong> &#x547D;&#x4EE4;&#x7528;&#x6765;&#x5B89;&#x88C5; Helm &#x56FE;&#x8868;&#x3002;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">helm <span class="token function">install</span> <span class="token punctuation">[</span>NAME<span class="token punctuation">]</span> <span class="token punctuation">[</span>CHART<span class="token punctuation">]</span> <span class="token punctuation">[</span>flags<span class="token punctuation">]</span>
+</code></pre>
+<ul>
+<li><p><strong>NAME</strong> &#xFF1A;&#x4F7F;&#x7528; Helm &#x5B89;&#x88C5;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5728; Helm &#x4E2D;&#x88AB;&#x79F0;&#x4E3A; release&#xFF0C;NAME &#x53C2;&#x6570;&#x662F;&#x6211;&#x4EEC;&#x4E3A; release &#x8D77;&#x7684;&#x540D;&#x79F0;&#x3002;Release &#x4F1A;&#x628A; Kubernetes &#x8D44;&#x6E90;&#x4E0E;&#x56FE;&#x8868;&#x4E00;&#x8D77;&#x5B89;&#x88C5;&#xFF0C;&#x5E76;&#x8DDF;&#x8E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x3002;&#x672C;&#x7AE0;&#x4F1A;&#x4ECB;&#x7ECD; release &#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x3002; </p>
+</li>
+<li><p><strong>CHART</strong>&#xFF1A; Helm &#x56FE;&#x8868;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5BF9;&#x4E8E;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x9075;&#x5FAA; \<repo name="">/\<chart name="">&#x3002;</chart></repo></p>
+</li>
+<li><strong>flags</strong>&#xFF1A;&#x4EE3;&#x6307; <strong>helm install</strong> &#x547D;&#x4EE4;&#x652F;&#x6301;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x53C2;&#x6570;&#xFF0C;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x5B9A;&#x5236;&#x5B89;&#x88C5;&#x56FE;&#x8868;&#x3002;flags &#x5141;&#x8BB8;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x3001;&#x8986;&#x76D6;&#x503C;&#xFF0C;&#x6307;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4;(namespace) &#x7B49;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>helm install --help</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B; flags &#x5217;&#x8868;&#x3002;--help &#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7ED9;&#x5176;&#x5B83;&#x547D;&#x4EE4;&#xFF0C;&#x67E5;&#x770B;&#x5B83;&#x4EEC;&#x7684;&#x7528;&#x6CD5;&#x548C;&#x652F;&#x6301;&#x7684;&#x9009;&#x9879;&#x3002;</li>
+</ul>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6B63;&#x786E;&#x638C;&#x63E1;&#x4E86; <strong>helm install</strong> &#x547D;&#x4EE4;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x73B0;&#x5728;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5B89;&#x88C5; WordPress &#x56FE;&#x8868;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm <span class="token function">install</span> wordpress bitnami/wordpress --values<span class="token operator">=</span>wordpress-values.yaml --namespace website --version <span class="token number">11.0</span>.5
+</code></pre>
+<p>&#x5728;&#x8BE5;&#x547D;&#x4EE4;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; bitnami/wordpress &#x56FE;&#x8868;&#x5B89;&#x88C5;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; wordpress &#x7684; release&#xFF0C;&#x5E76;&#x628A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x503C;&#x901A;&#x8FC7; wordpress-values.yaml &#x6587;&#x4EF6;&#x4F20;&#x9012;&#x7ED9;&#x4E86;&#x56FE;&#x8868;&#xFF0C;&#x4EE5;&#x8986;&#x76D6;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x56FE;&#x8868;&#x88AB;&#x5B89;&#x88C5;&#x5230;&#x4E86; website &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x3002;--version &#x6807;&#x5FD7;&#x6307;&#x5B9A;&#x4E86;&#x8981;&#x90E8;&#x7F72;&#x7684;&#x7248;&#x672C;&#x662F; 11.0.5&#x3002;&#x5728;&#x4E0D;&#x6307;&#x5B9A;&#x7248;&#x672C;&#x53F7;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5C06;&#x5B89;&#x88C5;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684; Helm &#x56FE;&#x8868;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x6210;&#x529F;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x4EE5;&#x4E0B;&#x7684;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">NAME</span><span class="token punctuation">:</span> wordpress
+<span class="token key atrule">LAST DEPLOYED</span><span class="token punctuation">:</span> Mon May 17 11<span class="token punctuation">:</span>28<span class="token punctuation">:</span>51 2021
+<span class="token key atrule">NAMESPACE</span><span class="token punctuation">:</span> website
+<span class="token key atrule">STATUS</span><span class="token punctuation">:</span> deployed
+<span class="token key atrule">REVISION</span><span class="token punctuation">:</span> <span class="token number">1</span>
+<span class="token key atrule">NOTES</span><span class="token punctuation">:</span>
+<span class="token important">**</span> Please be patient while the chart is being deployed <span class="token important">**</span>
+
+<span class="token key atrule">Your WordPress site can be accessed through the following DNS name from within your cluster</span><span class="token punctuation">:</span>
+
+    wordpress.website.svc.cluster.local (port 80)
+
+<span class="token key atrule">To access your WordPress site from outside the cluster follow the steps below</span><span class="token punctuation">:</span>
+
+<span class="token key atrule">1. Get the WordPress URL by running these commands</span><span class="token punctuation">:</span>
+
+   export NODE_PORT=$(kubectl get <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace website <span class="token punctuation">-</span>o jsonpath=&quot;<span class="token punctuation">{</span>.spec.ports<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.nodePort<span class="token punctuation">}</span>&quot; services wordpress)
+   export NODE_IP=$(kubectl get nodes <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace website <span class="token punctuation">-</span>o jsonpath=&quot;<span class="token punctuation">{</span>.items<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.status.addresses<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.address<span class="token punctuation">}</span>&quot;)
+   <span class="token key atrule">echo &quot;WordPress URL</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//$NODE_IP<span class="token punctuation">:</span>$NODE_PORT/&quot;
+   <span class="token key atrule">echo &quot;WordPress Admin URL</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//$NODE_IP<span class="token punctuation">:</span>$NODE_PORT/admin&quot;
+
+2. Open a browser and access WordPress using the obtained URL.
+
+<span class="token key atrule">3. Login with the following credentials below to see your blog</span><span class="token punctuation">:</span>
+
+  <span class="token key atrule">echo Username</span><span class="token punctuation">:</span> weiwendi
+  <span class="token key atrule">echo Password</span><span class="token punctuation">:</span> $(kubectl get secret <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace website wordpress <span class="token punctuation">-</span>o jsonpath=&quot;<span class="token punctuation">{</span>.data.wordpress<span class="token punctuation">-</span>password<span class="token punctuation">}</span>&quot; <span class="token punctuation">|</span> base64 <span class="token punctuation">-</span><span class="token punctuation">-</span>decode)
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x663E;&#x793A;&#x4E86;&#x5B89;&#x88C5;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC; release &#x540D;&#x79F0;&#x3001;&#x90E8;&#x7F72;&#x65F6;&#x95F4;&#x3001;&#x90E8;&#x7F72;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3001;&#x90E8;&#x7F72;&#x72B6;&#x6001;(&#x5DF2;&#x90E8;&#x7F72;)&#x548C;&#x4FEE;&#x8BA2;&#x53F7;(Revision)&#xFF0C;&#x7531;&#x4E8E;&#x8BE5; release &#x662F;&#x521D;&#x6B21;&#x5B89;&#x88C5;&#xFF0C;&#x6240;&#x4EE5;&#x4FEE;&#x8BA2;&#x53F7;&#x4E3A; 1&#x3002;</p>
+<p>&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x8FD8;&#x5305;&#x62EC; Notes&#xFF0C;Notes &#x7528;&#x4E8E;&#x5411;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x7684;&#x9644;&#x52A0;&#x4FE1;&#x606F;&#x3002;&#x5728; WordPress &#x56FE;&#x8868;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;Notes &#x63D0;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x8BBF;&#x95EE;&#x548C;&#x9A8C;&#x8BC1; WordPress &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>helm get notes</strong> &#x547D;&#x4EE4;&#x968F;&#x65F6;&#x67E5;&#x770B; Notes &#x4FE1;&#x606F;&#x3002;</p>
+<p>Helm &#x56FE;&#x8868;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; release &#x67E5;&#x770B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x8D44;&#x6E90;&#x6E05;&#x5355;&#x548C;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
+<h3 id="&#x67E5;&#x770B;-release">&#x67E5;&#x770B; release</h3>
+<p>&#x53EF;&#x4EE5;&#x5728; Kubernetes &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x67E5;&#x770B;&#x6240;&#x6709;&#x5DF2;&#x5B89;&#x88C5;&#x7684; release&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm list --namespace website
+NAME         NAMESPACE    REVISION    UPDATED                                    STATUS      CHART               APP VERSION
+wordpress    website      <span class="token number">1</span>           <span class="token number">2021</span>-05-17 <span class="token number">10</span>:50:12.321181442 +0800 CST    deployed    wordpress-11.0.5    <span class="token number">5.7</span>.2
+</code></pre>
+<p><strong>list</strong> &#x5B50;&#x547D;&#x4EE4;&#x5B57;&#x6BB5;&#x7684;&#x542B;&#x4E49;&#xFF1A;</p>
+<ul>
+<li><strong>NAME</strong>&#xFF1A;release &#x540D;&#x79F0;</li>
+<li><strong>NAMESPACE</strong>&#xFF1A;release &#x6240;&#x5728;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;</li>
+<li><strong>REVISION</strong>&#xFF1A;release &#x7684;&#x6700;&#x65B0;&#x4FEE;&#x8BA2;&#x53F7;</li>
+<li><strong>UPDATED</strong>&#xFF1A;release &#x53D1;&#x5E03;&#x7684;&#x6700;&#x65B0;&#x65F6;&#x95F4;&#x6233;</li>
+<li><strong>STATUS</strong>&#xFF1A;release &#x7684;&#x72B6;&#x6001;</li>
+<li><strong>CHART</strong>&#xFF1A;&#x56FE;&#x8868;&#x540D;&#x79F0;&#x53CA;&#x7248;&#x672C;</li>
+<li><strong>APP VERSION</strong>&#xFF1A;&#x56FE;&#x8868;&#x4E2D;&#x5E94;&#x7528;&#x7684;&#x7248;&#x672C;</li>
+</ul>
+<p>&#x9664;&#x4E86; <strong>list</strong> &#x5B50;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B; release &#x7684;&#x4FE1;&#x606F;&#xFF0C;Helm &#x8FD8;&#x63D0;&#x4F9B;&#x4E86; <strong>get</strong> &#x5B50;&#x547D;&#x4EE4;&#xFF0C;&#x7528;&#x6765;&#x83B7;&#x53D6; release &#x7684;&#x66F4;&#x591A;&#x4FE1;&#x606F;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x5217;&#x8868;&#x7528;&#x6765;&#x67E5;&#x770B;&#x6307;&#x5B9A; release &#x7684;&#x66F4;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF1A;</p>
+<ul>
+<li><p>&#x6216;&#x53D6; release &#x7684;&#x6240;&#x6709;&#x94A9;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">helm get hooks
+</code></pre>
+</li>
+<li><p>&#x83B7;&#x53D6; release &#x7684;&#x8D44;&#x6E90;&#x6E05;&#x5355;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">helm get manifest
+</code></pre>
+</li>
+<li><p>&#x83B7;&#x53D6; release &#x7684; notes&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">helm get notes
+</code></pre>
+</li>
+<li><p>&#x83B7;&#x53D6; release &#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">helm get values
+</code></pre>
+</li>
+<li><p>&#x83B7;&#x53D6; release &#x7684;&#x6240;&#x6709;&#x4FE1;&#x606F;&#xFF0C;&#x6DB5;&#x76D6;&#x4E86;&#x4EE5;&#x4E0A; 4 &#x4E2A;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">hlem get all
+</code></pre>
+</li>
+</ul>
+<p>&#x901A;&#x8FC7; <strong>helm get manifest</strong> &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5230;&#x5B89;&#x88C5; release &#x65F6;&#x521B;&#x5EFA;&#x7684; Kubernetes &#x8D44;&#x6E90;&#x6E05;&#x5355;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get manifest wordpress --namespace website
+</code></pre>
+<p>&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4EE5;&#x4E0B; Kubernetes &#x8D44;&#x6E90;&#x6E05;&#x5355;&#xFF1A;</p>
+<ul>
+<li>&#x4E24;&#x4E2A; Secret</li>
+<li>&#x4E24;&#x4E2A; Service</li>
+<li>&#x4E00;&#x4E2A; ConfigMap</li>
+<li>&#x4E00;&#x4E2A; ServiceAccount</li>
+<li>&#x4E00;&#x4E2A; Deployment</li>
+<li>&#x4E00;&#x4E2A; StatefulSet</li>
+<li>&#x4E00;&#x4E2A; PersistentVolumeClaim</li>
+</ul>
+<p>&#x5E76;&#x4E14;&#x4ECE;&#x8F93;&#x51FA;&#x4E2D;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x503C;&#xFF0C;&#x5982;&#xFF1A;NodePort&#x3002;</p>
+<p>&#x56FE;&#x8868;&#x63D0;&#x4F9B;&#x7684;&#x5927;&#x591A;&#x6570;&#x9ED8;&#x8BA4;&#x503C;&#x90FD;&#x4FDD;&#x6301;&#x4E0D;&#x53D8;&#xFF0C;&#x8FD9;&#x4E9B;&#x503C;&#x5DF2;&#x7ECF;&#x88AB;&#x5E94;&#x7528;&#x5230;&#x4E86; Kubernetes &#x8D44;&#x6E90;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>helm get manifest</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x5230;&#x3002;&#x5982;&#x679C;&#x4FEE;&#x6539;&#x4E86;&#x8FD9;&#x4E9B;&#x503C;&#xFF0C;&#x90A3;&#x4E48; Kubernetes &#x8D44;&#x6E90;&#x7684;&#x914D;&#x7F6E;&#x4E5F;&#x4F1A;&#x6539;&#x53D8;&#x3002;</p>
+<p><strong>helm get notes</strong> &#x547D;&#x4EE4;&#x663E;&#x793A;&#x4E86; release &#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x8BF4;&#x660E;&#x4FE1;&#x606F;&#x3002;&#x4F60;&#x53EF;&#x80FD;&#x8FD8;&#x8BB0;&#x5F97;&#xFF0C;&#x5728;&#x5B89;&#x88C5;&#x5B8C;&#x6210; WordPress &#x56FE;&#x8868;&#x65F6;&#x663E;&#x793A;&#x8FC7; release notes&#x3002;&#x8FD9;&#x4E9B; notes &#x5F15;&#x5BFC;&#x7528;&#x6237;&#x5982;&#x4F55;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x547D;&#x4EE4;&#x518D;&#x6B21;&#x67E5;&#x770B; notes&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get notes wordpress --namespace website
+</code></pre>
+<p><strong>helm get values</strong> &#x547D;&#x4EE4;&#x7528;&#x6765;&#x67E5;&#x770B;&#x5B89;&#x88C5; release &#x65F6;&#x63D0;&#x4F9B;&#x7684;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x901A;&#x8FC7; wordpress-values.yaml &#x6587;&#x4EF6;&#x4F20;&#x9012;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get values wordpress --namespace website
+</code></pre>
+<p>&#x52A0;&#x4E0A; --all &#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x6240;&#x6709;&#x503C;&#xFF0C;&#x5305;&#x62EC;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get values wordpress --all --namespace website
+</code></pre>
+<p><strong>helm get all</strong> &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x6240;&#x6709;&#x6765;&#x81EA;&#x5404;&#x4E2A; <strong>helm get</strong> &#x547D;&#x4EE4;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get all wordpress --namespace website
+</code></pre>
+<p>&#x9664;&#x4E86; Helm &#x7684;&#x547D;&#x4EE4;&#x5916;&#xFF0C;<strong>kubectl</strong> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x66F4;&#x65B9;&#x4FBF;&#x7684;&#x67E5;&#x770B;&#x5B89;&#x88C5;&#x7684;&#x8D44;&#x6E90;&#x3002;<strong>kubectl</strong> &#x53EF;&#x4EE5;&#x7CBE;&#x786E;&#x67E5;&#x8BE2;&#x67D0;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5982; Deployment&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x8D44;&#x6E90;&#x3002;&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x8FD4;&#x56DE;&#x7684;&#x8D44;&#x6E90;&#x662F; Helm &#x90E8;&#x7F72; release &#x65F6;&#x521B;&#x5EFA;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x7ED9; <strong>kubectl</strong> &#x63D0;&#x4F9B;&#x90E8;&#x7F72;&#x65F6;&#x5B9A;&#x4E49;&#x7684;&#x6807;&#x7B7E;&#xFF0C;Helm &#x56FE;&#x8868;&#x901A;&#x5E38;&#x4F1A;&#x4E3A; Kubernetes &#x8D44;&#x6E90;&#x8BBE;&#x7F6E;&#x6807;&#x7B7E;&#x3002;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x67E5;&#x770B;&#x5E26;&#x6709; app.kubernetes.io/instance=wordpress &#x6807;&#x7B7E;&#x7684; Kubernetes &#x8D44;&#x6E90;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl get all -l app.kubernetes.io/instance<span class="token operator">=</span>wordpress --namespace website
+</code></pre>
+<h2 id="install-&#x7684;&#x66F4;&#x591A;&#x7528;&#x6CD5;">install &#x7684;&#x66F4;&#x591A;&#x7528;&#x6CD5;</h2>
+<h3 id="n-&#x6807;&#x5FD7;">-n &#x6807;&#x5FD7;</h3>
+<p>-n &#x6807;&#x5FD7;&#x53EF;&#x4EE5;&#x66FF;&#x4EE3; --namespace&#xFF0C;&#x4EE5;&#x51CF;&#x5C11;&#x8F93;&#x5165;&#x547D;&#x4EE4;&#x65F6;&#x7684;&#x5DE5;&#x4F5C;&#x91CF;&#xFF0C;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm list --namespace website 
+<span class="token comment"># &#x53EF;&#x4EE5;&#x5199;&#x6210;</span>
+<span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm list -n website
+</code></pre>
+<h3 id="helmnamespace-&#x73AF;&#x5883;&#x53D8;&#x91CF;">HELM_NAMESPACE &#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<p>&#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;Helm &#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x4F1A;&#x5728; default &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x8FDB;&#x884C;&#x3002;&#x53EF;&#x4EE5;&#x4FEE;&#x6539; <strong>HELM_NAMESPACE</strong> &#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x8BBE;&#x7F6E; Helm &#x9ED8;&#x8BA4;&#x4EA4;&#x4E92;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3002;&#x5728;&#x4E0D;&#x540C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x6CD5;&#x7565;&#x6709;&#x4E0D;&#x540C;&#xFF1A;</p>
+<ul>
+<li><p>macOS &#x548C; Linux&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token builtin class-name">export</span> <span class="token assign-left variable">HELM_NAMESPACE</span><span class="token operator">=</span>website
+</code></pre>
+</li>
+<li><p>Windows &#x7528;&#x6237;&#x4F7F;&#x7528; PowerShell&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell">&gt; <span class="token variable">$env</span>:HELM_NAMESPACE = <span class="token string">&apos;website&apos;</span>
+</code></pre>
+</li>
+</ul>
+<p>&#x4FEE;&#x6539;&#x540E;&#xFF0C;&#x4F7F;&#x7528; <strong>helm env</strong> &#x547D;&#x4EE4;&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm <span class="token function">env</span>
+</code></pre>
+<p>&#x5728;&#x672C;&#x4E66;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E; HELM_NAMESPACE &#x53D8;&#x91CF;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x4E0A;&#x4F7F;&#x7528; -n &#x6807;&#x5FD7;&#xFF0C;&#x8FD9;&#x6837;&#x80FD;&#x66F4;&#x6E05;&#x695A;&#x5730;&#x77E5;&#x9053;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3002;&#x4F7F;&#x7528; -n &#x6807;&#x5FD7;&#x4E5F;&#x662F;&#x4E3A; Helm &#x6307;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x6700;&#x4F73;&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4FBF;&#x4E8E;&#x6211;&#x4EEC;&#x786E;&#x8BA4;&#x64CD;&#x4F5C;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x662F;&#x5426;&#x6B63;&#x786E;&#x3002;</p>
+<h3 id="-set-&#x548C;---values">--set &#x548C; --values</h3>
+<p>&#x5BF9;&#x4E8E; <strong>install</strong>&#x3001;<strong>upgrade</strong>&#x3001;<strong>rollback</strong> &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x5C06;&#x503C;&#x4F20;&#x9012;&#x7ED9;&#x56FE;&#x8868;&#xFF1A;</p>
+<ul>
+<li><strong>--set</strong>&#xFF1A;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x4F20;&#x5165;&#x503C;&#x3002;</li>
+<li><strong>--values</strong>&#xFF1A;&#x4ECE; YAML &#x503C;&#x6587;&#x4EF6;&#x6216; URL &#x4E2D;&#x4F20;&#x5165;&#x503C;</li>
+</ul>
+<p>--values &#x6807;&#x5FD7;&#x662F;&#x672C;&#x4E66;&#x4E2D;&#x914D;&#x7F6E;&#x56FE;&#x8868;&#x503C;&#x7684;&#x9996;&#x9009;&#x65B9;&#x6CD5;&#xFF0C;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#x503C;&#x4F1A;&#x66F4;&#x65B9;&#x4FBF;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5C06;&#x503C;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x5728;&#x6E90;&#x7801;&#x7BA1;&#x7406;(SCM)&#x7CFB;&#x7EDF;(&#x5982;git)&#x4E2D;&#x3002;&#x4F46;&#x5BF9;&#x4E8E;&#x5BC6;&#x7801;&#x7B49;&#x654F;&#x611F;&#x503C;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; --set &#x6807;&#x5FD7;&#x3002;</p>
+<p>--set &#x76F4;&#x63A5;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x4F20;&#x9012;&#x503C;&#xFF0C;&#x5BF9;&#x4E8E;&#x5BC6;&#x7801;&#x7C7B;&#x578B;&#x7684;&#x3001;&#x5C11;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#xFF0C;&#x4F46; --set &#x4E0D;&#x65B9;&#x4FBF;&#x91CD;&#x590D;&#x5B89;&#x88C5;&#x56FE;&#x8868;&#x3002;</p>
+<h2 id="&#x8BBF;&#x95EE;-wordpress">&#x8BBF;&#x95EE; WordPress</h2>
+<p>WordPress &#x56FE;&#x8868;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;Notes &#x8F93;&#x51FA;&#x4E86;&#x56DB;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x8BBF;&#x95EE; WordPress &#x7A0B;&#x5E8F;&#x3002;</p>
+<ul>
+<li><p>macOS &#x6216;&#x8005; Linux&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token builtin class-name">export</span> <span class="token assign-left variable">NODE_PORT</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl get --namespace website -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.spec.ports[0].nodePort}&quot;</span> services wordpress<span class="token variable">)</span></span>
+
+$ <span class="token builtin class-name">export</span> <span class="token assign-left variable">NODE_IP</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl get nodes --namespace website -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.items[0].status.addresses[0].address}&quot;</span><span class="token variable">)</span></span>
+
+$ <span class="token builtin class-name">echo</span> <span class="token string">&quot;WordPress URL: http://<span class="token variable">$NODE_IP</span>:<span class="token variable">$NODE_PORT</span>/&quot;</span>
+
+$ <span class="token builtin class-name">echo</span> <span class="token string">&quot;WordPress Admin URL: http://<span class="token variable">$NODE_IP</span>:<span class="token variable">$NODE_PORT</span>/admin&quot;</span>
+</code></pre>
+</li>
+<li><p>Windows PowerShell&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell">&gt; <span class="token variable">$NODE_PORT</span> = kubectl get <span class="token operator">--</span>namespace website <span class="token operator">-</span>o jsonpath=<span class="token string">&quot;{.spec.ports[0].nodePort}&quot;</span> services wordpress <span class="token punctuation">|</span> <span class="token function">Out-String</span>
+
+&gt; <span class="token variable">$NODE_IP</span> = kubectl get nodes <span class="token operator">--</span>namespace website <span class="token operator">-</span>o jsonpath=<span class="token string">&quot;{.items[0].status.addresses[0].address}&quot;</span> <span class="token punctuation">|</span> <span class="token function">Out-String</span>
+
+&gt; <span class="token function">echo</span> <span class="token string">&quot;WordPress URL: http://<span class="token variable">$NODE_IP</span>:<span class="token variable">$NODE_PORT</span>/&quot;</span>
+
+&gt; <span class="token function">echo</span> <span class="token string">&quot;WordPress Admin URL: http://<span class="token variable">$NODE_IP</span>:<span class="token variable">$NODE_PORT</span>/admin&quot;</span>
+</code></pre>
+</li>
+</ul>
+<p>&#x628A; <strong>kubectl</strong> &#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x4F20;&#x9012;&#x7ED9;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;echo &#x547D;&#x4EE4;&#x6253;&#x5370;&#x62FC;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#xFF0C;&#x8F93;&#x51FA;&#x8BBF;&#x95EE; WordPress &#x7684; URL&#x3002;&#x7B2C;&#x4E00;&#x4E2A; RUL &#x662F;&#x7F51;&#x7AD9;&#x4E3B;&#x9875;&#xFF0C;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x8BE5;&#x9875;&#x9762;&#x67E5;&#x770B;&#x7F51;&#x7AD9;&#x5185;&#x5BB9;&#xFF1B;&#x7B2C;&#x4E8C;&#x4E2A; URL &#x662F;&#x7F51;&#x7AD9;&#x7684;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x7F51;&#x7AD9;&#x7BA1;&#x7406;&#x4EBA;&#x5458;&#x7528;&#x5B83;&#x6765;&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x7F51;&#x7AD9;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5C06;&#x7B2C;&#x4E00;&#x4E2A; URL &#x7C98;&#x8D34;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4F1A;&#x770B;&#x5230;&#x7C7B;&#x4F3C;&#x4E0B;&#x56FE;&#x663E;&#x793A;&#x7684;&#x9875;&#x9762;&#xFF1A;</p>
+<figure id="fig2.3.6"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.8wordpresspage.jpg" alt="3.6 wordpress &#x9996;&#x9875;"><figcaption>3.6 wordpress &#x9996;&#x9875;</figcaption></figure>
+<p>&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x4E2D;&#x6709;&#x4E9B;&#x5185;&#x5BB9;&#x770B;&#x8D77;&#x6765;&#x5F88;&#x719F;&#x6089;&#xFF0C;&#x5728;&#x5C45;&#x4E2D;&#x4F4D;&#x7F6E;&#x6700;&#x4E0A;&#x65B9;&#xFF0C;&#x535A;&#x5BA2;&#x7684;&#x6807;&#x9898;&#x53EB; Learn Helm! &#xFF0C;&#x8FD9;&#x4E0D;&#x4EC5;&#x662F;&#x672C;&#x4E66;&#x7684;&#x4E3B;&#x9898;&#xFF0C;&#x4E5F;&#x662F;&#x4F60;&#x5728;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BBE;&#x7F6E;&#x7684; wordpressBlogName &#x7684;&#x503C;&#x3002;</p>
+<p>&#x5F71;&#x54CD;&#x9875;&#x9762;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x503C;&#x662F; wordpressUsername&#x3002;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x201C;Hello world&#xFF01;&#x201D; &#x7684;&#x4F5C;&#x8005;&#x662F; weiwendi&#x3002;&#x8FD9;&#x662F;&#x63D0;&#x4F9B;&#x7ED9; wordpressUsername &#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x503C;&#x662F;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x540D;&#xFF0C;&#x5219;&#x4F1A;&#x663E;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x540D;&#x79F0;&#x3002;</p>
+<p>&#x5C06;&#x7B2C;&#x4E8C;&#x4E2A;echo&#x547D;&#x4EE4;&#x4E2D;&#x7684;&#x94FE;&#x63A5;&#x7C98;&#x8D34;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x9875;&#x9762;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<figure id="fig2.3.7"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.9adminpage.jpg" alt="3.7 admin pages"><figcaption>3.7 admin pages</figcaption></figure>
+<p>&#x8981;&#x767B;&#x5F55;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x9700;&#x8981;&#x8F93;&#x5165;&#x5B89;&#x88C5;&#x65F6;&#x63D0;&#x4F9B;&#x7684; wordpressUsername &#x548C; wordpressPassword &#x7684;&#x503C;&#x3002;&#x8FD9;&#x4E9B;&#x503C;&#x53EF;&#x4EE5;&#x5728; wordpress-values.yaml &#x6587;&#x4EF6;&#x4E2D;&#x67E5;&#x770B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#xFF0C;&#x8FD9;&#x4E24;&#x6761;&#x547D;&#x4EE4;&#x4E5F;&#x662F; WordPress &#x56FE;&#x8868; notes &#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token builtin class-name">echo</span> Username: weiwendi
+<span class="token builtin class-name">echo</span> Password: <span class="token variable"><span class="token variable">$(</span>kubectl get secret --namespace website wordpress -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.data.wordpress-password}&quot;</span> <span class="token operator">|</span> base64 --decode<span class="token variable">)</span></span>
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x540E;&#xFF0C;&#x5C06;&#x663E;&#x793A;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4EEA;&#x8868;&#x677F;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<figure id="fig2.3.8"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.10adminpage2.png" alt="3.8 dashboard"><figcaption>3.8 dashboard</figcaption></figure>
+<p>&#x56FE;3-8 &#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4EEA;&#x8868;&#x76D8;</p>
+<h2 id="&#x66F4;&#x65B0;-wordpress-&#x7248;&#x672C;">&#x66F4;&#x65B0; WordPress &#x7248;&#x672C;</h2>
+<p>&#x4FEE;&#x6539;&#x503C;&#x6216;&#x5347;&#x7EA7;&#x56FE;&#x8868;&#x5230;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x66F4;&#x65B0; WordPress &#x7248;&#x672C;&#x5B9E;&#x73B0;&#x3002;&#x5728;&#x672C;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4FEE;&#x6539; WordPress &#x526F;&#x672C;&#x6570;&#x53CA;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x7684;&#x503C;&#xFF0C;&#x6765;&#x6F14;&#x793A;&#x7248;&#x672C;&#x66F4;&#x65B0;&#x3002;</p>
+<h3 id="&#x4FEE;&#x6539;&#x503C;">&#x4FEE;&#x6539;&#x503C;</h3>
+<p>&#x901A;&#x8FC7; Helm &#x56FE;&#x8868;&#x7684;&#x503C;&#x914D;&#x7F6E;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5B9E;&#x4F8B;&#x526F;&#x672C;&#x6570;&#x53CA;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x5927;&#x5C0F;&#x662F;&#x5F88;&#x5E38;&#x89C1;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x662F; <strong>helm show values</strong> &#x547D;&#x4EE4;&#x7684;&#x90E8;&#x5206;&#x8F93;&#x51FA;&#xFF0C;&#x8FD9;&#x662F;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x526F;&#x672C;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm show values bitnami/wordpress <span class="token operator">|</span><span class="token function">grep</span> replicaCount
+replicaCount: <span class="token number">1</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A; replicaCount &#x7684;&#x503C;&#x4FEE;&#x6539;&#x6210; 2&#x3002;</p>
+<p>&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x7B2C;&#x4E8C;&#x90E8;&#x5206;&#x7684;&#x503C;&#x662F; YAML &#x6587;&#x4EF6;&#x7684; &#x201C;WordPress container&#x201D; resources &#x5757;&#x7684;&#x503C;&#xFF0C;&#x8BE5;&#x5757;&#x4E2D; cpu &#x548C; memory &#x7684;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm show values bitnami/wordpress <span class="token operator">|</span><span class="token function">grep</span> resources -C <span class="token number">4</span>
+<span class="token comment">## WordPress containers&apos; resource requests and limits</span>
+<span class="token comment">## ref: http://kubernetes.io/docs/user-guide/compute-resources/</span>
+<span class="token comment">## @param resources.limits The resources limits for the WordPress container</span>
+<span class="token comment">## @param resources.requests [object] The requested resources for the WordPress container</span>
+<span class="token comment">##</span>
+resources:
+  limits: <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  requests:
+    memory: 512Mi
+    cpu: 300m
+</code></pre>
+<p>&#x503C;&#x901A;&#x8FC7;&#x7F29;&#x8FDB;&#x8FDB;&#x884C;&#x903B;&#x8F91;&#x5206;&#x7EC4;&#xFF0C;&#x5982; resources &#x90E8;&#x5206;&#x7684; requests &#x5757;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86; WordPress &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5728;&#x542F;&#x52A8;&#x65F6;&#xFF0C; Kubernetes &#x4E3A;&#x5176;&#x5206;&#x914D;&#x7684; memory &#x548C; cpu &#x7684;&#x503C;&#x3002;&#x6211;&#x4EEC;&#x5C06; requests.memory &#x7684;&#x503C;&#x4FEE;&#x6539;&#x4E3A; 256Mi (256 mebibytes)&#xFF0C;&#x5C06; requests.cpu &#x7684;&#x4FEE;&#x6539;&#x4E3A;100m(100&#x6BEB;&#x79D2;)&#x3002;&#x5C06;&#x8FD9;&#x4E9B;&#x4FEE;&#x6539;&#x6DFB;&#x52A0;&#x5230; wordpress-values.yaml &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+    <span class="token key atrule">memory</span><span class="token punctuation">:</span> 256Mi
+    <span class="token key atrule">cpu</span><span class="token punctuation">:</span> 100m
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x5B8C;&#x8FD9;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x65B0;&#x7684; wordpress-values.yaml &#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">wordpressUsername</span><span class="token punctuation">:</span> weiwendi
+<span class="token key atrule">wordpressPassword</span><span class="token punctuation">:</span> Z5tOfyh
+<span class="token key atrule">wordpressEmail</span><span class="token punctuation">:</span> weiwendi@aiops.red
+<span class="token key atrule">wordpressFirstName</span><span class="token punctuation">:</span> AiOps
+<span class="token key atrule">wordpressBlogName</span><span class="token punctuation">:</span> Learn Helm<span class="token tag">!</span>
+<span class="token key atrule">service</span><span class="token punctuation">:</span>
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> NodePort
+<span class="token key atrule">replicaCount</span><span class="token punctuation">:</span> <span class="token number">2</span>
+<span class="token key atrule">resources</span><span class="token punctuation">:</span>
+        <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+                <span class="token key atrule">memory</span><span class="token punctuation">:</span> 256Mi
+                <span class="token key atrule">cpu</span><span class="token punctuation">:</span> 100m
+</code></pre>
+<p>&#x66F4;&#x65B0;&#x4E86; wordpress-values.yaml &#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <strong>helm upgrade</strong> &#x547D;&#x4EE4;&#x5347;&#x7EA7; release&#x3002;</p>
+<h3 id="&#x6267;&#x884C;-upgrade">&#x6267;&#x884C; upgrade</h3>
+<p><strong>helm upgrade</strong> &#x547D;&#x4EE4;&#x7684;&#x8BED;&#x6CD5;&#x4E0E; <strong>helm install</strong> &#x547D;&#x4EE4;&#x51E0;&#x4E4E;&#x76F8;&#x540C;&#xFF0C;&#x5982;&#x4E0B;&#x4F8B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">helm upgrade <span class="token punctuation">[</span>RELEASE<span class="token punctuation">]</span> <span class="token punctuation">[</span>CHART<span class="token punctuation">]</span> <span class="token punctuation">[</span>flags<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x6267;&#x884C; <strong>helm install</strong> &#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5728;&#x8BE5;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x7684; release &#x540D;&#x79F0;&#xFF0C;&#x800C;&#x6267;&#x884C; <strong>helm upgrade</strong> &#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x6307;&#x5B9A;&#x66F4;&#x65B0;(&#x5DF2;&#x5B58;&#x5728;)&#x7684; release &#x540D;&#x79F0;&#x3002;</p>
+<p>&#x4E0E; <strong>helm install</strong> &#x547D;&#x4EE4;&#x76F8;&#x540C;&#xFF0C;<strong>helm upgrade</strong> &#x4E5F;&#x662F;&#x901A;&#x8FC7; --values &#x6807;&#x5FD7;&#x4F20;&#x9012;&#x503C;&#x6587;&#x4EF6;&#x3002;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x540E;&#x7684;&#x503C;&#x6587;&#x4EF6;&#x66F4;&#x65B0; WordPress &#x7248;&#x672C;&#x3002;</p>
+<p>&#x4F46;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x4FEE;&#x6539;&#x540E;&#x7684; wordpress-values.yaml &#x6587;&#x4EF6;&#x66F4;&#x65B0; WordPress &#x4F1A;&#x6536;&#x5230;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x7684;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">Error: UPGRADE FAILED: template: wordpress/templates/NOTES.txt:83:4: executing <span class="token string">&quot;wordpress/templates/NOTES.txt&quot;</span> at <span class="token operator">&lt;</span>include <span class="token string">&quot;common.errors.upgrade.passwords.empty&quot;</span> <span class="token punctuation">(</span>dict <span class="token string">&quot;validationErrors&quot;</span> <span class="token variable">$passwordValida</span>
+tionErrors <span class="token string">&quot;context&quot;</span> $<span class="token punctuation">)</span><span class="token operator">&gt;</span>: error calling include: template: wordpress/charts/common/templates/_errors.tpl:21:48: executing <span class="token string">&quot;common.errors.upgrade.passwords.empty&quot;</span> at <span class="token operator">&lt;</span>fail<span class="token operator">&gt;</span>: error calling fail: PASSWORDS ERROR: You must provide your current passwords when upgrading the release.
+                 Note that even after reinstallation, old credentials may be needed as they may be kept <span class="token keyword">in</span> persistent volume claims.
+                 Further information can be obtained at https://docs.bitnami.com/general/how-to/troubleshoot-helm-chart-issues/<span class="token comment">#credential-errors-while-upgrading-chart-releases</span>
+
+    <span class="token string">&apos;mariadb.auth.rootPassword&apos;</span> must not be empty, please <span class="token function">add</span> <span class="token string">&apos;--set mariadb.auth.rootPassword=$MARIADB_ROOT_PASSWORD&apos;</span> to the command. To get the current value:
+
+        <span class="token builtin class-name">export</span> <span class="token assign-left variable">MARIADB_ROOT_PASSWORD</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl get secret --namespace <span class="token string">&quot;website&quot;</span> wordpress-mariadb -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.data.mariadb-root-password}&quot;</span> <span class="token operator">|</span> base64 --decode<span class="token variable">)</span></span>
+
+    <span class="token string">&apos;mariadb.auth.password&apos;</span> must not be empty, please <span class="token function">add</span> <span class="token string">&apos;--set mariadb.auth.password=$MARIADB_PASSWORD&apos;</span> to the command. To get the current value:
+
+        <span class="token builtin class-name">export</span> <span class="token assign-left variable">MARIADB_PASSWORD</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl get secret --namespace <span class="token string">&quot;website&quot;</span> wordpress-mariadb -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.data.mariadb-password}&quot;</span> <span class="token operator">|</span> base64 --decode<span class="token variable">)</span></span>
+</code></pre>
+<p>&#x56FE;&#x8868;&#x8981;&#x6C42;&#x5728;&#x66F4;&#x65B0; release &#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x63D0;&#x4F9B;&#x6570;&#x636E;&#x5E93;&#x5F53;&#x524D;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x6839;&#x636E;&#x63D0;&#x793A;&#x83B7;&#x53D6;&#x5BC6;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl get secret --namespace <span class="token string">&quot;website&quot;</span> wordpress-mariadb -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.data.mariadb-root-password}&quot;</span> <span class="token operator">|</span> base64 --decode
+<span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl get secret --namespace <span class="token string">&quot;website&quot;</span> wordpress-mariadb -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.data.mariadb-password}&quot;</span> <span class="token operator">|</span> base64 --decode
+</code></pre>
+<p>&#x5C06; Mariadb &#x7684;&#x4E24;&#x4E2A;&#x5BC6;&#x7801;&#x4E5F;&#x6DFB;&#x52A0;&#x5230; wordpress-values.yaml &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6700;&#x7EC8;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">wordpressUsername</span><span class="token punctuation">:</span> weiwendi
+<span class="token key atrule">wordpressPassword</span><span class="token punctuation">:</span> Z5tOfyh
+<span class="token key atrule">wordpressEmail</span><span class="token punctuation">:</span> weiwendi@aiops.red
+<span class="token key atrule">wordpressFirstName</span><span class="token punctuation">:</span> AiOps
+<span class="token key atrule">wordpressBlogName</span><span class="token punctuation">:</span> Learn Helm<span class="token tag">!</span>
+<span class="token key atrule">service</span><span class="token punctuation">:</span>
+        <span class="token key atrule">type</span><span class="token punctuation">:</span> NodePort
+<span class="token key atrule">mariadb</span><span class="token punctuation">:</span>
+        <span class="token key atrule">auth</span><span class="token punctuation">:</span>
+                <span class="token key atrule">rootPassword</span><span class="token punctuation">:</span> szopyrAlqR  <span class="token comment"># Mariadb root &#x8D26;&#x53F7;&#x5BC6;&#x7801;</span>
+                <span class="token key atrule">password</span><span class="token punctuation">:</span> ePMtyJarxb      <span class="token comment"># Mariadb &#x666E;&#x901A;&#x8D26;&#x53F7;&#x5BC6;&#x7801;</span>
+<span class="token key atrule">replicaCount</span><span class="token punctuation">:</span> <span class="token number">2</span>
+<span class="token key atrule">resources</span><span class="token punctuation">:</span>
+        <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+                <span class="token key atrule">memory</span><span class="token punctuation">:</span> 256Mi
+                <span class="token key atrule">cpu</span><span class="token punctuation">:</span> 100m
+</code></pre>
+<p>&#x4FEE;&#x6539;&#x5B8C; wordpress-values.yaml &#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x6267;&#x884C; <strong>upgrade</strong> &#x547D;&#x4EE4;&#xFF1A; </p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm upgrade wordpress bitnami/wordpress --values wordpress-values.yaml -n website --version <span class="token number">11.0</span>.5
+</code></pre>
+<p>&#x4E00;&#x65E6;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5B8C;&#x6210;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x7C7B;&#x4F3C; 3.4&#x5C0F;&#x8282;&#x4E2D; <strong>helm install</strong> &#x65F6;&#x7684; Notes &#x8F93;&#x51FA;&#x3002;</p>
+<p>&#x4F7F;&#x7528; <strong>kubectl</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B; WordPress Pod &#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl get pods -n website
+</code></pre>
+<p>&#x5728; Kubernetes &#x4E2D;&#xFF0C;&#x5F53; Deployment &#x88AB;&#x4FEE;&#x6539;&#x65F6;&#x4F1A;&#x521B;&#x5EFA;&#x65B0;&#x7684; Pod&#x3002;&#x540C;&#x6837;&#x7684;&#x884C;&#x4E3A;&#x4E5F;&#x80FD;&#x5728; Helm &#x4E2D;&#x89C2;&#x5BDF;&#x5230;&#x3002;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#x6DFB;&#x52A0;&#x7684;&#x503C;&#x66F4;&#x6539;&#x4E86; WordPress &#x914D;&#x7F6E;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;Helm &#x4F7F;&#x7528;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x914D;&#x7F6E;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7684; WordPress Pod&#x3002;&#x8FD9;&#x4E9B;&#x66F4;&#x6539;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>helm get manifest</strong> &#x548C; <strong>kubectl get deployment</strong> &#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x4E00;&#x5C0F;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x518D;&#x6267;&#x884C;&#x51E0;&#x6B21;&#x5347;&#x7EA7;&#xFF0C;&#x6F14;&#x793A;&#x5728;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#x503C;&#x7684;&#x8BBE;&#x7F6E;&#x65B9;&#x5F0F;&#x3002;</p>
+<h3 id="upgrade-&#x65F6;&#x503C;&#x7684;&#x91CD;&#x7528;&#x4E0E;&#x91CD;&#x7F6E;">upgrade &#x65F6;&#x503C;&#x7684;&#x91CD;&#x7528;&#x4E0E;&#x91CD;&#x7F6E;</h3>
+<p><strong>helm upgrade</strong> &#x547D;&#x4EE4;&#x6709;&#x4E24;&#x4E2A;&#x6807;&#x5FD7;&#xFF0C;&#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x503C;&#x3002;</p>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x6807;&#x5FD7;&#x662F;&#xFF1A;</p>
+<ul>
+<li><strong>--reuse-values</strong>&#xFF1A;&#x5347;&#x7EA7;&#x65F6;&#xFF0C;&#x91CD;&#x7528;&#x4E0A;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x503C;&#x3002;</li>
+<li><strong>--reset-values</strong>&#xFF1A;&#x5347;&#x7EA7;&#x65F6;&#xFF0C;&#x5C06;&#x503C;&#x91CD;&#x7F6E;&#x4E3A; chart &#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x6267;&#x884C; <strong>upgrade</strong> &#x65F6;&#x6CA1;&#x6709;&#x4F7F;&#x7528; --set &#x6216; --values &#x63D0;&#x4F9B;&#x503C;&#xFF0C;&#x5219;&#x4F1A;&#x9ED8;&#x8BA4;&#x6DFB;&#x52A0; --reuse-values &#x6807;&#x5FD7;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x66F4;&#x65B0;&#x65F6;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x503C;&#xFF0C;&#x5C06;&#x4F7F;&#x7528;&#x4E0E;&#x4E4B;&#x524D;&#x7248;&#x672C;&#x76F8;&#x540C;&#x7684;&#x503C;&#xFF1A;</p>
+<ol>
+<li><p>&#x91CD;&#x65B0;&#x6267;&#x884C;&#x5347;&#x7EA7;&#x547D;&#x4EE4;&#xFF0C;&#x4E0D;&#x6307;&#x5B9A;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm upgrade wordpress bitnami/wordpress -n website --version <span class="token number">11.0</span>.5
+</code></pre>
+</li>
+<li><p>&#x4F7F;&#x7528; <strong>helm get values</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get values wordpress -n website
+<span class="token environment constant">USER</span>-SUPPLIED VALUES:
+mariadb:
+  auth:
+    password: ePMtyJarxb
+    rootPassword: szopyrAlqR
+  primary:
+    persistence:
+      enabled: <span class="token boolean">false</span>
+persistence:
+  enabled: <span class="token boolean">false</span>
+replicaCount: <span class="token number">2</span>
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+service:
+  type: NodePort
+wordpressBlogName: Learn Helm<span class="token operator">!</span>
+wordpressEmail: weiwendi@aiops.red
+wordpressFirstName: AiOps
+wordpressPassword: Z5tOfyh
+wordpressUsername: weiwendi
+</code></pre>
+<p>&#x663E;&#x793A;&#x7684;&#x503C;&#x4E0E;&#x524D;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x5F53;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x4F9B;&#x503C;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x89C2;&#x5BDF;&#x5230;&#x4E0D;&#x540C;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x5982;&#x679C;&#x503C;&#x662F;&#x901A;&#x8FC7; --set &#x6216; --values &#x4F20;&#x9012;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x6240;&#x6709;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x7684;&#x56FE;&#x8868;&#x503C;&#x90FD;&#x5C06;&#x91CD;&#x7F6E;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+</li>
+<li><p>&#x4F7F;&#x7528; --set &#x63D0;&#x4F9B;&#x5355;&#x4E2A;&#x503C;&#x518D;&#x6B21;&#x6267;&#x884C;&#x5347;&#x7EA7;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x522B;&#x5FD8;&#x8BB0;&#x83B7;&#x53D6;&#x5E76;&#x4F20;&#x9012; Mariadb &#x8D26;&#x53F7;&#x5BC6;&#x7801;&#xFF0C;&#x4E0D;&#x7136;&#x66F4;&#x65B0;&#x4F1A;&#x6267;&#x884C;&#x5931;&#x8D25;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ <span class="token builtin class-name">export</span> <span class="token assign-left variable">MARIADB_ROOT_PASSWORD</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl get secret --namespace <span class="token string">&quot;website&quot;</span> wordpress-mariadb -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.data.mariadb-root-password}&quot;</span> <span class="token operator">|</span> base64 --decode<span class="token variable">)</span></span>
+<span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ <span class="token builtin class-name">export</span> <span class="token assign-left variable">MARIADB_PASSWORD</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl get secret --namespace <span class="token string">&quot;website&quot;</span> wordpress-mariadb -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.data.mariadb-password}&quot;</span> <span class="token operator">|</span> base64 --decode<span class="token variable">)</span></span>
+<span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ <span class="token builtin class-name">export</span> <span class="token assign-left variable">WORDPRESS_PASSWORD</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span>kubectl get secret --namespace <span class="token string">&quot;website&quot;</span> wordpress -o <span class="token assign-left variable">jsonpath</span><span class="token operator">=</span><span class="token string">&quot;{.data.wordpress-password}&quot;</span> <span class="token operator">|</span> base64 --decode<span class="token variable">)</span></span>
+
+<span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm upgrade wordpress bitnami/wordpress --set <span class="token assign-left variable">replicaCount</span><span class="token operator">=</span><span class="token number">1</span> --set mariadb.auth.rootPassword<span class="token operator">=</span><span class="token variable">$MARIADB_ROOT_PASSWORD</span> --set mariadb.auth.password<span class="token operator">=</span><span class="token variable">$MARIADB_PASSWORD</span> --set <span class="token assign-left variable">wordpressPassword</span><span class="token operator">=</span><span class="token variable">$WORDPRESS_PASSWORD</span> -n website --version <span class="token number">11.0</span>.5
+</code></pre>
+</li>
+<li><p>&#x5347;&#x7EA7;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6267;&#x884C; <strong>helm get values</strong> &#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get values wordpress -n website
+</code></pre>
+</li>
+</ol>
+<p>&#x5728;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x503C;&#x65F6;&#xFF0C;Helm &#x4F1A;&#x81EA;&#x52A8;&#x4F7F;&#x7528; --reset-values &#x6807;&#x5FD7;&#xFF0C;&#x628A;&#x9664;&#x4E86;&#x63D0;&#x4F9B;&#x7684;&#x503C;&#x4E4B;&#x5916;&#x7684;&#x5176;&#x5B83;&#x503C;&#x7F6E;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
+<p>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; --reset-values &#x6216; --reuse-values&#xFF0C;&#x5728;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#x663E;&#x5F0F;&#x5730;&#x5B9A;&#x4E49;&#x503C;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x5982;&#x679C;&#x5728;&#x5347;&#x7EA7;&#x65F6;&#x5E0C;&#x671B;&#x9664;&#x4E86;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x8986;&#x76D6;&#x7684;&#x503C;&#x4E4B;&#x5916;&#xFF0C;&#x5176;&#x4ED6;&#x503C;&#x90FD;&#x88AB;&#x91CD;&#x7F6E;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; --reset-values&#xFF1B;&#x5982;&#x679C;&#x5E0C;&#x671B;&#x91CD;&#x7528; release &#x4E0A;&#x4E00;&#x7248;&#x672C;&#x7684;&#x503C;&#xFF0C;&#x540C;&#x65F6;&#x53C8;&#x60F3;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x90E8;&#x5206;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; --reuse-values&#x3002;&#x628A;&#x503C;&#x4FDD;&#x5B58;&#x5728;&#x503C;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x80FD;&#x6709;&#x6548;&#x7B80;&#x5316;&#x503C;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x5E76;&#x5728;&#x66F4;&#x65B0;&#x65F6;&#x4EE5;&#x58F0;&#x660E;&#x6027;&#x7684;&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;&#x503C;&#x3002;</p>
+<p>&#x6309;&#x7167;&#x672C;&#x7AE0;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x73B0;&#x5728; release &#x5E94;&#x8BE5;&#x6709;&#x4E86; 4 &#x4E2A;&#x7248;&#x672C;&#x3002;&#x7B2C; 4 &#x4E2A;&#x4FEE;&#x8BA2;&#x7248;&#x5E76;&#x4E0D;&#x7B26;&#x5408;&#x6211;&#x4EEC;&#x7684;&#x671F;&#x671B;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x53EA;&#x914D;&#x7F6E;&#x4E86; replicaCount(&#x9664;&#x4E86;&#x56FE;&#x8868;&#x8981;&#x6C42;&#x7684;&#x5FC5;&#x987B;&#x4F20;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x76F8;&#x5173;&#x503C;)&#xFF0C;&#x5176;&#x5B83;&#x90FD;&#x88AB;&#x7F6E;&#x4E3A;&#x4E86;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4F1A;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5C06; wordpress &#x56DE;&#x9000;&#x5230;&#x5305;&#x542B;&#x6240;&#x9700;&#x503C;&#x7684; release &#x7248;&#x672C;&#x3002;</p>
+<h2 id="&#x56DE;&#x9000;-wordpress-&#x7248;&#x672C;">&#x56DE;&#x9000; WordPress &#x7248;&#x672C;</h2>
+<p>&#x6709;&#x65F6;&#x540E;&#x9000;&#x662F;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x524D;&#x8FDB;&#x3002;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x56DE;&#x9000;&#x5230;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x975E;&#x5E38;&#x6709;&#x5FC5;&#x8981;&#x3002;<strong>helm rollback</strong> &#x547D;&#x4EE4;&#x5C31;&#x4E3A;&#x6EE1;&#x8DB3;&#x8FD9;&#x79CD;&#x573A;&#x666F;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x628A; WordPress &#x7248;&#x672C;&#x56DE;&#x9000;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<h3 id="&#x67E5;&#x770B;-wordpress-&#x5386;&#x53F2;&#x7248;&#x672C;">&#x67E5;&#x770B; WordPress &#x5386;&#x53F2;&#x7248;&#x672C;</h3>
+<p>Helm &#x7684;&#x6BCF;&#x4E2A; release &#x90FD;&#x6709;&#x5386;&#x53F2;&#x53D1;&#x5E03;&#x8BB0;&#x5F55;&#xFF0C;&#x7528;&#x4E8E;&#x7EDF;&#x8BA1;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x4E2D;&#x4F7F;&#x7528;&#x7684; values&#x3001;Kubernetes &#x8D44;&#x6E90;&#x3001;&#x56FE;&#x8868;&#x7248;&#x672C;&#x3002;&#x5728;&#x5B89;&#x88C5;&#x3001;&#x5347;&#x7EA7;&#x6216;&#x56DE;&#x9000;&#x56FE;&#x8868;&#x65F6;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x4FEE;&#x8BA2;&#x8BB0;&#x5F55;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4FEE;&#x8BA2;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728; Kubernetes &#x7684; Secret &#x4E2D;&#x3002;</p>
+<p>&#x4F7F;&#x7528; <strong>kubectl</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B; website &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x7684; Secret&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl get secret -n website
+</code></pre>
+<p>&#x8FD9;&#x6761;&#x547D;&#x4EE4;&#x4F1A;&#x8FD4;&#x56DE; website &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x6240;&#x6709;&#x7684; Secret&#xFF0C;&#x4F60;&#x81F3;&#x5C11;&#x4F1A;&#x770B;&#x5230;&#x4EE5;&#x4E0B; 4 &#x4E2A; Secret&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">sh.helm.release.v1.wordpress.v1
+sh.helm.release.v1.wordpress.v2
+sh.helm.release.v1.wordpress.v3
+sh.helm.release.v1.wordpress.v4
+</code></pre>
+<p>&#x8FD9;&#x4E9B; Secret &#x90FD;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A; release &#x7684;&#x5386;&#x53F2;&#x4FEE;&#x8BA2;&#x6761;&#x76EE;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>helm history</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm <span class="token function">history</span> wordpress -n website
+</code></pre>
+<p>&#x8BE5;&#x547D;&#x4EE4;&#x4EE5;&#x8868;&#x683C;&#x7684;&#x65B9;&#x5F0F;&#x8F93;&#x51FA;&#x6BCF;&#x4E2A; release &#x7684;&#x6761;&#x76EE;&#xFF0C;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x53EA;&#x662F;&#x622A;&#x53D6;&#x4E86;&#x90E8;&#x5206;&#x5B57;&#x6BB5;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">REVISION    STATUS       DESCRIPTION
+<span class="token number">1</span>           superseded   Install complete
+
+<span class="token number">2</span>           superseded   Upgrade complete
+
+<span class="token number">3</span>           superseded   Upgrade complete
+
+<span class="token number">4</span>           deployed     Upgrade complete
+</code></pre>
+<p>&#x5B8C;&#x6574;&#x7684;&#x5217;&#x8868;&#x5B57;&#x6BB5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li><strong>REVISION</strong>&#xFF1A;&#x4FEE;&#x8BA2;&#x7248;&#x672C;&#x53F7;&#xFF0C;1 &#x4E3A;&#x6700;&#x521D;&#x7248;(install &#x65F6;&#x7684;&#x7248;&#x672C;)&#xFF0C;&#x66F4;&#x65B0;&#x6216;&#x56DE;&#x9000;&#x4E00;&#x6B21;&#x5219;&#x52A0; 1 </li>
+<li><strong>UPDATED</strong>&#xFF1A;&#x66F4;&#x65B0;&#x65E5;&#x671F;&#x53CA;&#x65F6;&#x95F4;</li>
+<li><strong>STATUS</strong>&#xFF1A;&#x72B6;&#x6001;</li>
+<li><strong>CHART</strong>&#xFF1A;&#x56FE;&#x8868;&#x7248;&#x672C;</li>
+<li><strong>APP VERSION</strong>&#xFF1A;&#x56FE;&#x8868;&#x90E8;&#x7F72;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7248;&#x672C;</li>
+<li><strong>DESCRIPTION</strong>&#xFF1A;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;</li>
+</ul>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x8F93;&#x51FA;&#x4E2D;&#xFF0C;STATUS &#x4E3A; &#x201C;superseded&#x201D; &#x8868;&#x793A;&#x5DF2;&#x5347;&#x7EA7;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4E3A; &#x201C;deployed&#x201D; &#x8868;&#x793A;&#x5F53;&#x524D;&#x8FD0;&#x884C;&#x7684;&#x7248;&#x672C;&#x3002;STATUS &#x7684;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x8FD8;&#x5305;&#x62EC; pending&#x3001;pending_upgrade(&#x8FD9;&#x4E24;&#x4E2A;&#x8868;&#x793A;&#x5B89;&#x88C5;&#x3001;&#x5347;&#x7EA7;&#x6B63;&#x5728;&#x8FDB;&#x884C;&#x4E2D;)&#x3001;failed(&#x5B89;&#x88C5;&#x6216;&#x5347;&#x7EA7;&#x5931;&#x8D25;&#xFF0C;DESCRIPTION &#x4F1A;&#x663E;&#x793A;&#x8BE6;&#x7EC6;&#x7684;&#x5931;&#x8D25;&#x4FE1;&#x606F;)&#x3001;unknown(&#x72B6;&#x6001;&#x672A;&#x77E5;&#xFF0C;&#x5F88;&#x96BE;&#x9047;&#x5230;&#x8FD9;&#x79CD;&#x72B6;&#x6001;)&#x3002;</p>
+<p>&#x524D;&#x9762;&#x4ECB;&#x7ECD;&#x8FC7;&#xFF0C;<strong>helm get</strong> &#x547D;&#x4EE4;&#x901A;&#x8FC7; --revision &#x6807;&#x5FD7;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#x6307;&#x5B9A;&#x7684;&#x4FEE;&#x8BA2;&#x7248;&#x672C;&#x3002;&#x5728;&#x6267;&#x884C;&#x56DE;&#x9000;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x6B64;&#x547D;&#x4EE4;&#x786E;&#x8BA4;&#x6307;&#x5B9A;&#x7684;&#x4FEE;&#x8BA2;&#x7248;&#x672C;&#x662F;&#x5426;&#x5305;&#x542B;&#x4E86;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x503C;&#x3002;&#x4F60;&#x53EF;&#x80FD;&#x8FD8;&#x8BB0;&#x5F97;&#xFF0C;&#x4FEE;&#x8BA2;&#x53F7;&#x4E3A; 4 &#x7684;&#x7248;&#x672C;&#x4EC5;&#x5305;&#x542B;&#x4E86; replicacount &#x503C;&#xFF0C;&#x800C;&#x4FEE;&#x8BA2;&#x53F7;&#x4E3A; 3 &#x7684;&#x7248;&#x672C;&#x5305;&#x542B;&#x4E86;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get values wordpress --revision <span class="token number">3</span> -n website
+</code></pre>
+<h3 id="&#x6267;&#x884C;&#x56DE;&#x9000;">&#x6267;&#x884C;&#x56DE;&#x9000;</h3>
+<p><strong>helm rollback</strong> &#x662F; Helm &#x63D0;&#x4F9B;&#x7684;&#x56DE;&#x9000;&#x547D;&#x4EE4;&#xFF0C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">helm rollback <span class="token operator">&lt;</span>RELEASE<span class="token operator">&gt;</span> <span class="token punctuation">[</span>REVISION<span class="token punctuation">]</span> <span class="token punctuation">[</span>flags<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x5728;&#x6267;&#x884C;&#x56DE;&#x9000;&#x65F6;&#xFF0C;&#x7528;&#x6237;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x56DE;&#x9000;&#x7684; release &#x540D;&#x79F0;&#x3001;&#x56DE;&#x9000;&#x5230;&#x7684;&#x4FEE;&#x8BA2;&#x7248;&#x672C;&#x53F7;&#x3002;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5C06; wordpress &#x56DE;&#x9000;&#x5230;&#x4FEE;&#x8BA2;&#x53F7;&#x4E3A; 3 &#x7684;&#x7248;&#x672C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm rollback wordpress <span class="token number">3</span> -n website
+Rollback was a success<span class="token operator">!</span> Happy Helming<span class="token operator">!</span>
+</code></pre>
+<p>&#x6267;&#x884C; <strong>helm history</strong> &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; release &#x56DE;&#x9000;&#x5230;&#x4E86;&#x4FEE;&#x8BA2;&#x53F7;&#x4E3A; 3 &#x7684;&#x7248;&#x672C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm <span class="token function">history</span> wordpress -n website
+</code></pre>
+<p>&#x4ECE;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;release &#x8BB0;&#x5F55;&#x4E2D;&#x591A;&#x4E86;&#x4E00;&#x6761;&#x4FEE;&#x8BA2;&#x53F7;&#x4E3A; 5 &#x7684;&#x8BB0;&#x5F55;&#xFF0C;STATUS &#x662F; deployed&#xFF0C;DESCRIPTION &#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x662F; &#x201C;Rollback to 3&#x201D;&#x3002;&#x5F53;&#x56DE;&#x9000;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x4F1A;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x65B0;&#x7684; release &#x5386;&#x53F2;&#x4FEE;&#x8BA2;&#x8BB0;&#x5F55;&#x3002;&#x4E0D;&#x8981;&#x5C06;&#x6B64;&#x4E0E;&#x5347;&#x7EA7;&#x6DF7;&#x6DC6;&#xFF0C;&#x6700;&#x9AD8;&#x4FEE;&#x8BA2;&#x7248;&#x672C;&#x53F7;&#x4EC5;&#x8868;&#x793A;&#x5F53;&#x524D;&#x90E8;&#x7F72;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4ECE; DESCRIPTION &#x4E2D;&#x624D;&#x80FD;&#x786E;&#x5B9A;&#x8FD9;&#x6761;&#x8BB0;&#x5F55;&#x662F;&#x7531;&#x5347;&#x7EA7;&#x8FD8;&#x662F;&#x56DE;&#x9000;&#x521B;&#x5EFA;&#x7684;&#x3002;</p>
+<p>&#x518D;&#x6B21;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7248;&#x672C;&#x4F7F;&#x7528;&#x7684;&#x503C;&#xFF0C;&#x786E;&#x8BA4;&#x56DE;&#x9000;&#x7684;&#x7248;&#x672C;&#x662F;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x7684;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm get values wordpress -n website
+</code></pre>
+<p>&#x5728; <strong>rollback</strong> &#x5B50;&#x547D;&#x4EE4;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x6307;&#x5B9A;&#x56FE;&#x8868;&#x7248;&#x672C;&#x548C;&#x5B83;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; <strong>rollback</strong> &#x5B50;&#x547D;&#x4EE4;&#x65E0;&#x987B;&#x63A5;&#x6536;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#xFF1B;&#x5B83;&#x7684;&#x76EE;&#x7684;&#x662F;&#x5C06;&#x56FE;&#x8868;&#x56DE;&#x9000;&#x5230;&#x4E4B;&#x524D;&#x7684;&#x4FEE;&#x8BA2;&#x7248;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x4FEE;&#x8BA2;&#x7248;&#x7684;&#x503C;&#x548C;&#x56FE;&#x8868;&#x7248;&#x672C;&#x3002;<strong>rollback</strong> &#x5B50;&#x547D;&#x4EE4;&#x4E0D;&#x662F; Helm &#x65E5;&#x5E38;&#x5B9E;&#x8DF5;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5B83;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x5728;&#x5F53;&#x524D;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x72B6;&#x6001;&#x4E0D;&#x7A33;&#x5B9A;&#x3001;&#x4E14;&#x5FC5;&#x987B;&#x6062;&#x590D;&#x5230;&#x4E4B;&#x524D;&#x7A33;&#x5B9A;&#x7248;&#x7684;&#x7D27;&#x6025;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x5728;&#x6210;&#x529F;&#x6F14;&#x793A;&#x4E86;&#x7248;&#x672C;&#x56DE;&#x9000;&#x529F;&#x80FD;&#x540E;&#xFF0C;&#x672C;&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#x4E5F;&#x5373;&#x5C06;&#x7ED3;&#x675F;&#x3002;&#x6700;&#x540E;&#x4E00;&#x6B65;&#x662F;&#x4F7F;&#x7528; <strong>uninstall</strong> &#x5B50;&#x547D;&#x4EE4;&#x4ECE; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x5220;&#x9664; WordPress &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x6211;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x5C0F;&#x8282;&#x4ECB;&#x7ECD; <strong>uninstall</strong> &#x5B50;&#x547D;&#x4EE4;&#x3002;</p>
+<h2 id="&#x5378;&#x8F7D;-wordpress">&#x5378;&#x8F7D; WordPress</h2>
+<p>&#x5378;&#x8F7D; Helm release&#xFF0C;&#x610F;&#x5473;&#x7740;&#x8981;&#x5220;&#x9664;&#x5B83;&#x7BA1;&#x7406;&#x7684; Kubernetes &#x8D44;&#x6E90;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<strong>uninstall</strong> &#x547D;&#x4EE4;&#x4F1A;&#x540C;&#x65F6;&#x5220;&#x9664; release &#x7684;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF0C;&#x8FD9;&#x662F;&#x5408;&#x7406;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#x679C;&#x60F3;&#x4FDD;&#x7559;&#x8FD9;&#x4E9B;&#x8BB0;&#x5F55;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>--keep-history</strong> &#x6807;&#x5FD7;&#x3002;</p>
+<p><strong>uninstall</strong> &#x7684;&#x8BED;&#x6CD5;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">helm uninstall RELEASE_NAME <span class="token punctuation">[</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span> <span class="token punctuation">[</span>flags<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x6267;&#x884C; <strong>helm uninstall </strong> &#x547D;&#x4EE4;&#x5378;&#x8F7D; WordPress &#x7248;&#x672C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm uninstall wordpress -n website
+release <span class="token string">&apos;wordpress&apos;</span> uninstalled
+</code></pre>
+<p>&#x901A;&#x8FC7; <strong>list</strong> &#x5B50;&#x547D;&#x4EE4;&#x67E5;&#x770B; website &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x7684; release&#xFF0C;wordpress &#x5DF2;&#x7ECF;&#x4E0D;&#x5B58;&#x5728;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ helm list -n website
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x7A7A;&#x8868;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; kubectl &#x83B7;&#x53D6; WordPress &#x7684; Deployment&#xFF0C;&#x6765;&#x786E;&#x8BA4; wordpress &#x5DF2;&#x7ECF;&#x4E0D;&#x5B58;&#x5728;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl get deployments -l app.kubernetes.io/instance<span class="token operator">=</span>wordpress --namespace website
+No resources found <span class="token keyword">in</span> website namespace.
+</code></pre>
+<p>&#x6B63;&#x5982;&#x9884;&#x671F;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x5DF2;&#x6CA1;&#x6709; WordPress &#x4E86;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl get pvc -n website
+</code></pre>
+<p>&#x7136;&#x800C;&#xFF0C;&#x4F60;&#x4F1A;&#x770B;&#x5230;&#x5728; website &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x4E2D;&#x4ECD;&#x7136;&#x6709;&#x4E24;&#x4E2A; PersistentVolumeClaim &#x53EF;&#x7528;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A; <strong>PersistentVolumeClaim</strong> &#x8D44;&#x6E90;&#x6CA1;&#x6709;&#x88AB;&#x5220;&#x9664;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x7531; <strong>StatefulSet</strong> &#x5728;&#x540E;&#x53F0;&#x521B;&#x5EFA;&#x7684;&#x3002;&#x5728; Kubernetes &#x4E2D;&#xFF0C;&#x5982;&#x679C; <strong>StatefulSet</strong> &#x88AB;&#x5220;&#x9664;&#xFF0C;&#x90A3;&#x4E48;&#x7531; <strong>StatefulSet</strong> &#x521B;&#x5EFA;&#x7684; <strong>PersistentVolumeClaim</strong> &#x8D44;&#x6E90;&#x4E0D;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x3002;&#x5728;  Helm &#x5378;&#x8F7D;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;<strong>StatefulSet</strong> &#x88AB;&#x5220;&#x9664;&#xFF0C;&#x4F46;&#x76F8;&#x5173;&#x7684; <strong>PersistentVolumeClaim</strong> &#x6CA1;&#x6709;&#x88AB;&#x5220;&#x9664;&#x3002;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x6240;&#x671F;&#x671B;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x624B;&#x52A8;&#x5220;&#x9664; <strong>PersistentVolumeClaim</strong> &#x8D44;&#x6E90;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl delete pvc -l app.kubernetes.io/instance<span class="token operator">=</span>wordpress -n website
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x548C;&#x5378;&#x8F7D;&#x4E86; Wordpress&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6E05;&#x7406;&#x4F60;&#x7684; Kubernetes &#x73AF;&#x5883;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x6709;&#x4E86;&#x4E00;&#x4E2A;&#x5E72;&#x51C0;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5728;&#x672C;&#x4E66;&#x540E;&#x9762;&#x7684;&#x7AE0;&#x8282;&#x4E2D;&#x8FDB;&#x884C;&#x7EC3;&#x4E60;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86; WordPress &#x7684;&#x5B89;&#x88C5;&#x548C;&#x5378;&#x8F7D;&#xFF0C;&#x672C;&#x7AE0;&#x7684;&#x6240;&#x6709;&#x8BD5;&#x9A8C;&#x90FD;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x6E05;&#x7406; Kubernetes &#x73AF;&#x5883;&#xFF0C;&#x6253;&#x626B;&#x6218;&#x573A;&#x3002;</p>
+<h2 id="&#x6E05;&#x626B;&#x6218;&#x573A;">&#x6E05;&#x626B;&#x6218;&#x573A;</h2>
+<p>&#x6211;&#x4EEC;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x5728; website namespace &#x4E2D;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x8981;&#x6E05;&#x7406; Kubernetes &#x73AF;&#x5883;&#xFF0C;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x8BE5; namespace &#x5373;&#x53EF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl delete ns website
+namespace <span class="token string">&quot;website&quot;</span> deleted
+</code></pre>
+<p>&#x5728;&#x5220;&#x9664; wordpress &#x547D;&#x540D;&#x7A7A;&#x95F4;&#x540E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5173;&#x95ED; Minikube &#x865A;&#x62DF;&#x673A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ minikube stop
+</code></pre>
+<p>VM &#x88AB;&#x5173;&#x95ED;&#xFF0C;&#x4F46;&#x4F1A;&#x4FDD;&#x7559; Minikube &#x72B6;&#x6001;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x4E0B;&#x4E00;&#x4E2A;&#x7EC3;&#x4E60;&#x4E2D;&#x5FEB;&#x901F;&#x542F;&#x52A8;&#x3002;</p>
+<h2 id="minikube-&#x7684;&#x4E00;&#x4E2A;&#x5C0F;-bug">Minikube &#x7684;&#x4E00;&#x4E2A;&#x5C0F; Bug</h2>
+<p>&#x672C;&#x4E66;&#x5199;&#x4F5C;&#x65F6;&#xFF0C;&#x6700;&#x65B0;&#x7248;&#x672C;&#x4E5F;&#x662F;&#x672C;&#x4E66;&#x6F14;&#x793A;&#x793A;&#x4F8B;&#x6240;&#x7528;&#x7684;&#x7248;&#x672C;&#xFF1A;minikube version: v1.20.0&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x4E86; --image-mirror-country=cn &#x6807;&#x5FD7;&#x65F6;&#xFF0C;&#x4F1A;&#x4ECE;&#x9519;&#x8BEF;&#x7684;&#x955C;&#x50CF;&#x5730;&#x5740;&#x4E0B;&#x8F7D; storage-provisioner &#x955C;&#x50CF;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x591F;&#x4ED4;&#x7EC6;&#x7684;&#x8BDD;&#xFF0C;&#x4F1A;&#x7559;&#x610F;&#x5230;&#x6267;&#x884C;&#x5B8C; <strong>minikube start</strong> &#x547D;&#x4EE4;&#x540E;&#xFF0C;&#x8F93;&#x51FA;&#x5185;&#x5BB9;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">..</span>.
+  - Using image registry.cn-hangzhou.aliyuncs.com/google_containers/k8s-minikube/storage-provisioner:v5 <span class="token punctuation">(</span>global image repository<span class="token punctuation">)</span>
+* Enabled addons: storage-provisioner, default-storageclass
+</code></pre>
+<p>registry.cn-hangzhou.aliyuncs.com/google_containers/k8s-minikube/storage-provisioner:v5 &#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x5728;&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x4E2D;&#xFF0C;&#x6B63;&#x786E;&#x7684;&#x955C;&#x50CF;&#x5730;&#x5740;&#x662F; registry.cn-hangzhou.aliyuncs.com/google_containers/storage-provisioner:v5&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x9A8C;&#x8BC1;&#x8FD9;&#x4E00;&#x70B9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl get pod -n kube-system
+</code></pre>
+<p>&#x4ECE;&#x8F93;&#x51FA;&#x4E2D;&#x67E5;&#x770B; storage-provisioner Pod &#x7684;&#x72B6;&#x6001;&#x4E3A; ImagePullBackOff&#x3002;&#x7F16;&#x8F91; storage-provisioner Pod &#x7684; YAML &#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 valuesFile<span class="token punctuation">]</span>$ kubectl edit pod/storage-provisioner -n kube-system
+</code></pre>
+<p>&#x628A; image &#x7684;&#x503C;&#x4FEE;&#x6539;&#x4E3A;&#x6B63;&#x786E;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x4E5F;&#x6709;&#x4EBA;&#x63D0;&#x4E86; PR&#xFF1A;<a href="https://github.com/kubernetes/minikube/pull/10770&#x3002;" target="_blank">https://github.com/kubernetes/minikube/pull/10770&#x3002;</a></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/weiwendi" target="_blank">&#x9B4F;&#x6587;&#x5F1F;</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0 &#x56FD;&#x9645;&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2021-08-18 18:27:18 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bushu.html" class="navigation navigation-prev " aria-label="Previous page: Helm 部署">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chartsjinjie.html" class="navigation navigation-next " aria-label="Next page: Helm 图表进阶">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"安装 Helm 图表","level":"2.3","depth":1,"next":{"title":"Helm 图表进阶","level":"2.4","depth":1,"path":"helm/chartsjinjie.md","ref":"helm/chartsjinjie.md","articles":[]},"previous":{"title":"Helm 部署","level":"2.2","depth":1,"path":"helm/bushu.md","ref":"helm/bushu.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-lunr","-search","prism","prism-themes","github","donate","codesnippet","ga","adsense","github-buttons@2.1.0","splitter","simple-page-toc","page-toc-button","image-captions","back-to-top-button","search-plus","sharing-plus","favicon","theme-default","page-footer-ex","search-pro","code","auto-scroll-table","advanced-emoji","flexible-alerts","editlink"],"ignores":["_book","node_modules"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/weiwendi/cloudnative-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/weiwendi/cloudnative-handbook/tree/main"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"page-footer-ex":{"copyright":"By [魏文弟](https://github.com/weiwendi)，使用[知识共享 署名-相同方式共享 4.0 国际协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"adsense":{"client":"pub-8736620102237076","slot":"","format":"auto","element":".page-inner section","position":"bottom"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/sretech/images/raw/master/pays/alipay.jpg","alipayText":"支付宝","button":"请杯咖啡","title":"","wechat":"https://gitee.com/sretech/images/raw/master/pays/wechatpay.jpg","wechatText":"微信"},"codesnippet":{},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://gitee.com/sretech/images/raw/master/favicon/favicon.ico","bookmark":"https://gitee.com/sretech/images/raw/master/favicon/favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"user":"weiwendi","repo":"cloudnative-handbook","types":["star"],"size":"small"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"ga":{"configuration":"auto","token":"UA-174057096-1"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","linkedin","twitter","weibo","messenger","qq","qzone"],"facebook":false,"weibo":false,"instapaper":false,"twitter":false,"vk":false,"google":false,"qzone":true},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"魏文弟","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"helm/jieshao.html#fig2.1.1","level":"2.1","list_caption":"Figure: 1.2dtcreate","alt":"1.2dtcreate","nro":1,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.2dtcreate.jpg","index":1,"caption_template":"_CAPTION_","label":"1.2dtcreate","attributes":{},"skip":false,"key":"2.1.1"},{"backlink":"helm/jieshao.html#fig2.1.2","level":"2.1","list_caption":"Figure: 1.3Service","alt":"1.3Service","nro":2,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.3Service.jpg","index":2,"caption_template":"_CAPTION_","label":"1.3Service","attributes":{},"skip":false,"key":"2.1.2"},{"backlink":"helm/jieshao.html#fig2.1.3","level":"2.1","list_caption":"Figure: 1.4-storageclass","alt":"1.4-storageclass","nro":3,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.4-storageclass.jpg","index":3,"caption_template":"_CAPTION_","label":"1.4-storageclass","attributes":{},"skip":false,"key":"2.1.3"},{"backlink":"helm/jieshao.html#fig2.1.4","level":"2.1","list_caption":"Figure: 1.6-Upgrade","alt":"1.6-Upgrade","nro":4,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.6-Upgrade.jpg","index":4,"caption_template":"_CAPTION_","label":"1.6-Upgrade","attributes":{},"skip":false,"key":"2.1.4"},{"backlink":"helm/bushu.html#fig2.2.1","level":"2.2","list_caption":"Figure: 2.1versions","alt":"2.1versions","nro":5,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/2.1versions.png","index":1,"caption_template":"_CAPTION_","label":"2.1versions","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"helm/bushu.html#fig2.2.2","level":"2.2","list_caption":"Figure: 2.2minikubeDrivers","alt":"2.2minikubeDrivers","nro":6,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/2.2minikubeDrivers.jpg","index":2,"caption_template":"_CAPTION_","label":"2.2minikubeDrivers","attributes":{},"skip":false,"key":"2.2.2"},{"backlink":"helm/anzhuangcharts.html#fig2.3.1","level":"2.3","list_caption":"Figure: 3.1 helm search hub wordpress outputs","alt":"3.1 helm search hub wordpress outputs","nro":7,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.1hubouts.jpg","index":1,"caption_template":"_CAPTION_","label":"3.1 helm search hub wordpress outputs","attributes":{},"skip":false,"key":"2.3.1"},{"backlink":"helm/anzhuangcharts.html#fig2.3.2","level":"2.3","list_caption":"Figure: 3.2 helm search hub wordpress yaml outputs","alt":"3.2 helm search hub wordpress yaml outputs","nro":8,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.2hubyamloutps.png","index":2,"caption_template":"_CAPTION_","label":"3.2 helm search hub wordpress yaml outputs","attributes":{},"skip":false,"key":"2.3.2"},{"backlink":"helm/anzhuangcharts.html#fig2.3.3","level":"2.3","list_caption":"Figure: 3.3 wordpress page details","alt":"3.3 wordpress page details","nro":9,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.3wordpressdetails.jpg","index":3,"caption_template":"_CAPTION_","label":"3.3 wordpress page details","attributes":{},"skip":false,"key":"2.3.3"},{"backlink":"helm/anzhuangcharts.html#fig2.3.4","level":"2.3","list_caption":"Figure: 3.4 bitnami wordpress","alt":"3.4 bitnami wordpress","nro":10,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.4bitnamiwordpress.jpg","index":4,"caption_template":"_CAPTION_","label":"3.4 bitnami wordpress","attributes":{},"skip":false,"key":"2.3.4"},{"backlink":"helm/anzhuangcharts.html#fig2.3.5","level":"2.3","list_caption":"Figure: 3.5 show chart","alt":"3.5 show chart","nro":11,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.5showchart.jpg","index":5,"caption_template":"_CAPTION_","label":"3.5 show chart","attributes":{},"skip":false,"key":"2.3.5"},{"backlink":"helm/anzhuangcharts.html#fig2.3.6","level":"2.3","list_caption":"Figure: 3.6 wordpress 首页","alt":"3.6 wordpress 首页","nro":12,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.8wordpresspage.jpg","index":6,"caption_template":"_CAPTION_","label":"3.6 wordpress 首页","attributes":{},"skip":false,"key":"2.3.6"},{"backlink":"helm/anzhuangcharts.html#fig2.3.7","level":"2.3","list_caption":"Figure: 3.7 admin pages","alt":"3.7 admin pages","nro":13,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.9adminpage.jpg","index":7,"caption_template":"_CAPTION_","label":"3.7 admin pages","attributes":{},"skip":false,"key":"2.3.7"},{"backlink":"helm/anzhuangcharts.html#fig2.3.8","level":"2.3","list_caption":"Figure: 3.8 dashboard","alt":"3.8 dashboard","nro":14,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.10adminpage2.png","index":8,"caption_template":"_CAPTION_","label":"3.8 dashboard","attributes":{},"skip":false,"key":"2.3.8"},{"backlink":"helm/kaifacharts.html#fig2.5.1","level":"2.5","list_caption":"Figure: 5.1 player stats page","alt":"5.1 player stats page","nro":15,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/5.1player-stats.jpg","index":1,"caption_template":"_CAPTION_","label":"5.1 player stats page","attributes":{},"skip":false,"key":"2.5.1"},{"backlink":"helm/helmcicd.html#fig2.7.1","level":"2.7","list_caption":"Figure: 7.1 fork","alt":"7.1 fork","nro":16,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.1fork.png","index":1,"caption_template":"_CAPTION_","label":"7.1 fork","attributes":{},"skip":false,"key":"2.7.1"},{"backlink":"helm/helmcicd.html#fig2.7.2","level":"2.7","list_caption":"Figure: 7.2 delete tar and index file","alt":"7.2 delete tar and index file","nro":17,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.2delete.jpg","index":2,"caption_template":"_CAPTION_","label":"7.2 delete tar and index file","attributes":{},"skip":false,"key":"2.7.2"},{"backlink":"helm/helmcicd.html#fig2.7.3","level":"2.7","list_caption":"Figure: 7.3 create github token.","alt":"7.3 create github token.","nro":18,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.3%20create%20github%20token.jpg","index":3,"caption_template":"_CAPTION_","label":"7.3 create github token.","attributes":{},"skip":false,"key":"2.7.3"},{"backlink":"helm/helmcicd.html#fig2.7.4","level":"2.7","list_caption":"Figure: 7.4 create jenkins github credentials","alt":"7.4 create jenkins github credentials","nro":19,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.4%20create%20github%20credentials.jpg","index":4,"caption_template":"_CAPTION_","label":"7.4 create jenkins github credentials","attributes":{},"skip":false,"key":"2.7.4"},{"backlink":"helm/helmcicd.html#fig2.7.5","level":"2.7","list_caption":"Figure: 7.5 create jenkins kubeconfig credentials","alt":"7.5 create jenkins kubeconfig credentials","nro":20,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.5%20create%20kubernetes%20credentials.jpg","index":5,"caption_template":"_CAPTION_","label":"7.5 create jenkins kubeconfig credentials","attributes":{},"skip":false,"key":"2.7.5"},{"backlink":"helm/helmcicd.html#fig2.7.6","level":"2.7","list_caption":"Figure: 7.6 add repo","alt":"7.6 add repo","nro":21,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.6%20add%20https%20github%20repository.png","index":6,"caption_template":"_CAPTION_","label":"7.6 add repo","attributes":{},"skip":false,"key":"2.7.6"},{"backlink":"helm/helmcicd.html#fig2.7.7","level":"2.7","list_caption":"Figure: 7.8 scan repo","alt":"7.8 scan repo","nro":22,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.8%20scan%20repository%20build.jpg","index":7,"caption_template":"_CAPTION_","label":"7.8 scan repo","attributes":{},"skip":false,"key":"2.7.7"},{"backlink":"helm/helmcicd.html#fig2.7.8","level":"2.7","list_caption":"Figure: 7.9 charts repo list","alt":"7.9 charts repo list","nro":23,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.9%20charts%20repo%20list.jpg","index":8,"caption_template":"_CAPTION_","label":"7.9 charts repo list","attributes":{},"skip":false,"key":"2.7.8"},{"backlink":"helm/helmcicd.html#fig2.7.9","level":"2.7","list_caption":"Figure: 7.10 stable list","alt":"7.10 stable list","nro":24,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.10%20stable%20list.jpg","index":9,"caption_template":"_CAPTION_","label":"7.10 stable list","attributes":{},"skip":false,"key":"2.7.9"},{"backlink":"helm/helmcicd.html#fig2.7.10","level":"2.7","list_caption":"Figure: 7.11 Proceed or Abort","alt":"7.11 Proceed or Abort","nro":25,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/Figure_7.17.jpg","index":10,"caption_template":"_CAPTION_","label":"7.11 Proceed or Abort","attributes":{},"skip":false,"key":"2.7.10"},{"backlink":"helm/operator.html#fig2.8.1","level":"2.8","list_caption":"Figure: 8.1 cr install helm chart","alt":"8.1 cr install helm chart","nro":26,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.1%20cr%20install%20chart.jpg","index":1,"caption_template":"_CAPTION_","label":"8.1 cr install helm chart","attributes":{},"skip":false,"key":"2.8.1"},{"backlink":"helm/operator.html#fig2.8.2","level":"2.8","list_caption":"Figure: 8.2 create quay image repo","alt":"8.2 create quay image repo","nro":27,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.2%20create%20quay%20image%20repo.jpg","index":2,"caption_template":"_CAPTION_","label":"8.2 create quay image repo","attributes":{},"skip":false,"key":"2.8.2"},{"backlink":"helm/operator.html#fig2.8.3","level":"2.8","list_caption":"Figure: 8.3 create public image repository","alt":"8.3 create public image repository","nro":28,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.3%20create%20public%20image%20repository.jpg","index":3,"caption_template":"_CAPTION_","label":"8.3 create public image repository","attributes":{},"skip":false,"key":"2.8.3"},{"backlink":"helm/operator.html#fig2.8.4","level":"2.8","list_caption":"Figure: 8.4 player stats operator image","alt":"8.4 player stats operator image","nro":29,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.4%20player%20stats%20operator%20image.jpg","index":4,"caption_template":"_CAPTION_","label":"8.4 player stats operator image","attributes":{},"skip":false,"key":"2.8.4"},{"backlink":"helm/security.html#fig2.10.1","level":"2.10","list_caption":"Figure: 9.1 gpg outputs","alt":"9.1 gpg outputs","nro":30,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.1%20gpg%20infors.jpg","index":1,"caption_template":"_CAPTION_","label":"9.1 gpg outputs","attributes":{},"skip":false,"key":"2.10.1"},{"backlink":"helm/security.html#fig2.10.2","level":"2.10","list_caption":"Figure: 9.2 helm versions","alt":"9.2 helm versions","nro":31,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.2%20helm%20release%20download.jpg","index":2,"caption_template":"_CAPTION_","label":"9.2 helm versions","attributes":{},"skip":false,"key":"2.10.2"},{"backlink":"helm/security.html#fig2.10.3","level":"2.10","list_caption":"Figure: 9.3 digital signature","alt":"9.3 digital signature","nro":32,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.3%20digital%20signature.jpg","index":3,"caption_template":"_CAPTION_","label":"9.3 digital signature","attributes":{},"skip":false,"key":"2.10.3"}]},"title":"云原生运维指南","language":"zh-hans","links":{"sidebar":{"博客":"https://www.aiops.red","公众号: sretech":"https://gitee.com/sretech/images/raw/master/wechatpublic.jpg"}},"gitbook":"*","description":"从理论到实践系统介绍云原生环境下的运维"},"file":{"path":"helm/anzhuangcharts.md","mtime":"2021-08-18T10:27:18.427Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-01T09:21:34.056Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

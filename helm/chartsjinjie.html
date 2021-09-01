@@ -1,0 +1,1628 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Helm 图表进阶 · 云原生运维指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="魏文弟">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="kaifacharts.html" />
+    
+    
+    <link rel="prev" href="anzhuangcharts.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../https:/gitee.com/sretech/images/raw/master/favicon/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../https:/gitee.com/sretech/images/raw/master/favicon/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"user":"weiwendi","repo":"cloudnative-handbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.aiops.red" target="_blank" class="custom-link">博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://gitee.com/sretech/images/raw/master/wechatpublic.jpg" target="_blank" class="custom-link">公众号: sretech</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">云原生运维指南</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../cloudnative/jieshao.html">
+            
+                <a href="../cloudnative/jieshao.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    课程介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Helm 最佳实践</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="jieshao.html">
+            
+                <a href="jieshao.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Kubernetes and Helm 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="bushu.html">
+            
+                <a href="bushu.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Helm 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="anzhuangcharts.html">
+            
+                <a href="anzhuangcharts.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    安装 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="chartsjinjie.html">
+            
+                <a href="chartsjinjie.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Helm 图表进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="kaifacharts.html">
+            
+                <a href="kaifacharts.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    开发 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ceshicharts.html">
+            
+                <a href="ceshicharts.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    测试 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="helmcicd.html">
+            
+                <a href="helmcicd.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    使用 CI/CD 和 GitOps 实现 Helm 自动化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    Helm 与 Operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                        <b>2.9.</b>
+                    
+                    Helm 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="security.html">
+            
+                <a href="security.html">
+            
+                    
+                        <b>2.10.</b>
+                    
+                    Helm 安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Helm 图表进阶</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="helm-&#x56FE;&#x8868;&#x8FDB;&#x9636;">Helm &#x56FE;&#x8868;&#x8FDB;&#x9636;</h1>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4ECE;&#x4F7F;&#x7528;&#x8005;&#x89D2;&#x5EA6;&#x8BA8;&#x8BBA;&#x4E86; Helm &#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x5B89;&#x88C5;&#x4E86; WordPress &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55; Kubernetes &#x4E13;&#x4E1A;&#x77E5;&#x8BC6;&#xFF0C;&#x4E5F;&#x65E0;&#x9700;&#x5BF9;&#x5B89;&#x88C5;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x6240;&#x4E86;&#x89E3;&#xFF0C;&#x56E0;&#x4E3A;&#x6240;&#x9700;&#x8D44;&#x6E90;&#x548C;&#x903B;&#x8F91;&#x90FD;&#x5C01;&#x88C5;&#x5728;&#x4E86; Helm &#x56FE;&#x8868;&#x4E2D;&#x3002;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x56FE;&#x8868;&#x4E2D;&#x7684;&#x503C;&#xFF0C;&#x4EE5;&#x4FBF;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x4E00;&#x4E9B;&#x9009;&#x9879;&#x3002;</p>
+<p>&#x77E5;&#x5176;&#x7136;&#xFF0C;&#x53EA;&#x80FD;&#x52C9;&#x5F3A;&#x6210;&#x4E3A;&#x5408;&#x683C;&#x7684;&#x6267;&#x884C;&#x8005;&#xFF1B;&#x77E5;&#x5176;&#x6240;&#x4EE5;&#x7136;&#x624D;&#x80FD;&#x6709;&#x66F4;&#x597D;&#x7684;&#x53D1;&#x5C55;&#x3002;&#x5728;&#x8FD9;&#x4E00;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4F1A;&#x6DF1;&#x5165;&#x4ECB;&#x7ECD;&#x56FE;&#x8868;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x56FE;&#x8868;&#x3002;</p>
+<p>&#x51C6;&#x5907;&#x597D;&#x4E0E;&#x4E0A;&#x4E00;&#x7AE0;&#x76F8;&#x540C;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x548C; Helm &#x73AF;&#x5883;&#xFF0C;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x4E00;&#x63A2;&#x56FE;&#x8868;&#x7A76;&#x7ADF;&#x3002;</p>
+<h2 id="yaml-&#x8BED;&#x6CD5;&#x4ECB;&#x7ECD;">YAML &#x8BED;&#x6CD5;&#x4ECB;&#x7ECD;</h2>
+<p>YAML(YAML Ain&apos;t Markup Language)&#x4E00;&#x79CD;&#x6613;&#x4E8E;&#x4EBA;&#x7C7B;&#x9605;&#x8BFB;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF0C;&#x662F;&#x914D;&#x7F6E; Kubernetes &#x8D44;&#x6E90;&#x6700;&#x5E38;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF0C;&#x4E5F;&#x662F; Helm &#x56FE;&#x8868;&#x4E2D;&#x5927;&#x591A;&#x6570;&#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;&#x3002;</p>
+<p>YAML &#x9075;&#x5FAA;&#x952E;&#x503C;&#x5BF9;(key-value)&#x683C;&#x5F0F;&#x58F0;&#x660E;&#x914D;&#x7F6E;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B; YAML &#x7684;&#x952E;&#x503C;&#x5BF9;&#x7ED3;&#x6784;&#x3002;</p>
+<h3 id="&#x5B9A;&#x4E49;&#x952E;&#x503C;&#x5BF9;">&#x5B9A;&#x4E49;&#x952E;&#x503C;&#x5BF9;</h3>
+<p>&#x4E0B;&#x9762;&#x662F; YAML &#x6700;&#x57FA;&#x672C;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">blog</span><span class="token punctuation">:</span> <span class="token string">&quot;cloudnative.aiops.red&quot;</span>
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86; blog &#x952E;&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x662F; cloudnative.aiops.red&#x3002;&#x5728; YAML &#x4E2D;&#x952E;&#x548C;&#x503C;&#x4E4B;&#x524D;&#x7528;&#x5192;&#x53F7; <code>:</code> &#x5206;&#x9694;&#x3002;&#x5192;&#x53F7;&#x5DE6;&#x8FB9;&#x7684;&#x5B57;&#x7B26;&#x662F;&#x952E;&#xFF0C;&#x5192;&#x53F7;&#x53F3;&#x8FB9;&#x7684;&#x5B57;&#x7B26;&#x662F;&#x503C;&#x3002;</p>
+<p>&#x5728; YAML &#x683C;&#x5F0F;&#x4E2D;&#xFF0C;&#x7A7A;&#x683C;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x7684; YAML &#x952E;&#x503C;&#x5BF9;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml">blog<span class="token punctuation">:</span><span class="token string">&quot;cloudnative.aiops.red&quot;</span>
+</code></pre>
+<p>&#x5192;&#x53F7;&#x548C; cloudnative.aiops.red &#x5B57;&#x7B26;&#x4E32;&#x4E4B;&#x95F4;&#x7F3A;&#x5C11;&#x7A7A;&#x683C;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x89E3;&#x6790;&#x9519;&#x8BEF;&#x3002;YAML &#x683C;&#x5F0F;&#x8981;&#x6C42;&#x5192;&#x53F7;&#x548C;&#x503C;&#x4E4B;&#x95F4;&#x5FC5;&#x987B;&#x8981;&#x6709;&#x7A7A;&#x683C;&#x3002;</p>
+<p>YAML &#x4E5F;&#x652F;&#x6301;&#x5D4C;&#x5957;&#x5143;&#x7D20;&#x6216;&#x5757;&#x5B9A;&#x4E49;&#x66F4;&#x590D;&#x6742;&#x7684;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">resources</span><span class="token punctuation">:</span>
+  <span class="token key atrule">limits</span><span class="token punctuation">:</span>
+    <span class="token key atrule">cpu</span><span class="token punctuation">:</span> 100m
+    <span class="token key atrule">memory</span><span class="token punctuation">:</span> 512Mi
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x4E2D;&#x7684; resources &#x5BF9;&#x8C61;&#x6620;&#x5C04;&#x4E86;&#x4E24;&#x4E2A;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x5982;&#x4E0B;&#x8868;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Key</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">resources.limits.cpu</td>
+<td>100m</td>
+</tr>
+<tr>
+<td style="text-align:left">resources.limits.memory</td>
+<td>512Mi</td>
+</tr>
+</tbody>
+</table>
+<p>&#x952E;&#x662F;&#x901A;&#x8FC7; YAML &#x5757;&#x4E0B;&#x7684;&#x7F29;&#x8FDB;&#x6765;&#x786E;&#x5B9A;&#x7684;&#xFF0C;&#x6BCF;&#x4E2A;&#x7F29;&#x8FDB;&#x90FD;&#x5411;&#x952E;&#x540D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x70B9; <code>.</code> &#x5206;&#x9694;&#x7B26;&#x3002;&#x5F53; YAML &#x5757;&#x4E2D;&#x4E0D;&#x518D;&#x6709;&#x4EFB;&#x4F55;&#x7F29;&#x8FDB;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x662F;&#x503C;&#x3002;&#x6309;&#x7167;&#x4F7F;&#x7528;&#x89C4;&#x8303;&#xFF0C;YAML &#x7684;&#x7F29;&#x8FDB;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x7A7A;&#x683C;&#x8868;&#x793A;&#xFF0C;&#x4F46;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x7A7A;&#x683C;&#xFF0C;&#x53EA;&#x8981;&#x5728;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x7A7A;&#x683C;&#x6570;&#x662F;&#x4E00;&#x81F4;&#x7684;&#x5373;&#x53EF;&#x3002;</p>
+<p>YAML &#x4E0D;&#x652F;&#x6301;&#x5236;&#x8868;&#x7B26;(Tab &#x952E;)&#xFF0C;&#x4F7F;&#x7528;&#x5236;&#x8868;&#x7B26;&#x5C06;&#x4F1A;&#x5BFC;&#x81F4;&#x89E3;&#x6790;&#x9519;&#x8BEF;&#x3002;</p>
+<h3 id="&#x503C;&#x7C7B;&#x578B;">&#x503C;&#x7C7B;&#x578B;</h3>
+<p>YAML &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#xFF0C;&#x5E38;&#x89C1;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5B83;&#x662F;&#x6587;&#x672C;&#x503C;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5F15;&#x53F7;&#x5C06;&#x503C;&#x5F15;&#x8D77;&#x6765;&#xFF0C;&#x58F0;&#x660E;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;(&#x5982;&#x7B2C;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#x7684; &quot;cloudnative.aiops.red&quot;)&#x3002;&#x4F46;&#x8FD9;&#x4E0D;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x503C;&#x4E2D;&#x5305;&#x542B;&#x5B57;&#x6BCD;&#x6216;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x4E0D;&#x8BBA;&#x662F;&#x5426;&#x6709;&#x5F15;&#x53F7;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x89C6;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x7B26;(|)&#x8BBE;&#x7F6E;&#x591A;&#x884C;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">configuration</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+  server.port=8443
+  logging.file.path=/var/log</span>
+</code></pre>
+<p>&#x503C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x6574;&#x6570;&#x3002;&#x5F53;&#x503C;&#x662F;&#x6CA1;&#x6709;&#x7528;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;&#x7684;&#x6570;&#x5B57;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x5C31;&#x662F;&#x6574;&#x6570;&#x7C7B;&#x578B;&#x3002;&#x8FD9;&#x4E2A; YAML &#x793A;&#x4F8B;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+</code></pre>
+<p>&#x5C06;&#x5176;&#x4E0E;&#x4E0B;&#x9762;&#x7684; YAML &#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF0C;&#x540E;&#x8005;&#x4E3A; replicas &#x5206;&#x914D;&#x7ED9;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token string">&apos;1&apos;</span>
+</code></pre>
+<p>&#x5E03;&#x5C14;&#x503C;&#x4E5F;&#x7ECF;&#x5E38;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x7528; true &#x6216; false &#x58F0;&#x660E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">ingress</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A; YAML &#x793A;&#x4F8B;&#x8BBE;&#x7F6E;&#x4E86; ingress.enable &#x4E3A; true &#x7684;&#x5E03;&#x5C14;&#x503C;&#x7C7B;&#x578B;&#x3002;&#x5176;&#x4ED6;&#x5E03;&#x5C14;&#x503C;&#x5305;&#x62EC;&#xFF1A;yes&#x3001;no&#x3001;on&#x3001;off&#x3001;y&#x3001;n&#x3001;Y&#x3001;N&#x3002; </p>
+<p>&#x503C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x66F4;&#x590D;&#x6742;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982;&#x5217;&#x8868;(list)&#x3002;YAML &#x4E2D;&#x7684;&#x5217;&#x8868;&#x9879;&#x7531; <code>-</code> (&#x51CF;&#x53F7;)&#x6807;&#x8BC6;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x503C;&#x4E3A;&#x5217;&#x8868;&#x7C7B;&#x578B;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">servicePorts</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token number">8080</span>
+  <span class="token punctuation">-</span> <span class="token number">8443</span>
+</code></pre>
+<p>servicePorts &#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x5217;&#x8868; 8080 &#x548C; 8443&#x3002;&#x8FD9;&#x79CD;&#x8BED;&#x6CD5;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5728;&#x5BF9;&#x8C61;&#x4E0A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">deployment</span><span class="token punctuation">:</span>
+  <span class="token key atrule">env</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> MY_VAR
+      <span class="token key atrule">value</span><span class="token punctuation">:</span> MY_VALUE
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> SERVICE_NAME
+      <span class="token key atrule">value</span><span class="token punctuation">:</span> MY_SERVICE
+</code></pre>
+<p>&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;env &#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B; name &#x548C; value &#x5B57;&#x6BB5;&#x7684;&#x5BF9;&#x8C61;&#x5217;&#x8868;&#x3002;&#x5728;&#x914D;&#x7F6E; Kubernetes &#x548C; Helm &#x7684; YAML &#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x5217;&#x8868;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x8BB0;&#x4F4F;&#x8FD9;&#x79CD;&#x683C;&#x5F0F;&#x7684;&#x5199;&#x6CD5;&#x3002;</p>
+<p>YAML &#x4FBF;&#x4E8E;&#x4EBA;&#x7C7B;&#x9605;&#x8BFB;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4F7F;&#x5B83;&#x5728; Kubernetes &#x548C; Helm &#x7684;&#x914D;&#x7F6E;&#x4E2D;&#x6BD4;&#x8F83;&#x6D41;&#x884C;&#xFF0C;&#x4F46;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; JSON &#x683C;&#x5F0F;&#x66FF;&#x4EE3; YAML&#x3002;JSON &#x4E5F;&#x9075;&#x5FAA;&#x952E;&#x503C;&#x5BF9;&#x683C;&#x5F0F;&#xFF0C;&#x7C7B;&#x4F3C; YAML&#xFF0C;&#x4E3B;&#x8981;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E; YAML &#x4F9D;&#x8D56;&#x7A7A;&#x683C;&#x7F29;&#x8FDB;&#x914D;&#x7F6E;&#x952E;&#x503C;&#x5BF9;&#xFF0C;&#x800C; JSON &#x4F9D;&#x8D56;&#x4E8E;&#x5927;&#x62EC;&#x53F7;&#x548C;&#x65B9;&#x62EC;&#x53F7;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x5C06; YAML &#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x4E3A; JSON &#x683C;&#x5F0F;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  &apos;deployment&apos;<span class="token operator">:</span> <span class="token punctuation">{</span>
+    &apos;env&apos;<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        &apos;name&apos;<span class="token operator">:</span> &apos;MY_VAR&apos;<span class="token punctuation">,</span>
+        &apos;value&apos;<span class="token operator">:</span> &apos;MY_VALUE&apos;
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        &apos;name&apos;<span class="token operator">:</span> &apos;SERVICE_NAME&apos;<span class="token punctuation">,</span>
+        &apos;value&apos;<span class="token operator">:</span> &apos;MY_SERVICE&apos;
+      <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>JSON &#x4E2D;&#x7684;&#x6240;&#x6709;&#x952E;&#x90FD;&#x7528;&#x5F15;&#x53F7;&#x62EC;&#x8D77;&#x6765;&#xFF0C;&#x653E;&#x5728;&#x5192;&#x53F7;&#x524D;&#x9762;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x82B1;&#x62EC;&#x53F7;({)&#x8868;&#x793A;&#x5757;&#xFF0C;&#x8FD9;&#x4E0E; YAML &#x4E2D;&#x4EE5;&#x7F29;&#x8FDB;&#x8868;&#x793A;&#x5757;&#x7684;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;&#x3002;</li>
+<li>&#x4F7F;&#x7528;&#x65B9;&#x62EC;&#x53F7;([)&#x8868;&#x793A;&#x5217;&#x8868;&#xFF0C;&#x8FD9;&#x4E0E; YAML &#x4E2D;&#x4EE5;&#x51CF;&#x53F7;&#x8868;&#x793A;&#x5217;&#x8868;&#x7684;&#x65B9;&#x5F0F;&#x7C7B;&#x4F3C;&#x3002;</li>
+</ul>
+<p>YAML &#x548C; JSON &#x683C;&#x5F0F;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x7ED3;&#x6784;&#xFF0C;&#x4F46;&#x672C;&#x6587;&#x4ECB;&#x7ECD;&#x7684;&#x77E5;&#x8BC6;&#x70B9;&#x5DF2;&#x8DB3;&#x591F;&#x6211;&#x4EEC;&#x5728; Helm &#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x5C06;&#x8BA8;&#x8BBA; Helm &#x56FE;&#x8868;&#x7684;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x5B83;&#x5305;&#x542B;&#x4E86; YAML &#x548C; JSON &#x6587;&#x4EF6;&#x3002;</p>
+<h2 id="helm-&#x56FE;&#x8868;&#x7ED3;&#x6784;">Helm &#x56FE;&#x8868;&#x7ED3;&#x6784;</h2>
+<p>&#x56FE;&#x8868;&#x4F5C;&#x4E3A; Kubernetes &#x7684;&#x5305;&#xFF0C;&#x5FC5;&#x987B;&#x8981;&#x9075;&#x5FAA;&#x4E00;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token function">ls</span> my-chart/
+  chart &#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;<span class="token punctuation">..</span>.
+</code></pre>
+<p>&#x628A; Helm &#x56FE;&#x8868;&#x7684;&#x9876;&#x7EA7;&#x76EE;&#x5F55;&#x4F5C;&#x4E3A; Helm &#x56FE;&#x8868;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x8FD9;&#x662F;&#x6700;&#x4F73;&#x547D;&#x540D;&#x89C4;&#x5219;&#x3002;&#x867D;&#x7136; Helm &#x4E0D;&#x4E25;&#x683C;&#x8981;&#x6C42;&#x8FD9;&#x4E48;&#x505A;&#xFF0C;&#x4F46;&#x8FD9;&#x6837;&#x547D;&#x540D;&#x80FD;&#x589E;&#x52A0;&#x56FE;&#x8868;&#x7684;&#x8FA8;&#x8BC6;&#x5EA6;&#x3002;&#x5728;&#x4E0A;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;my-chart &#x662F;&#x56FE;&#x8868;&#x7684;&#x9876;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x4E5F;&#x662F;&#x8FD9;&#x4E2A;&#x56FE;&#x8868;&#x7684;&#x540D;&#x79F0;&#x3002;</p>
+<p>&#x9876;&#x7EA7;&#x76EE;&#x5F55;&#x91CC;&#x5305;&#x542B;&#x4E86;&#x7EC4;&#x6210;&#x56FE;&#x8868;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x3002;&#x4E0B;&#x8868;&#x5217;&#x51FA;&#x4E86;&#x53EF;&#x80FD;&#x5305;&#x62EC;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6587;&#x4EF6;/&#x76EE;&#x5F55;</th>
+<th>&#x5B9A;&#x4E49;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chart.yaml</td>
+<td>&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x56FE;&#x8868;&#x7684;&#x5143;&#x6570;&#x636E;</td>
+<td>&#x662F;</td>
+</tr>
+<tr>
+<td>templates/</td>
+<td>&#x5B58;&#x653E;&#x56FE;&#x8868;&#x7684;&#x8D44;&#x6E90;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x662F; YAML &#x683C;&#x5F0F;</td>
+<td>&#x662F;(&#x9664;&#x975E;&#x4F9D;&#x8D56;&#x9879;&#x5728; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;)</td>
+</tr>
+<tr>
+<td>templates/NOTES.txt</td>
+<td>&#x56FE;&#x8868;&#x7684;&#x8BF4;&#x660E;&#x6587;&#x4EF6;&#x3002;&#x5B89;&#x88C5;&#x3001;&#x5347;&#x7EA7;&#x6216;&#x6267;&#x884C; notes &#x547D;&#x4EE4;&#x4F1A;&#x8F93;&#x51FA;&#x6B64;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>values.yaml</td>
+<td>&#x56FE;&#x8868;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x6587;&#x4EF6;</td>
+<td>&#x5426;&#xFF0C;&#x4F46;&#x4F5C;&#x4E3A;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF0C;&#x6700;&#x597D;&#x5305;&#x542B;&#x6B64;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>.helmignore</td>
+<td>&#x6307;&#x5B9A;&#x5FFD;&#x7565; Helm &#x5305;&#x4E2D;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>charts/</td>
+<td>&#x5B58;&#x653E;&#x56FE;&#x8868;&#x4F9D;&#x8D56;&#x7684;&#x5176;&#x4ED6;&#x56FE;&#x8868;</td>
+<td>&#x65E0;&#x9700;&#x660E;&#x786E;&#x63D0;&#x4F9B;&#xFF0C;Helm &#x7684;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x6B64;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td>Chart.lock</td>
+<td>&#x4FDD;&#x5B58;&#x5148;&#x524D;&#x7248;&#x672C;&#x7684;&#x4F9D;&#x8D56;</td>
+<td>&#x65E0;&#x9700;&#x660E;&#x786E;&#x63D0;&#x4F9B;&#xFF0C;Helm &#x7684;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x6B64;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>crds/</td>
+<td>&#x5B58;&#x50A8;&#x81EA;&#x5B9A;&#x4E49;(CRD)&#x8D44;&#x6E90;&#x7684;&#x76EE;&#x5F55;&#x3002;YAML &#x683C;&#x5F0F;&#x3002;&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x4F1A;&#x5728; templates/ &#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x4E4B;&#x524D;&#x5B89;&#x88C5;&#x3002;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>README.md</td>
+<td>&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x548C;&#x4F7F;&#x7528;&#x8BF4;&#x660E;&#x7684;&#x81EA;&#x8FF0;&#x6587;&#x4EF6;</td>
+<td>&#x5426;&#xFF0C;&#x4F46;&#x4F5C;&#x4E3A;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF0C;&#x6700;&#x597D;&#x5305;&#x542B;&#x6B64;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>LICENSE</td>
+<td>&#x56FE;&#x8868; license &#x6587;&#x4EF6;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>values.schema.json</td>
+<td>JSON &#x683C;&#x5F0F;&#x7684;&#x56FE;&#x8868;&#x503C;&#x6587;&#x4EF6;</td>
+<td>&#x5426;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6211;&#x4F1A;&#x9010;&#x4E2A;&#x4ECB;&#x7ECD;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x4FBF;&#x5927;&#x5BB6;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x521B;&#x5EFA; Helm &#x56FE;&#x8868;&#x3002;&#x9996;&#x5148;&#x4ECE; templates/ &#x76EE;&#x5F55;&#x5F00;&#x59CB;&#xFF0C;&#x5B83;&#x662F;&#x52A8;&#x6001;&#x751F;&#x6210; Kubernetes &#x8D44;&#x6E90;&#x7684;&#x5173;&#x952E;&#x3002;</p>
+<h3 id="&#x56FE;&#x8868;&#x6A21;&#x677F;">&#x56FE;&#x8868;&#x6A21;&#x677F;</h3>
+<p>Helm &#x56FE;&#x8868;&#x4E4B;&#x6240;&#x4EE5;&#x80FD;&#x591F;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x90E8;&#x7F72;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6240;&#x9700;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;&#x6A21;&#x677F;(templates)&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x7528;&#x6237;&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x503C;&#x4F20;&#x9012;&#x7ED9;&#x6A21;&#x677F;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x6240;&#x9700;&#x7684; Kubernetes &#x8D44;&#x6E90;&#x3002;&#x5728;&#x672C;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x6A21;&#x677F;&#x548C;&#x503C;&#x662F;&#x5982;&#x4F55;&#x7ED3;&#x5408;&#x7684;&#x3002;</p>
+<p>Helm &#x56FE;&#x8868;&#x4E2D;&#x5FC5;&#x987B;&#x5305;&#x542B; templates/ &#x76EE;&#x5F55;&#xFF0C;&#x5B58;&#x653E;&#x751F;&#x6210; Kubernetes &#x8D44;&#x6E90;&#x7684; YAML &#x6A21;&#x677F;&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x5217;&#x8868;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml">templates/
+  configmap.yaml
+  deployment.yaml
+  service.yaml
+</code></pre>
+<p>configmap.yaml &#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> ConfigMap
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">configuration.txt</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token punctuation">-</span>
+    <span class="token punctuation">{</span><span class="token punctuation">{</span> .Values.configurationData <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x89C9;&#x5F97;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x4E0D;&#x662F;&#x6709;&#x6548;&#x7684; YAML &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; configmap.yaml &#x6587;&#x4EF6;&#x4EC5;&#x662F;&#x4E00;&#x4E2A; Helm &#x6A21;&#x677F;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x7279;&#x5B9A;&#x7684;&#x503C;&#x4FEE;&#x6539;&#x8D44;&#x6E90;&#x914D;&#x7F6E;&#xFF0C;&#x7136;&#x540E;&#x751F;&#x6210;&#x6709;&#x6548;&#x7684; YAML &#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x3002;&#x4E24;&#x4E2A;&#x82B1;&#x62EC;&#x53F7; <code>{{ ... }}</code> &#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x662F; Go &#x8BED;&#x8A00;&#x6A21;&#x677F;&#x7684;&#x8F93;&#x5165;&#x6587;&#x672C;&#xFF0C;&#x4F1A;&#x5728;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x6216;&#x66F4;&#x65B0;&#x671F;&#x95F4;&#x88AB;&#x66FF;&#x6362;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x3002;</p>
+<p>Go &#x6A21;&#x677F;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5B83;&#x751F;&#x6210; Kubernetes &#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x5462;&#xFF1F;&#x5E26;&#x7740;&#x8FD9;&#x4E24;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x8FDB;&#x5165;&#x4E0B;&#x4E00;&#x5C0F;&#x8282;&#x3002;</p>
+<h4 id="go-&#x6A21;&#x677F;">Go &#x6A21;&#x677F;</h4>
+<p>Go &#x662F;&#x8C37;&#x6B4C;&#x5F00;&#x53D1;&#x7684;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#xFF0C;Kubernetes&#x3001;Helm&#x3001;Istio &#x4EE5;&#x53CA;&#x4E91;&#x539F;&#x751F;&#x7684;&#x8BB8;&#x591A;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x90FD;&#x662F;&#x4F7F;&#x7528; Go &#x5F00;&#x53D1;&#x7684;&#xFF0C;&#x5BF9; Go &#x611F;&#x5174;&#x8DA3;&#x7684;&#x670B;&#x53CB;&#xFF0C;&#x6B22;&#x8FCE;&#x9605;&#x8BFB;&#x6211;&#x7684;&#x300A;Go &#x5165;&#x95E8;&#x4E0E;&#x5B9E;&#x6218;&#x300B;&#x7CFB;&#x5217;&#x6587;&#x7AE0;&#x3002;&#x6A21;&#x677F;&#x662F; Go &#x8BED;&#x8A00;&#x7684;&#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E0D;&#x540C;&#x683C;&#x5F0F;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x5BF9;&#x4E8E; Helm&#xFF0C;Go &#x6A21;&#x677F;&#x7528;&#x4E8E;&#x5728; Helm &#x56FE;&#x8868;&#x7684; templates/ &#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210; Kubernetes YAML &#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x3002;</p>
+<p>Go &#x6A21;&#x677F;&#x4EE5;&#x4E24;&#x4E2A;&#x5DE6;&#x82B1;&#x62EC;&#x53F7; <code>{{</code> &#x5F00;&#x59CB;&#x3001;&#x4E24;&#x4E2A;&#x53F3;&#x82B1;&#x62EC;&#x53F7; <code>}}</code> &#x7ED3;&#x675F;&#xFF0C;&#x8FD9;&#x4E9B;&#x82B1;&#x62EC;&#x53F7;&#x867D;&#x7136;&#x5728; YAML &#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x89C1;&#xFF0C;&#x4F46;&#x5728;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x6216;&#x5347;&#x7EA7;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x5728;&#x7B2C;&#x4E94;&#x7AE0;&#xFF0C;&#x6211;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD; Go &#x6A21;&#x677F;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x5E26;&#x4F60;&#x4ECE;&#x96F6;&#x5230;&#x4E00;&#x5B8C;&#x6210;&#x56FE;&#x8868;&#x5F00;&#x53D1;&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;&#x503C;&#x548C;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#x5316;&#x5B57;&#x6BB5;">&#x4F7F;&#x7528;&#x503C;&#x548C;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x53C2;&#x6570;&#x5316;&#x5B57;&#x6BB5;</h4>
+<p>Helm &#x56FE;&#x8868;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; values.yaml &#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x56FE;&#x8868;&#x6240;&#x9700;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x8FD9;&#x4E9B;&#x503C;&#x4F1A;&#x88AB; Go &#x6A21;&#x677F;&#x5F15;&#x7528;&#xFF0C;&#x5E76;&#x4EA4;&#x7ED9; Helm &#x5904;&#x7406;&#xFF0C;&#x52A8;&#x6001;&#x751F;&#x6210; Kubernetes &#x8D44;&#x6E90;&#x3002;</p>
+<p>values.yaml &#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment">## weChatPublicId is my WeChat public number</span>
+<span class="token key atrule">weChatPublicId</span><span class="token punctuation">:</span> sretech
+
+<span class="token comment">## weChatPublicName is my WeChat public name</span>
+<span class="token key atrule">weChatPublicName</span><span class="token punctuation">:</span> &#x9B4F;&#x6587;&#x5F1F;
+</code></pre>
+<p>&#x4EE5;&#x4E95;&#x53F7;(#)&#x5F00;&#x5934;&#x7684;&#x884C;&#x662F;&#x6CE8;&#x91CA;&#x884C;&#xFF0C;&#x5BF9;&#x952E;&#x503C;&#x5BF9;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x65F6;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#x3002;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x4E3A;&#x6BCF;&#x4E2A;&#x503C;&#x90FD;&#x63D0;&#x4F9B;&#x6CE8;&#x91CA;&#xFF0C;&#x4EE5;&#x4FBF;&#x7528;&#x6237;&#x7406;&#x89E3;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x503C;&#x3002;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x884C;&#x8868;&#x793A;&#x952E;&#x503C;&#x5BF9;&#x3002;</p>
+<p>&#x4EE5; .Values &#x5F00;&#x5934;&#x7684; Go &#x6A21;&#x677F;&#x5F15;&#x7528; values.yaml &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x5728;&#x5B89;&#x88C5;&#x3001;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528; --set&#x3001;--values &#x53C2;&#x6570;&#x4F20;&#x5165;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x662F;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">env</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> WECHATPUBLIC_ID
+    <span class="token key atrule">value</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Values.weChatPublicId <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> WECHATPUBLIC_NAME
+    <span class="token key atrule">values</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Values.weChatPublicName <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6A21;&#x677F;&#x5904;&#x7406;&#x4E4B;&#x540E;&#x7684; YAML &#x8D44;&#x6E90;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">env</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> WECHATPUBLIC_ID
+    <span class="token key atrule">value</span><span class="token punctuation">:</span> sretech
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> WECHATPUBLIC_NAME
+    <span class="token key atrule">values</span><span class="token punctuation">:</span> &#x9B4F;&#x6587;&#x5F1F;
+</code></pre>
+<p>.Values &#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x7528;&#x4E8E;&#x53C2;&#x6570;&#x5316;&#x7684;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;(Built-in Objects)&#xFF0C;&#x7528;&#x6765;&#x5F15;&#x7528;&#x56FE;&#x8868;&#x503C;&#x3002;Helm &#x7684;&#x6240;&#x6709;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5728; Helm &#x6587;&#x6863;&#x9875;&#x9762;(<a href="https://helm.sh/docs/chart_template_guide/builtin_objects/)&#x67E5;&#x770B;&#x3002;&#x4E0B;&#x8868;&#x662F;&#x6211;&#x6574;&#x7406;&#x7684;&#x5E38;&#x7528;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#xFF1A;" target="_blank">https://helm.sh/docs/chart_template_guide/builtin_objects/)&#x67E5;&#x770B;&#x3002;&#x4E0B;&#x8868;&#x662F;&#x6211;&#x6574;&#x7406;&#x7684;&#x5E38;&#x7528;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#xFF1A;</a></p>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5185;&#x7F6E;&#x5BF9;&#x8C61;</strong></th>
+<th><strong>&#x5B9A;&#x4E49;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.Release.Name</td>
+<td>release &#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>.Release.Namespace</td>
+<td>release &#x6307;&#x5B9A;&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;</td>
+</tr>
+<tr>
+<td>.Release.Revision</td>
+<td>&#x5B89;&#x88C5;&#x6216;&#x5347;&#x7EA7;&#x65F6;&#x7684;&#x4FEE;&#x8BA2;&#x53F7;&#x3002;&#x5B89;&#x88C5;&#x65F6;&#x662F; 1&#xFF0C;&#x6BCF;&#x6B21;&#x5347;&#x7EA7;&#x6216;&#x56DE;&#x9000;&#x90FD;&#x4F1A;&#x81EA;&#x589E;&#x3002;</td>
+</tr>
+<tr>
+<td>.Values</td>
+<td>&#x7528;&#x4E8E;&#x5F15;&#x7528; values.yaml &#x6216;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x7684;&#x503C;</td>
+</tr>
+<tr>
+<td>.Chart.Name, .Chart.Version, .Chart.AppVersion</td>
+<td>&#x7528;&#x4E8E;&#x5F15;&#x7528; Chart.yaml &#x6587;&#x4EF6;&#xFF0C;&#x5F15;&#x7528;&#x5B57;&#x6BB5;&#x5305;&#x62EC; Chart.$Field</td>
+</tr>
+<tr>
+<td>.Files.Get</td>
+<td>&#x83B7;&#x53D6;&#x56FE;&#x8868;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>.Files.AsSecrets</td>
+<td>&#x4EE5;Base 64&#x7F16;&#x7801;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>.Files.AsConfig</td>
+<td>&#x4F7F;&#x7528; YAML &#x683C;&#x5F0F;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x5185;&#x5BB9;</td>
+</tr>
+<tr>
+<td>.Capabilities.APIVersions</td>
+<td>&#x8FD4;&#x56DE; kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x53EF;&#x7528;&#x7684; API &#x7248;&#x672C;&#x7684;&#x5217;&#x8868;</td>
+</tr>
+<tr>
+<td>.Template.Name</td>
+<td>&#x8FD4;&#x56DE;&#x6B64;&#x5BF9;&#x8C61;&#x4F7F;&#x7528;&#x7684;&#x6A21;&#x677F;&#x7684;&#x76F8;&#x5BF9;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5BF9;&#x8C61;&#x524D;&#x9762;&#x7684;&#x70B9;(.)&#x8868;&#x793A;&#x5BF9;&#x8C61;&#x4F5C;&#x7528;&#x57DF;&#x3002;&#x70B9;&#x53F7;&#x540E;&#x8DDF;&#x5BF9;&#x8C61;&#x540D;&#xFF0C;&#x8868;&#x793A;&#x5C06;&#x4F5C;&#x7528;&#x57DF;&#x9650;&#x5236;&#x4E3A;&#x8BE5;&#x5BF9;&#x8C61;&#x3002;&#x4F8B;&#x5982; .Values &#x4EC5;&#x4F5C;&#x7528;&#x4E8E;&#x56FE;&#x8868;&#x7684;&#x503C;&#xFF1B;.Release &#x4F5C;&#x7528;&#x57DF;&#x4EC5;&#x4F7F; Release &#x5BF9;&#x8C61;&#x4E0B;&#x7684;&#x5B57;&#x6BB5;&#x53EF;&#x89C1;&#xFF1B;.scope &#x8868;&#x793A;&#x5168;&#x5C40;&#x8303;&#x56F4;&#xFF0C;&#x4F7F;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x53EF;&#x89C1;&#x3002;</p>
+<h4 id="valuesschemajson">VALUES.SCHEMA.JSON</h4>
+<p>&#x5728;&#x5B66;&#x4E60;&#x503C;&#x548C;&#x53C2;&#x6570;&#x5316;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x4E86;&#x89E3;&#x4E0B; values.schema.json &#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x5E76;&#x4E0D;&#x662F;&#x56FE;&#x8868;&#x76EE;&#x5F55;&#x4E2D;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x7684;&#x6587;&#x4EF6;&#x3002;values.schema.json &#x5F3A;&#x5236;&#x5728;&#x503C;&#x6587;&#x4EF6;&#x4E2D;&#x6267;&#x884C;&#x7279;&#x5B9A;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x53EF;&#x7528;&#x4E8E;&#x5728;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x6216;&#x66F4;&#x65B0;&#x671F;&#x95F4;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x503C;&#x3002;</p>
+<p>values.schema.json &#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x7247;&#x6BB5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-json"><span class="token punctuation">{</span>
+  &apos;$schema&apos;<span class="token operator">:</span> &apos;https<span class="token operator">:</span><span class="token comment">//json-schema.org/draft-07/schema#&apos;,</span>
+  &apos;properties&apos;<span class="token operator">:</span> <span class="token punctuation">{</span>
+    &apos;replicas&apos;<span class="token operator">:</span> <span class="token punctuation">{</span>
+      &apos;description&apos;<span class="token operator">:</span> &apos;number of application instances to deploy&apos;<span class="token punctuation">,</span>
+      &apos;minimum&apos;<span class="token operator">:</span> <span class="token number">0</span>
+      &apos;type&apos; &apos;integer&apos;
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    . . .
+  &apos;title&apos;<span class="token operator">:</span> &apos;values&apos;<span class="token punctuation">,</span>
+  &apos;type&apos;<span class="token operator">:</span> &apos;object&apos;
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6709;&#x4E86; values.schema.json &#x6A21;&#x5F0F;&#x6587;&#x4EF6;&#xFF0C;replicas &#x7684;&#x503C;&#x6700;&#x5C0F;&#x53EA;&#x80FD;&#x8BBE;&#x7F6E;&#x4E3A; 0&#xFF0C;&#x8FD9;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x5BF9;&#x503C;&#x7684;&#x9650;&#x5236;&#x3002;&#x8BE5;&#x6587;&#x4EF6;&#x786E;&#x4FDD;&#x4E86;&#x7528;&#x6237;&#x53EA;&#x80FD;&#x63D0;&#x4F9B;&#x56FE;&#x8868;&#x6A21;&#x677F;&#x652F;&#x6301;&#x7684;&#x503C;&#x3002;</p>
+<p>Go &#x6A21;&#x677F;&#x4E0D;&#x4EC5;&#x652F;&#x6301;&#x56FE;&#x8868;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53C2;&#x6570;&#x5316; Helm &#x56FE;&#x8868;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728; YAML &#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#x903B;&#x8F91;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x3002;</p>
+<h4 id="&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x6D41;&#x7A0B;&#x63A7;&#x5236;">&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x6D41;&#x7A0B;&#x63A7;&#x5236;</h4>
+<p>&#x6A21;&#x677F;&#x7684;&#x53C2;&#x6570;&#x5316;&#x529F;&#x80FD;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x503C;&#x66FF;&#x6362;&#x6A21;&#x677F;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x800C;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x8BED;&#x53E5;&#xFF0C;&#x8FDB;&#x4E00;&#x6B65;&#x589E;&#x52A0;&#x4E86;&#x914D;&#x7F6E;&#x7075;&#x6D3B;&#x6027;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x5B9A;&#x4E49;&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x7684;&#x51E0;&#x4E2A;&#x5173;&#x952E;&#x8BCD;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x52A8;&#x4F5C;</th>
+<th>&#x5B9A;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>if/else</td>
+<td>&#x6709;&#x6761;&#x4EF6;&#x5730;&#x5305;&#x542B;&#x6216;&#x6392;&#x9664;&#x67D0;&#x4E9B;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td>with</td>
+<td>&#x7528;&#x4E8E;&#x4FEE;&#x6539;&#x503C;&#x5F15;&#x7528;&#x7684;&#x8303;&#x56F4;</td>
+</tr>
+<tr>
+<td>range</td>
+<td>&#x7528;&#x4E8E;&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x503C;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5728;&#x56FE;&#x8868;&#x6A21;&#x677F;&#x7684;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6709;&#x65F6;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5305;&#x542B;&#x6216;&#x6392;&#x9664;&#x67D0;&#x4E9B; Kubernetes &#x8D44;&#x6E90;&#x6216;&#x8D44;&#x6E90;&#x7684;&#x67D0;&#x4E9B;&#x90E8;&#x5206;&#x3002;if&#x2026;else &#x52A8;&#x4F5C;&#x53EF;&#x6EE1;&#x8DB3;&#x6B64;&#x9700;&#x6C42;&#x3002;&#x4EE5;&#x4E0B;&#x662F; Deployment &#x6A21;&#x677F;&#x4E2D;&#x5305;&#x542B;&#x6761;&#x4EF6;&#x5757;&#x7684;&#x4EE3;&#x7801;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">readinessProbe</span><span class="token punctuation">:</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> if .Values.probeType.httpGet <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token key atrule">httpGet</span><span class="token punctuation">:</span>
+    <span class="token key atrule">path</span><span class="token punctuation">:</span> /healthz
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+    <span class="token key atrule">scheme</span><span class="token punctuation">:</span> HTTP
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> else <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token key atrule">tcpSocket</span><span class="token punctuation">:</span>
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token key atrule">initialDelaySeconds</span><span class="token punctuation">:</span> <span class="token number">30</span>
+  <span class="token key atrule">periodSeconds</span><span class="token punctuation">:</span> <span class="token number">10</span>
+</code></pre>
+<p>if &#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x8BBE;&#x7F6E; readinessProbe&#xFF0C;&#x5982;&#x679C; probeType.httpGet &#x7684;&#x503C;&#x4E3A; true &#x6216;&#x975E; null&#xFF0C;httpGet  readinessProbe &#x5C06;&#x88AB;&#x6A21;&#x677F;&#x5316;&#x3002;&#x5426;&#x5219;&#xFF0C;readinessProbe &#x5C06;&#x4E3A; tcpSocket &#x7C7B;&#x578B;&#x3002;&#x82B1;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x51CF;&#x53F7;&#x8868;&#x793A;&#x5728;&#x5904;&#x7406;&#x540E;&#x5E94;&#x8BE5;&#x5220;&#x9664;&#x7A7A;&#x683C;&#x3002;&#x5DE6;&#x82B1;&#x62EC;&#x53F7;&#x540E;&#x7684;&#x51CF;&#x53F7;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x82B1;&#x62EC;&#x53F7;&#x524D;&#x9762;&#x7684;&#x7A7A;&#x683C;&#xFF0C;&#x53F3;&#x82B1;&#x62EC;&#x53F7;&#x524D;&#x9762;&#x7684;&#x51CF;&#x53F7;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x82B1;&#x62EC;&#x53F7;&#x540E;&#x9762;&#x7684;&#x7A7A;&#x683C;&#x3002;</p>
+<p>&#x56FE;&#x8868;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; with &#x52A8;&#x4F5C;&#x4FEE;&#x6539;&#x503C;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#x3002;&#x5F53;&#x5F15;&#x7528;&#x6DF1;&#x5EA6;&#x5D4C;&#x5957;&#x7684;&#x503C;&#x65F6;&#xFF0C;&#x975E;&#x5E38;&#x9002;&#x5408;&#x4F7F;&#x7528; with&#x3002;&#x901A;&#x8FC7;&#x51CF;&#x5C11;&#x5F15;&#x7528;&#x6DF1;&#x5EA6;&#x5D4C;&#x5957;&#x503C;&#x6240;&#x9700;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x91CF;&#xFF0C;&#x63D0;&#x9AD8;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x548C;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x503C;&#x6587;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x6DF1;&#x5EA6;&#x5D4C;&#x5957;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">application</span><span class="token punctuation">:</span>
+  <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+    <span class="token key atrule">limits</span><span class="token punctuation">:</span>
+      <span class="token key atrule">cpu</span><span class="token punctuation">:</span> 100m
+      <span class="token key atrule">memory</span><span class="token punctuation">:</span> 512Mi
+</code></pre>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709; with &#x52A8;&#x4F5C;&#xFF0C;&#x8FD9;&#x4E9B;&#x503C;&#x5728;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4E2D;&#x88AB;&#x5F15;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Values.application.resources.limits.cpu <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>    
+<span class="token key atrule">memory</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Values.application.resources.limits.memory <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>with &#x52A8;&#x4F5C;&#x5141;&#x8BB8;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x4FEE;&#x6539;&#x8FD9;&#x4E9B;&#x503C;&#x7684;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x4F7F;&#x7528;&#x7B80;&#x77ED;&#x7684;&#x8BED;&#x6CD5;&#x5F15;&#x7528;&#x5B83;&#x4EEC;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> with .Values.application.resources.limits <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token key atrule">cpu</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .cpu <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token key atrule">memory</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .memory <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; range &#x52A8;&#x4F5C;&#x6267;&#x884C;&#x91CD;&#x590D;&#x64CD;&#x4F5C;&#xFF0C;&#x904D;&#x5386;&#x5FAA;&#x73AF;&#x5217;&#x8868;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x3002;&#x5047;&#x8BBE;&#x67D0;&#x4E2A;&#x56FE;&#x8868;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">servicePorts</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> http
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> https
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8443</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> monitor
+    <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">8881</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A; servicePort &#x5217;&#x8868;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x88AB;&#x5FAA;&#x73AF;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ports</span><span class="token punctuation">:</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> range .Values.servicePorts <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">-</span> name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .port <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>with &#x548C; range &#x7684;&#x4F5C;&#x7528;&#x57DF;&#x662F;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x5728; range &#x793A;&#x4F8B;&#x4E2D;&#xFF0C;range &#x4F5C;&#x7528;&#x4E8E; .Values.servicePorts &#x5BF9;&#x8C61;&#xFF0C;&#x70B9; <code>.</code>&#x53F7;&#x5C06;&#x4F5C;&#x7528;&#x57DF;&#x9650;&#x5236;&#x5728;&#x6B64;&#x5BF9;&#x8C61;&#x4E0B;&#x5B9A;&#x4E49;&#x7684;&#x503C;&#x3002;&#x8981;&#x5F15;&#x7528;&#x6240;&#x6709;&#x503C;&#x6216;&#x662F;&#x8BBE;&#x7F6E;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5E94;&#x8BE5;&#x5728;&#x5F15;&#x7528;&#x524D;&#x52A0;&#x4E0A;&#x7F8E;&#x5143; <code>$</code> &#x7B26;&#x53F7;&#xFF0C;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> range .Values.servicePorts <span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> $.Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span><span class="token punctuation">-</span><span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .port <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x9664;&#x4E86;&#x56FE;&#x8868;&#x503C;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4E3A;&#x6A21;&#x677F;&#x4F20;&#x9012;&#x53D8;&#x91CF;&#x3002;</p>
+<h4 id="&#x6A21;&#x677F;&#x53D8;&#x91CF;">&#x6A21;&#x677F;&#x53D8;&#x91CF;</h4>
+<p>&#x56FE;&#x8868;&#x6A21;&#x677F;&#x4E5F;&#x652F;&#x6301;&#x53D8;&#x91CF;&#xFF0C;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> $weChatPublicId <span class="token punctuation">:</span>= &apos;sretech&apos; <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8BBE;&#x7F6E; weChatPublicId &#x53D8;&#x91CF;&#x7684;&#x503C;&#x4E3A; sretech(&#x672C;&#x4EBA;&#x516C;&#x4F17;&#x53F7; ID&#xFF0C;&#x6B22;&#x8FCE;&#x5173;&#x6CE8;&#x263A;) &#x3002;&#x53D8;&#x91CF;&#x4E5F;&#x53EF;&#x4EE5;&#x8D4B;&#x503C;&#x7ED9;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982;&#x56FE;&#x8868;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> $myvar <span class="token punctuation">:</span>= .Values.greeting <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x5F15;&#x7528;&#x53D8;&#x91CF;&#x7684;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">greeting.txt</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+    {% raw %}{{ $myvar }}{% endraw %}</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x7684;&#x6700;&#x4F73;&#x573A;&#x666F;&#x4E4B;&#x4E00;&#x662F;&#x5728; range &#x5757;&#x4E2D;&#xFF0C;&#x53D8;&#x91CF;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x6355;&#x83B7;&#x5217;&#x8868;&#x8FED;&#x4EE3;&#x7684;&#x7D22;&#x5F15;&#x548C;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">greetings.txt</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> range $index<span class="token punctuation">,</span> $value <span class="token punctuation">:</span>= .Values.greetings <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    Greeting <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> $index <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> $value <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">greetings.txt</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+    Greeting 0: Hello
+    Greeting 1: Hola
+    Greeting 2: Hallo</span>
+</code></pre>
+<p>&#x53D8;&#x91CF;&#x8FD8;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x5BF9;&#x6620;&#x5C04;&#x7684;&#x8FED;&#x4EE3;&#x5904;&#x7406;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">greetings.txt</span><span class="token punctuation">:</span> <span class="token punctuation">|</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> range $key<span class="token punctuation">,</span> $val <span class="token punctuation">:</span>= .Values.greetings <span class="token punctuation">}</span><span class="token punctuation">}</span>
+    Greeting in <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> $key <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> $val <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x53EF;&#x80FD;&#x7684;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">greetings.txt</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+    Greeting in English: Hello
+    Greeting in Spanish: Hola
+    Greeting in German: Hallo</span>
+</code></pre>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x5F15;&#x7528;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x5916;&#x7684;&#x503C;&#x3002;</p>
+<p>&#x8003;&#x8651;&#x4E0B;&#x9762;&#x7684; with &#x4EE3;&#x7801;&#x5757;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> with .Values.application.configuration <span class="token punctuation">}</span><span class="token punctuation">}</span>
+My application is called <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x6A21;&#x677F;&#x4E2D;&#xFF0C;.Release.Name &#x662F;&#x4E0D;&#x4F1A;&#x88AB;&#x5904;&#x7406;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4E0D;&#x5728; .Values.application.configuration &#x8303;&#x56F4;&#x5185;&#x3002;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x5728; with &#x5757;&#x4E0A;&#x65B9;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x503C;&#x4E3A; .Release.Name &#x7684;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> $appName <span class="token punctuation">:</span>= .Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> with .Values.application.configuration <span class="token punctuation">}</span><span class="token punctuation">}</span>
+My application is called <span class="token punctuation">{</span><span class="token punctuation">{</span> $appName <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x867D;&#x7136;&#x80FD;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x4E0D;&#x662F;&#x6700;&#x597D;&#x7684;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>$</code> &#x7B26;&#x5F15;&#x7528;&#x5168;&#x5C40;&#x8303;&#x56F4;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4EE3;&#x7801;&#x884C;&#x6570;&#x4F1A;&#x66F4;&#x5C11;&#x3001;&#x66F4;&#x6613;&#x9605;&#x8BFB;&#x3002;</p>
+<p>&#x6D41;&#x7A0B;&#x63A7;&#x5236;&#x548C;&#x53D8;&#x91CF;&#x4E3A;&#x52A8;&#x6001;&#x751F;&#x6210;&#x8D44;&#x6E90;&#x63D0;&#x4F9B;&#x4E86;&#x6709;&#x529B;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x548C;&#x7BA1;&#x9053;&#x6765;&#x534F;&#x52A9;&#x8D44;&#x6E90;&#x7684;&#x6E32;&#x67D3;&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x548C;&#x7BA1;&#x9053;&#x5904;&#x7406;&#x590D;&#x6742;&#x6570;&#x636E;">&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x548C;&#x7BA1;&#x9053;&#x5904;&#x7406;&#x590D;&#x6742;&#x6570;&#x636E;</h4>
+<p>Go &#x63D0;&#x4F9B;&#x4E86;&#x51FD;&#x6570;&#x548C;&#x7BA1;&#x9053;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4EE5;&#x652F;&#x6301;&#x5728;&#x6A21;&#x677F;&#x4E2D;&#x5904;&#x7406;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>Go &#x6A21;&#x677F;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x548C;&#x5176;&#x4ED6;&#x7ED3;&#x6784;&#x6216;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x7C7B;&#x4F3C;&#xFF0C;&#x65E8;&#x5728;&#x5904;&#x7406;&#x67D0;&#x4E9B;&#x8F93;&#x5165;&#xFF0C;&#x5E76;&#x6839;&#x636E;&#x8F93;&#x5165;&#x63D0;&#x4F9B;&#x8F93;&#x51FA;&#x7684;&#x903B;&#x8F91;&#x3002;</p>
+<p>Go &#x6A21;&#x677F;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-go">functionName arg1 arg2 <span class="token punctuation">.</span> <span class="token punctuation">.</span> <span class="token punctuation">.</span>
+</code></pre>
+<p>indent &#x662F;&#x5E38;&#x7528;&#x7684; Go &#x6A21;&#x677F;&#x51FD;&#x6570;&#x4E4B;&#x4E00;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x7528;&#x4E8E;&#x7F29;&#x8FDB;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x5B57;&#x7B26;&#x4E32;&#x88AB;&#x6B63;&#x786E;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x56E0;&#x4E3A; YAML &#x5BF9;&#x7A7A;&#x683C;&#x5F88;&#x654F;&#x611F;&#x3002;indent &#x51FD;&#x6570;&#x63A5;&#x6536;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8981;&#x7F29;&#x8FDB;&#x7684;&#x7A7A;&#x683C;&#x6570;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8981;&#x7F29;&#x8FDB;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4E0B;&#x9762;&#x662F; indent &#x51FD;&#x6570;&#x7684;&#x6A21;&#x677F;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application-config</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token punctuation">-</span>
+<span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> indent 4 .Values.config <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x5C06; config &#x503C;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7F29;&#x8FDB; 4 &#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x4EE5;&#x786E;&#x4FDD;&#x5B57;&#x7B26;&#x4E32;&#x5728; application-config YAML &#x952E;&#x4E0B;&#x6B63;&#x786E;&#x7F29;&#x8FDB;&#x3002;</p>
+<p>Helm &#x63D0;&#x4F9B;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x6784;&#x9020;&#x662F;&#x7BA1;&#x9053;&#x3002;&#x7BA1;&#x9053;&#x662F;&#x4ECE; UNIX &#x501F;&#x6765;&#x7684;&#x6982;&#x5FF5;&#xFF1A;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x88AB;&#x4F5C;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x5165;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token function">cat</span> file.txt <span class="token operator">|</span> <span class="token function">grep</span> helm
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#x4E00;&#x4E2A; UNIX &#x7BA1;&#x9053;&#x3002;&#x7BA1;&#x9053;(|)&#x7684;&#x5DE6;&#x8FB9;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x53F3;&#x8FB9;&#x662F;&#x7B2C;&#x4E8C;&#x4E2A;&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4; <strong>cat file.txt</strong> &#x8F93;&#x51FA; file.txt &#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x547D;&#x4EE4; <strong>grep helm</strong> &#x7684;&#x8F93;&#x5165;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x547D;&#x4EE4;&#x7528;&#x6765;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#x4E2D;&#x8FC7;&#x6EE4;&#x51FA;&#x5305;&#x542B; helm &#x5355;&#x8BCD;&#x7684;&#x884C;&#x3002;</p>
+<p>Go &#x7BA1;&#x9053;&#x4EE5;&#x7C7B;&#x4F3C;&#x7684;&#x65B9;&#x5F0F;&#x5DE5;&#x4F5C;&#xFF0C;&#x518D;&#x6B21;&#x4EE5; indent &#x51FD;&#x6570;&#x6765;&#x6F14;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">data</span><span class="token punctuation">:</span>
+  <span class="token key atrule">application-config</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token punctuation">-</span>
+<span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Values.config <span class="token punctuation">|</span> indent 4 <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x540C;&#x6837;&#x5C06; config &#x7684;&#x503C;&#x7F29;&#x8FDB; 4 &#x4E2A;&#x7A7A;&#x683C;&#xFF0C;&#x7BA1;&#x9053;&#x9002;&#x5408;&#x5C06;&#x591A;&#x4E2A;&#x547D;&#x4EE4;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x6267;&#x884C;&#xFF0C;&#x9605;&#x8BFB;&#x8D77;&#x6765;&#x4E5F;&#x8FDE;&#x7EED;&#x81EA;&#x7136;&#x3002;</p>
+<p>&#x6709;&#x8BB8;&#x591A; Go &#x6A21;&#x677F;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5728; Helm &#x56FE;&#x8868;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5728; <a href="https://golang.org/pkg/text/template/#hdr-Functions" target="_blank">https://golang.org/pkg/text/template/#hdr-Functions</a> &#x7684; Go &#x6587;&#x6863;&#x548C; <a href="http://masterminds.github.io/sprig/" target="_blank">http://masterminds.github.io/sprig/</a> &#x7684; Sprig &#x6A21;&#x677F;&#x5E93;&#x4E2D;&#x627E;&#x5230;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x5E38;&#x89C1;&#x7684; Go &#x6A21;&#x677F;&#x51FD;&#x6570;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x56FE;&#x8868;&#x5F00;&#x53D1;&#x4E2D;&#x7528;&#x5230;&#xFF1A;</p>
+<ul>
+<li><strong>date&#xFF1A;</strong>&#x683C;&#x5F0F;&#x5316;&#x65E5;&#x671F;</li>
+<li><strong>default&#xFF1A;</strong>&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;</li>
+<li><strong>fail&#xFF1A;</strong>&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x5931;&#x8D25;</li>
+<li><strong>include&#xFF1A;</strong>&#x6267;&#x884C; Go &#x6A21;&#x677F;&#x5E76;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;</li>
+<li><strong>nindent&#xFF1A;</strong>&#x5C06;&#x6587;&#x672C;&#x7F29;&#x8FDB;&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x7A7A;&#x683C;&#xFF0C;&#x5E76;&#x5728;&#x7F29;&#x8FDB;&#x4E4B;&#x524D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x884C;</li>
+<li><strong>indent&#xFF1A;</strong>&#x5C06;&#x6587;&#x672C;&#x7F29;&#x8FDB;&#x6307;&#x5B9A;&#x6570;&#x91CF;&#x7684;&#x7A7A;&#x683C;</li>
+<li><strong>now&#xFF1A;</strong>&#x663E;&#x793A;&#x5F53;&#x524D;&#x65E5;&#x671F;/&#x65F6;&#x95F4;</li>
+<li><strong>quote&#xFF1A;</strong>&#x7528;&#x5F15;&#x53F7;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x62EC;&#x8D77;&#x6765;</li>
+<li><strong>required&#xFF1A;</strong>&#x8981;&#x6C42;&#x7528;&#x6237;&#x8F93;&#x5165;</li>
+<li><strong>splitList&#xFF1A;</strong>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x62C6;&#x5206;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5217;&#x8868;</li>
+<li><strong>toYaml&#xFF1A;</strong>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A; YAML &#x683C;&#x5F0F;</li>
+</ul>
+<p>Go &#x6A21;&#x677F;&#x8BED;&#x8A00;&#x8FD8;&#x5305;&#x542B;&#x5E03;&#x5C14;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; if &#x52A8;&#x4F5C;&#x4E2D;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x6765;&#x8FDB;&#x4E00;&#x6B65;&#x63A7;&#x5236; YAML &#x8D44;&#x6E90;&#x7684;&#x751F;&#x6210;&#xFF1A;</p>
+<ul>
+<li><strong>and</strong></li>
+<li><strong>or</strong></li>
+<li><strong>not</strong></li>
+<li><strong>eq</strong>&#xFF08;&#x76F8;&#x7B49;&#xFF09;</li>
+<li><strong>ne</strong>&#xFF08;&#x4E0D;&#x7B49;&#xFF09;</li>
+<li><strong>lt</strong>&#xFF08;&#x5C0F;&#x4E8E;&#xFF09;</li>
+<li><strong>le</strong>&#xFF08;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#xFF09;</li>
+<li><strong>gt</strong>&#xFF08;&#x5927;&#x4E8E;&#xFF09;</li>
+<li><strong>ge</strong>&#xFF08;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#xFF09;</li>
+</ul>
+<p>&#x9664;&#x4E86;&#x751F;&#x6210; Kubernetes &#x8D44;&#x6E90;&#xFF0C;Go &#x6A21;&#x677F;&#x8FD8;&#x53EF;&#x4EE5;&#x91CD;&#x7528;&#x5177;&#x6709;&#x76F8;&#x540C;&#x6A21;&#x677F;&#x7684; YAML &#x8D44;&#x6E90;&#x3002;&#x8FD9;&#x662F;&#x901A;&#x8FC7;&#x547D;&#x540D;&#x6A21;&#x677F;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;&#x547D;&#x540D;&#x6A21;&#x677F;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x91CD;&#x7528;">&#x4F7F;&#x7528;&#x547D;&#x540D;&#x6A21;&#x677F;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x91CD;&#x7528;</h4>
+<p>&#x5728;&#x521B;&#x5EFA;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x91CD;&#x590D;&#x7684; YAML &#x5757;&#x3002;&#x6211;&#x4EEC;&#x4EE5;&#x6807;&#x7B7E;&#x8D44;&#x6E90;&#x4F5C;&#x4E3A;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">labels</span><span class="token punctuation">:</span>
+  <span class="token key atrule">&apos;app.kubernetes.io/instance&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+  <span class="token key atrule">&apos;app.kubernetes.io/managed-by&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Service <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6807;&#x7B7E;&#x53EF;&#x4EE5;&#x9644;&#x52A0;&#x5230;&#x4EFB;&#x610F;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x4E0A;&#xFF0C;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x4E0A;&#x4E5F;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x6807;&#x7B7E;&#x3002;&#x5C06;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x4E0E;&#x6807;&#x7B7E;&#x6346;&#x7ED1;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x591A;&#x7EF4;&#x5EA6;&#x7684;&#x8D44;&#x6E90;&#x5206;&#x7EC4;&#x7BA1;&#x7406;&#x3002;&#x5982;&#x679C;&#x56FE;&#x8868;&#x5305;&#x542B;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x7684; Kubernetes &#x8D44;&#x6E90;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x6240;&#x9700;&#x7684;&#x6807;&#x7B7E;&#x5C31;&#x4F1A;&#x5F88;&#x9EBB;&#x70E6;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x5728;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x6216;&#x8005;&#x5411;&#x8D44;&#x6E90;&#x6DFB;&#x52A0;&#x65B0;&#x6807;&#x7B7E;&#x7684;&#x65F6;&#x5019;&#x3002;</p>
+<p>Helm &#x63D0;&#x4F9B;&#x4E86;&#x547D;&#x540D;&#x6A21;&#x677F;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5141;&#x8BB8;&#x56FE;&#x8868;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x521B;&#x5EFA;&#x53EF;&#x91CD;&#x7528;&#x7684;&#x6A21;&#x677F;&#xFF0C;&#x4ECE;&#x800C;&#x51CF;&#x5C11;&#x91CD;&#x590D;&#x7684;&#x914D;&#x7F6E;&#x5757;&#x3002;&#x547D;&#x540D;&#x6A21;&#x677F;&#x5728; templates/ &#x76EE;&#x5F55;&#x4E0B;&#x5B9A;&#x4E49;&#xFF0C;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x4EE5;&#x4E0B;&#x5212;&#x7EBF;&#x5F00;&#x5934;&#xFF0C;&#x4EE5; .tpl &#x4F5C;&#x4E3A;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#x3002;&#x8BB8;&#x591A;&#x56FE;&#x8868;&#x5305;&#x542B; _helpers.tpl &#x7684;&#x547D;&#x540D;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#xFF0C;&#x5C3D;&#x7BA1;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x9700;&#x8981;&#x88AB;&#x547D;&#x540D;&#x4E3A; helpers&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; define &#x52A8;&#x4F5C;&#x5728; tpl &#x6587;&#x4EF6;&#x4E2D;&#x521B;&#x5EFA;&#x547D;&#x540D;&#x6A21;&#x677F;&#x3002;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5C01;&#x88C5;&#x8D44;&#x6E90;&#x6807;&#x7B7E;&#x7684;&#x547D;&#x540D;&#x6A21;&#x677F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> define &apos;mychart.labels&apos; <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token key atrule">labels</span><span class="token punctuation">:</span>
+  <span class="token key atrule">&apos;app.kubernetes.io/instance&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+  <span class="token key atrule">&apos;app.kubernetes.io/managed-by&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Service <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>define &#x52A8;&#x4F5C;&#x4EE5;&#x6A21;&#x677F;&#x540D;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6A21;&#x677F;&#x540D;&#x5C31;&#x662F; mychart.labels&#x3002;&#x6A21;&#x677F;&#x540D;&#x7684;&#x547D;&#x540D;&#x7EA6;&#x5B9A;&#x662F; $CHART_NAME.$TEMPLATE_NAME&#xFF0C;&#x5176;&#x4E2D; $CHART_NAME &#x662F; Helm &#x56FE;&#x8868;&#x7684;&#x540D;&#x79F0;&#xFF0C;$TEMPLATE_NAME &#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x77ED;&#x7684;&#x63CF;&#x8FF0;&#x6027;&#x540D;&#x79F0;&#xFF0C;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x6A21;&#x677F;&#x7684;&#x7528;&#x9014;&#x3002;</p>
+<p>mychart.labels &#x8FD9;&#x4E2A;&#x540D;&#x79F0;&#x8BF4;&#x660E;&#x4E86;&#x6A21;&#x677F;&#x6765;&#x81EA;&#x4E8E; mychart &#x56FE;&#x8868;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x4F1A;&#x751F;&#x6210;&#x6240;&#x9700;&#x7684;&#x6807;&#x7B7E;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x8981;&#x5728; Kubernetes YAML &#x6A21;&#x677F;&#x4E2D;&#x4F7F;&#x7528;&#x547D;&#x540D;&#x6A21;&#x677F;&#xFF0C;&#x9700;&#x8981; include &#x51FD;&#x6570;&#xFF0C;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml">include <span class="token punctuation">[</span>TEMPLATE_NAME<span class="token punctuation">]</span> <span class="token punctuation">[</span>SCOPE<span class="token punctuation">]</span>
+</code></pre>
+<p>TEMPLATE_NAME &#x53C2;&#x6570;&#x662F;&#x547D;&#x540D;&#x6A21;&#x677F;&#x7684;&#x540D;&#x79F0;&#xFF0C;SCOPE &#x53C2;&#x6570;&#x5B9A;&#x4E49;&#x4E86;&#x5E94;&#x7528;&#x7684;&#x503C;&#x548C;&#x5185;&#x7F6E;&#x5BF9;&#x8C61;&#x7684;&#x8303;&#x56F4;&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x70B9;(.)&#xFF0C;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x9876;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x6A21;&#x677F;&#x5F15;&#x7528;&#x4E86;&#x5F53;&#x524D;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x5916;&#x7684;&#x503C;&#xFF0C;&#x5219;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; $ &#x7B26;&#x53F7;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x6F14;&#x793A;&#x5982;&#x4F55;&#x4F7F;&#x7528; include &#x51FD;&#x6570;&#x5904;&#x7406;&#x547D;&#x540D;&#x6A21;&#x677F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+<span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> include &apos;mychart.labels&apos; . <span class="token punctuation">|</span> indent 2 <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x9996;&#x5148;&#x8BBE;&#x7F6E;&#x4E86;&#x6A21;&#x677F;&#x540D;&#x79F0;&#x4E3A; release &#x540D;&#x79F0;&#x3002;&#x63A5;&#x7740;&#x4F7F;&#x7528; include &#x51FD;&#x6570;&#x5904;&#x7406;&#x6807;&#x7B7E;(labels)&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x5C06;&#x6807;&#x7B7E;&#x884C;&#x7F29;&#x8FDB;&#x4E24;&#x4E2A;&#x7A7A;&#x683C;&#x3002;&#x5F53;&#x5904;&#x7406;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; template-demonstration &#x7684; release &#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x4F1A;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> template<span class="token punctuation">-</span>demonstration
+  <span class="token key atrule">labels</span><span class="token punctuation">:</span>
+    <span class="token key atrule">&apos;app.kubernetes.io/instance&apos;</span><span class="token punctuation">:</span> template<span class="token punctuation">-</span>demonstration
+    <span class="token key atrule">&apos;app.kubernetes.io/managed-by&apos;</span><span class="token punctuation">:</span> Helm
+</code></pre>
+<p>Helm &#x8FD8;&#x63D0;&#x4F9B;&#x4E86; template &#x52A8;&#x4F5C;&#xFF0C;&#x53EF;&#x4EE5;&#x6269;&#x5C55;&#x547D;&#x540D;&#x6A21;&#x677F;&#x3002;template &#x7684;&#x7528;&#x6CD5;&#x4E0E; include &#x76F8;&#x540C;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x5728;&#x7BA1;&#x9053;&#x4E2D;&#x4F7F;&#x7528;&#x3002;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x4F7F;&#x7528; include &#x800C;&#x4E0D;&#x662F; template&#xFF0C;&#x56E0;&#x4E3A; include &#x4E0D;&#x4EC5;&#x5177;&#x6709;&#x4E0E; template &#x76F8;&#x540C;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x7BA1;&#x9053;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x8BA8;&#x8BBA;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x547D;&#x540D;&#x6A21;&#x677F;&#x6765;&#x51CF;&#x5C11;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x56FE;&#x8868;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x6A21;&#x677F;&#x5757;&#x3002;</p>
+<h4 id="&#x56FE;&#x8868;&#x5E93;">&#x56FE;&#x8868;&#x5E93;</h4>
+<p>Helm &#x56FE;&#x8868;&#x5206;&#x4E3A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;(application)&#x548C;&#x5E93;(library)&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x7684; type &#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x3002;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7C7B;&#x578B;&#x7684;&#x56FE;&#x8868;&#x7528;&#x4E8E;&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x90E8;&#x7F72;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E5F;&#x662F;&#x5E38;&#x89C1;&#x7684;&#x3001;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x7684;&#x56FE;&#x8868;&#x7C7B;&#x578B;&#x3002;&#x56FE;&#x8868;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E3A;&#x5E93;&#x7C7B;&#x578B;&#xFF0C;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x56FE;&#x8868;&#x4E0D;&#x80FD;&#x90E8;&#x7F72;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x800C;&#x662F;&#x63D0;&#x4F9B;&#x53EF;&#x8DE8;&#x591A;&#x4E2A;&#x56FE;&#x8868;&#x4F7F;&#x7528;&#x7684;&#x547D;&#x540D;&#x6A21;&#x677F;&#x3002;&#x6211;&#x4EEC;&#x4F9D;&#x7136;&#x4F7F;&#x7528;&#x4E0A;&#x4E00;&#x4E2A;&#x5C0F;&#x7ED3;&#x7684;&#x6807;&#x7B7E;&#x793A;&#x4F8B;&#xFF0C;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53EF;&#x80FD;&#x7EF4;&#x62A4;&#x6210;&#x767E;&#x4E0A;&#x5343;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x6BCF;&#x4E2A;&#x56FE;&#x8868;&#x90FD;&#x5177;&#x6709;&#x76F8;&#x540C;&#x7684;&#x8D44;&#x6E90;&#x6807;&#x7B7E;&#xFF0C;&#x5355;&#x72EC;&#x7EF4;&#x62A4;&#x6BCF;&#x4E2A;&#x56FE;&#x8868;&#x7684; _helpers.tpl &#x6587;&#x4EF6;&#x5C31;&#x53D8;&#x5F97;&#x590D;&#x6742;&#x4E14;&#x591A;&#x4F59;&#x4E86;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x56FE;&#x8868;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x5E93;&#x7C7B;&#x578B;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x7528;&#x6765;&#x63D0;&#x4F9B;&#x751F;&#x6210;&#x8D44;&#x6E90;&#x6807;&#x7B7E;&#x7684;&#x547D;&#x540D;&#x6A21;&#x677F;&#x3002;</p>
+<p>&#x867D;&#x7136; Helm &#x5E38;&#x7528;&#x6765;&#x521B;&#x5EFA; Kubernetes &#x7684;&#x539F;&#x751F;&#x8D44;&#x6E90;&#xFF0C;&#x4F46;&#x4E5F;&#x53EF;&#x4EE5;&#x7528;&#x5B83;&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x8D44;&#x6E90;(CRs)&#xFF0C;&#x6211;&#x5C06;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h4 id="cr-&#x6A21;&#x677F;">CR &#x6A21;&#x677F;</h4>
+<p>CR &#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x975E;&#x539F;&#x751F;&#x7684; Kubernetes API &#x8D44;&#x6E90;&#xFF0C;&#x6269;&#x5C55; Kubernetes &#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;&#x3002;CR &#x53EF;&#x4EE5;&#x4F7F;&#x7528; Helm &#x6A21;&#x677F;&#x521B;&#x5EFA;&#xFF0C;&#x5C31;&#x50CF;&#x521B;&#x5EFA;&#x539F;&#x751F;&#x7684; Kubernetes &#x8D44;&#x6E90;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x521B;&#x5EFA;&#x524D;&#x5FC5;&#x987B;&#x6709;&#x5BF9;&#x5E94;&#x7684; Custom Resource Definition (CRD)&#xFF0C;&#x7528;&#x6765;&#x5B9A;&#x4E49; CR&#x3002; &#x5982;&#x679C;&#x5728;&#x521B;&#x5EFA; CR &#x4E4B;&#x524D;&#x6CA1;&#x6709; CRD&#xFF0C;CR &#x5C06;&#x4F1A;&#x521B;&#x5EFA;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x5728; Helm &#x56FE;&#x8868;&#x4E2D;&#x521B;&#x5EFA; crds/ &#x76EE;&#x5F55;&#xFF0C;&#x5B58;&#x653E; CRD&#x3002;crds/ &#x76EE;&#x5F55;&#x793A;&#x4F8B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>crds/
+  my-custom-resource-crd.yaml
+</code></pre><p>my-custom-resource-crd.yaml &#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apiextensions.k8s.io/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> CustomResourceDefinition
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>custom<span class="token punctuation">-</span>resources.learnhelm.io
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">group</span><span class="token punctuation">:</span> cloudnative.aiops.red
+  <span class="token key atrule">names</span><span class="token punctuation">:</span>
+    <span class="token key atrule">kind</span><span class="token punctuation">:</span> MyCustomResource
+    <span class="token key atrule">listKind</span><span class="token punctuation">:</span> MyCustomResourceList
+    <span class="token key atrule">plural</span><span class="token punctuation">:</span> MyCustomResources
+    <span class="token key atrule">singular</span><span class="token punctuation">:</span> MyCustomResource
+    <span class="token key atrule">scope</span><span class="token punctuation">:</span> Namespaced
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> v1
+</code></pre>
+<p> templates/ &#x76EE;&#x5F55;&#x4E2D;&#x53EF;&#x4EE5;&#x5305;&#x542B; MyCustomResource &#x8D44;&#x6E90;&#x7684;&#x5B9E;&#x4F8B;&#x3002;</p>
+<pre class="language-"><code class="lang-yaml">templates/
+  my<span class="token punctuation">-</span>custom<span class="token punctuation">-</span>resource.yaml
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x7684;&#x7ED3;&#x6784;&#x786E;&#x4FDD;&#x4E86;&#x5728;&#x5B89;&#x88C5;&#x81EA;&#x5B9A;&#x4E49;&#x8D44;&#x6E90;(CR)&#x524D;&#x5DF2;&#x7ECF;&#x5B9A;&#x4E49;&#x4E86; MyCustomResource  CRD&#x3002;</p>
+<p>&#x521B;&#x5EFA; CRD &#x9700;&#x8981;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x662F;&#x7BA1;&#x7406;&#x5458;&#xFF0C;&#x9700;&#x8981;&#x8BA9;&#x7BA1;&#x7406;&#x5458;&#x5E2E;&#x4F60;&#x521B;&#x5EFA;&#x597D; CRD&#x3002;&#x5982;&#x679C;&#x662F;&#x8FD9;&#x6837;&#xFF0C; crds/ &#x76EE;&#x5F55;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x5305;&#x542B;&#x5728;&#x56FE;&#x8868;&#x4E2D;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A; CRD &#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x4E86;&#x3002;</p>
+<p>&#x5230;&#x73B0;&#x5728;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x5DF2;&#x7ECF;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x4E86; Helm &#x6A21;&#x677F;&#xFF0C;&#x603B;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x5B83;&#x662F;&#x56FE;&#x8868;&#x7684;&#x5927;&#x8111;&#xFF0C;&#x7528;&#x4E8E;&#x751F;&#x6210; Kubernetes &#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4F1A;&#x7EE7;&#x7EED;&#x4ECB;&#x7ECD; Helm &#x56FE;&#x8868;&#x7684;&#x5176;&#x5B83;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF0C;&#x4E0E;&#x6A21;&#x677F;&#x540C;&#x6837;&#x91CD;&#x8981;&#x7684; Chart.yaml &#x6587;&#x4EF6;&#x3002;</p>
+<h3 id="&#x56FE;&#x8868;&#x5B9A;&#x4E49;">&#x56FE;&#x8868;&#x5B9A;&#x4E49;</h3>
+<p>Chart.yaml &#x6587;&#x4EF6;&#x53C8;&#x88AB;&#x79F0;&#x4E3A;&#x56FE;&#x8868;&#x5B9A;&#x4E49;&#xFF0C;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x56FE;&#x8868;&#x5143;&#x6570;&#x636E;&#x3002;&#x8BE5;&#x6587;&#x4EF6;&#x5728;&#x56FE;&#x8868;&#x4E2D;&#x662F;&#x5FC5;&#x987B;&#x5B58;&#x5728;&#x7684;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x62A5;&#x9519;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">Error</span><span class="token punctuation">:</span> <span class="token key atrule">validation</span><span class="token punctuation">:</span> chart.metadata is required
+</code></pre>
+<p>&#x5728;&#x7B2C;&#x4E09;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x6267;&#x884C; <strong>helm show chart</strong> &#x547D;&#x4EE4;&#x67E5;&#x770B;&#x4E86; Bitnami&apos;s WordPress &#x56FE;&#x8868;&#x7684;&#x5B9A;&#x4E49;&#xFF0C;&#x518D;&#x6B21;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#xFF0C;&#x91CD;&#x65B0;&#x67E5;&#x770B;&#x56FE;&#x8868;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ helm show chart bitnami/wordpress --version <span class="token number">11.0</span>.5
+annotations:
+  category: CMS
+apiVersion: v2
+appVersion: <span class="token number">5.7</span>.2
+dependencies:
+- condition: mariadb.enabled
+  name: mariadb
+  repository: https://charts.bitnami.com/bitnami
+  version: <span class="token number">9</span>.x.x
+- condition: memcached.enabled
+  name: memcached
+  repository: https://charts.bitnami.com/bitnami
+  version: <span class="token number">5</span>.x.x
+- name: common
+  repository: https://charts.bitnami.com/bitnami
+  tags:
+  - bitnami-common
+  version: <span class="token number">1</span>.x.x
+description: Web publishing platform <span class="token keyword">for</span> building blogs and websites.
+home: https://github.com/bitnami/charts/tree/master/bitnami/wordpress
+icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+keywords:
+- application
+- blog
+- cms
+- http
+- php
+- web
+- wordpress
+maintainers:
+- email: containers@bitnami.com
+  name: Bitnami
+name: wordpress
+sources:
+- https://github.com/bitnami/bitnami-docker-wordpress
+- https://wordpress.org/
+version: <span class="token number">11.0</span>.
+</code></pre>
+<p>&#x4ECE;&#x8F93;&#x51FA;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x56FE;&#x8868;&#x5B9A;&#x4E49;&#x6216;&#x8005;&#x8BF4; Chart.yaml &#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x542B;&#x8BB8;&#x591A;&#x5B57;&#x6BB5;&#x3002;&#x6709;&#x4E9B;&#x5B57;&#x6BB5;&#x662F;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x800C;&#x5927;&#x90E8;&#x5206;&#x5B57;&#x6BB5;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x53EA;&#x9700;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x63D0;&#x4F9B;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5BF9; Chart.yaml &#x6587;&#x4EF6;&#x6709;&#x4E86;&#x57FA;&#x672C;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x6211;&#x4EEC;&#x8BA8;&#x8BBA;&#x5FC5;&#x8981;&#x5B57;&#x6BB5;&#x3002;</p>
+<h4 id="&#x5FC5;&#x8981;&#x5B57;&#x6BB5;">&#x5FC5;&#x8981;&#x5B57;&#x6BB5;</h4>
+<p>Chart.yaml &#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x90FD;&#x662F;&#x91CD;&#x8981;&#x7684;&#x56FE;&#x8868;&#x5143;&#x6570;&#x636E;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apiVersion</td>
+<td>&#x56FE;&#x8868; API &#x7248;&#x672C;</td>
+</tr>
+<tr>
+<td>name</td>
+<td>&#x56FE;&#x8868;&#x540D;</td>
+</tr>
+<tr>
+<td>version</td>
+<td>&#x56FE;&#x8868;&#x7248;&#x672C;&#xFF0C;&#x793A;&#x4F8B;&#x4E2D;&#x7684;&#x7248;&#x672C;&#x662F; 11.0.5 &#x7248;&#x672C;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6211;&#x4EEC;&#x770B;&#x770B;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x90FD;&#x4EE3;&#x8868;&#x4E86;&#x4EC0;&#x4E48;&#xFF1A;</p>
+<ul>
+<li>apiVersion &#x5B57;&#x6BB5;&#x6709;&#x4E24;&#x4E2A;&#x503C;&#x53EF;&#x9009;&#xFF1A;<ul>
+<li>v1</li>
+<li>v2</li>
+</ul>
+</li>
+<li>aipVersion  v1 &#x7248;&#x672C;&#x662F; Helm3 &#x53D1;&#x5E03;&#x524D;&#x4F7F;&#x7528;&#x7684; apiVersion &#x7248;&#x672C;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x6210; v1&#xFF0C;&#x610F;&#x5473;&#x7740;&#x56FE;&#x8868;&#x5C06;&#x9075;&#x5FAA;&#x8001;&#x7684;&#x56FE;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x8001;&#x7ED3;&#x6784;&#x652F;&#x6301; requirement.yaml &#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x4E0D;&#x652F;&#x6301; type &#x5B57;&#x6BB5;&#x3002;&#x867D;&#x7136; Helm 3 &#x5411;&#x540E;&#x517C;&#x5BB9; apiVersion v1&#xFF0C;&#x4F46;&#x8FD8;&#x662F;&#x5EFA;&#x8BAE;&#x76F4;&#x63A5;&#x4F7F;&#x7528; v2 &#x7248;&#x672C;&#xFF0C;&#x4EE5;&#x514D;&#x4F7F;&#x7528;&#x4E86;&#x88AB;&#x5F03;&#x7528;&#x7684;&#x7279;&#x6027;&#x3002;</li>
+<li>name &#x5B57;&#x6BB5;&#x5B9A;&#x4E49; Helm &#x56FE;&#x8868;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x8BE5;&#x503C;&#x5E94;&#x8BE5;&#x4E0E; Helm &#x56FE;&#x8868;&#x7684;&#x9876;&#x7EA7;&#x76EE;&#x5F55;&#x540D;&#x76F8;&#x540C;&#x3002;<strong>helm search</strong> &#x547D;&#x4EE4;&#x548C; <strong>helm list</strong> &#x547D;&#x4EE4;&#x7684;&#x641C;&#x7D22;&#x7ED3;&#x679C;&#x5305;&#x542B;&#x4E86; Helm &#x56FE;&#x8868;&#x7684;&#x540D;&#x79F0;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x7684;&#x503C;&#x5E94;&#x8BE5;&#x7B80;&#x5355;&#x4E14;&#x5177;&#x6709;&#x63CF;&#x8FF0;&#x6027;&#xFF0C;&#x7528;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x540D;&#x5B57;&#x63CF;&#x8FF0;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x6BD4;&#x5982; wordpress &#x6216; redis-cluster&#x3002;&#x51CF;&#x53F7;&#x662F;&#x8FDE;&#x63A5;&#x540D;&#x79F0;&#x4E2D;&#x4E0D;&#x540C;&#x5355;&#x8BCD;&#x7684;&#x5E38;&#x7528;&#x65B9;&#x5F0F;&#x3002;&#x6709;&#x65F6;&#xFF0C;&#x540D;&#x79F0;&#x4E5F;&#x4F1A;&#x88AB;&#x5199;&#x6210;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;&#x5982; rediscluster&#x3002;</li>
+<li>version &#x5B57;&#x6BB5;&#x5B9A;&#x4E49; Helm &#x56FE;&#x8868;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x7248;&#x672C;&#x5FC5;&#x987B;&#x9075;&#x5FAA; Semantic Versioning (SemVer) 2.0.0 &#x683C;&#x5F0F;&#x3002;SemVer &#x683C;&#x5F0F;&#x4E3A; Major.Minor.Patch(&#x4E3B;&#x7248;&#x672C;&#x53F7;.&#x6B21;&#x7248;&#x672C;&#x53F7;.&#x8865;&#x4E01;&#x7248;&#x672C;&#x53F7;)&#x3002;&#x5F53;&#x7248;&#x672C;&#x6539;&#x52A8;&#x8F83;&#x5927;&#xFF0C;&#x4E0D;&#x5411;&#x540E;&#x517C;&#x5BB9;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x4FEE;&#x6539;&#x4E3B;&#x7248;&#x672C;&#x53F7;&#xFF1B;&#x5F53;&#x53D1;&#x5E03;&#x5411;&#x540E;&#x517C;&#x5BB9;&#x7684;&#x529F;&#x80FD;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x4FEE;&#x6539;&#x6B21;&#x7248;&#x672C;&#x53F7;&#xFF1B;&#x5F53;&#x4FEE;&#x590D; bug &#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x4FEE;&#x6539;&#x8865;&#x4E01;&#x7248;&#x672C;&#x53F7;&#x3002;&#x6B21;&#x7248;&#x672C;&#x589E;&#x5927;&#x65F6;&#xFF0C;&#x9700;&#x5C06;&#x8865;&#x4E01;&#x7248;&#x672C;&#x53F7;&#x7F6E;&#x4E3A; 0&#xFF1B;&#x4E3B;&#x7248;&#x672C;&#x589E;&#x5927;&#x65F6;&#xFF0C;&#x6B21;&#x7248;&#x672C;&#x53F7;&#x548C;&#x8865;&#x4E01;&#x7248;&#x672C;&#x53F7;&#x90FD;&#x9700;&#x7F6E;&#x4E3A; 0&#x3002;&#x56FE;&#x8868;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728;&#x66F4;&#x6539;&#x7248;&#x672C;&#x53F7;&#x65F6;&#x8981;&#x6CE8;&#x610F;&#x8FD9;&#x4E9B;&#x89C4;&#x8303;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x4EE3;&#x8868;&#x4E86;&#x65B0;&#x7248;&#x672C;&#x662F;&#x4F55;&#x79CD;&#x7A0B;&#x5EA6;&#x7684;&#x66F4;&#x65B0;&#x3002;</li>
+</ul>
+<p>&#x867D;&#x7136;&#x8FD9;&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#x5728; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x662F;&#x5FC5;&#x8981;&#x5B57;&#x6BB5;&#xFF0C;&#x4F46;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x5143;&#x6570;&#x636E;&#x7684;&#x53EF;&#x9009;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>appVersion</td>
+<td>&#x56FE;&#x8868;&#x90E8;&#x7F72;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7248;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td>dependencies</td>
+<td>&#x56FE;&#x8868;&#x4F9D;&#x8D56;&#x7684;&#x5176;&#x4ED6;&#x56FE;&#x8868;&#x5217;&#x8868;&#x3002;</td>
+</tr>
+<tr>
+<td>deprecated</td>
+<td>&#x56FE;&#x8868;&#x662F;&#x5426;&#x88AB;&#x5F03;&#x7528;&#x3002;</td>
+</tr>
+<tr>
+<td>description</td>
+<td>&#x56FE;&#x8868;&#x7684;&#x7B80;&#x77ED;&#x63CF;&#x8FF0;&#x3002;</td>
+</tr>
+<tr>
+<td>home</td>
+<td>&#x9879;&#x76EE;&#x4E3B;&#x9875;&#x7684; URL&#x3002;</td>
+</tr>
+<tr>
+<td>icon</td>
+<td>SVG &#x6216; PNG &#x683C;&#x5F0F;&#x7684;&#x56FE;&#x6807;&#xFF0C;&#x7528;&#x4E8E;&#x8868;&#x793A; Helm &#x56FE;&#x8868;&#x3002;&#x663E;&#x793A;&#x5728; Helm Hub &#x7684;&#x56FE;&#x8868;&#x9875;&#x4E0A;&#x3002;</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>&#x5173;&#x952E;&#x5B57;&#x5217;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>helm search</strong> &#x547D;&#x4EE4;&#x641C;&#x7D22;&#x5230;&#x3002;</td>
+</tr>
+<tr>
+<td>kubeVersion</td>
+<td>&#x5728; SemVer &#x4E2D;&#x517C;&#x5BB9; Kubernetes &#x7684;&#x4E00;&#x7CFB;&#x5217;&#x7248;&#x672C;&#x3002;</td>
+</tr>
+<tr>
+<td>maintainers</td>
+<td>&#x56FE;&#x8868;&#x7684;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&#x540D;&#x5355;&#x3002;</td>
+</tr>
+<tr>
+<td>sources</td>
+<td>&#x94FE;&#x63A5;&#x5230; Helm &#x56FE;&#x8868;&#x6216;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6E90;&#x4EE3;&#x7801;&#x7684; URL &#x5217;&#x8868;&#x3002;</td>
+</tr>
+<tr>
+<td>type</td>
+<td>&#x5B9A;&#x4E49;&#x56FE;&#x8868;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x662F; application &#x6216; library&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p> &#x4E00;&#x4E9B;&#x5B57;&#x6BB5;&#x4EC5;&#x4EC5;&#x63D0;&#x4F9B;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x6709;&#x4E9B;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x4FEE;&#x6539; Helm &#x56FE;&#x8868;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x6BD4;&#x5982; type &#x5B57;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x56FE;&#x8868;&#x7C7B;&#x578B;&#x4E3A; application &#x6216; library&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; application&#xFF0C;&#x56FE;&#x8868;&#x5C06;&#x7528;&#x6765;&#x90E8;&#x7F72;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF1B;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; library&#xFF0C;&#x56FE;&#x8868;&#x53EF;&#x901A;&#x8FC7; helper &#x6A21;&#x677F;&#x7684;&#x5F62;&#x5F0F;&#x5411;&#x5176;&#x4ED6;&#x56FE;&#x8868;&#x63D0;&#x4F9B;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x53EF;&#x4EE5;&#x4FEE;&#x6539; Helm &#x56FE;&#x8868;&#x884C;&#x4E3A;&#x7684;&#x5B57;&#x6BB5;&#x662F; dependencies(&#x4F9D;&#x8D56;&#x9879;) &#x5B57;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x8BA8;&#x8BBA;&#x3002;</p>
+<h4 id="&#x7BA1;&#x7406;&#x56FE;&#x8868;&#x4F9D;&#x8D56;">&#x7BA1;&#x7406;&#x56FE;&#x8868;&#x4F9D;&#x8D56;</h4>
+<p>Helm &#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x4F46;&#x5177;&#x4F53;&#x4F9D;&#x8D56;&#x54EA;&#x4E9B;&#x56FE;&#x8868;&#x9700;&#x8981;&#x56FE;&#x8868;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x7684; dependencies &#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x3002;&#x6BD4;&#x5982; wordpress &#x56FE;&#x8868;&#xFF0C;&#x5B83;&#x5728;&#x4F9D;&#x8D56;&#x9879;&#x4E2D;&#x58F0;&#x660E;&#x4E86; mariadb&#x3002;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#xFF0C;&#x514D;&#x53BB;&#x4E86;&#x91CD;&#x5934;&#x5B9A;&#x4E49;&#x8D44;&#x6E90;&#x7684;&#x9EBB;&#x70E6;&#x3002;&#x4EE5;&#x4E0B;&#x662F; wordpress &#x56FE;&#x8868;&#x4E2D;&#x5B9A;&#x4E49; mariadb &#x4F9D;&#x8D56;&#x7684;&#x4EE3;&#x7801;&#x6BB5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">condition</span><span class="token punctuation">:</span> mariadb.enabled
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> mariadb
+  <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//charts.bitnami.com/bitnami
+  <span class="token key atrule">version</span><span class="token punctuation">:</span> 9.x.x
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EC5;&#x4EC5;&#x7C98;&#x8D34;&#x4E86; mariadb &#x7684;&#x4F9D;&#x8D56;&#x3002;&#x901A;&#x8FC7;&#x6267;&#x884C; <strong>helm show chart bitnami/wordpress --version 11.0.5</strong> &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; dependencies &#x5757;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x7684;&#x5217;&#x8868;&#x3002;</p>
+<p>dependencies &#x5757;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x7528;&#x6765;&#x4FEE;&#x6539;&#x56FE;&#x8868;&#x7684;&#x4F9D;&#x8D56;&#x9879;&#x7BA1;&#x7406;&#x884C;&#x4E3A;&#x3002;&#x53EF;&#x4EE5;&#x5728;&#x4E0B;&#x8868;&#x4E2D;&#x67E5;&#x770B;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x5B9A;&#x4E49;</th>
+<th>&#x662F;&#x5426;&#x5FC5;&#x987B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>&#x4F9D;&#x8D56;&#x7684;&#x56FE;&#x8868;&#x540D;&#x79F0;</td>
+<td>&#x662F;</td>
+</tr>
+<tr>
+<td>repository</td>
+<td>&#x4F9D;&#x8D56;&#x7684;&#x56FE;&#x8868;&#x4F4D;&#x7F6E;(&#x5B58;&#x50A8;&#x5E93;)</td>
+<td>&#x662F;</td>
+</tr>
+<tr>
+<td>version</td>
+<td>&#x4F9D;&#x8D56;&#x7684;&#x56FE;&#x8868;&#x7248;&#x672C;</td>
+<td>&#x662F;</td>
+</tr>
+<tr>
+<td>alias</td>
+<td>&#x4F9D;&#x8D56;&#x7684;&#x56FE;&#x8868;&#x522B;&#x540D;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>condition</td>
+<td>&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5B83;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5305;&#x542B;&#x4F9D;&#x8D56;&#x9879;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>import-values</td>
+<td>&#x5C06;&#x4F9D;&#x8D56;&#x56FE;&#x8868;&#x7684;&#x503C;&#x5BFC;&#x5165;&#x5230;&#x7236;&#x56FE;&#x8868;</td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>&#x6807;&#x7B7E;</td>
+<td>&#x5426;</td>
+</tr>
+</tbody>
+</table>
+<p>dependencies &#x5757;&#x4E2D;&#x7684;&#x5FC5;&#x8981;&#x5B57;&#x6BB5;&#x53EA;&#x6709; name&#x3001;repository &#x548C; version&#x3002;&#x6211;&#x4EEC;&#x5728; wordpress &#x4F9D;&#x8D56;&#x9879;&#x4E2D;&#x770B;&#x5230;&#xFF0C;&#x4F9D;&#x8D56;&#x7684;&#x56FE;&#x8868;&#x540D;&#x79F0;&#x662F; mariadb&#xFF0C;&#x5B58;&#x50A8;&#x5E93;(repository)&#x5730;&#x5740;&#x662F; <a href="https://charts.bitnami.com/bitnami&#x3002;&#x5B83;&#x4F1A;&#x4ECE;&#x8BE5;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x641C;&#x7D22;&#x540D;&#x79F0;&#x4E3A;" target="_blank">https://charts.bitnami.com/bitnami&#x3002;&#x5B83;&#x4F1A;&#x4ECE;&#x8BE5;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x641C;&#x7D22;&#x540D;&#x79F0;&#x4E3A;</a> mariadb &#x7684;&#x4F9D;&#x8D56;&#x3002;version &#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x4E86;&#x4F9D;&#x8D56;&#x56FE;&#x8868;&#x7684;&#x7248;&#x672C;&#xFF0C;&#x5B83;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x6BD4;&#x5982; 9.0.0&#xFF1B;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x901A;&#x914D;&#x7B26;&#x5F62;&#x5F0F;&#xFF0C;&#x6BD4;&#x5982; 9.x.x&#xFF0C;&#x5982;&#x679C;&#x5B9A;&#x4E49;&#x7684;&#x662F;&#x901A;&#x914D;&#x7B26;&#xFF0C;&#x4F1A;&#x4E0B;&#x8F7D;&#x4E0E;&#x901A;&#x914D;&#x7B26;&#x5339;&#x914D;&#x7684;&#x6700;&#x65B0;&#x56FE;&#x8868;&#x7248;&#x672C;&#x3002;</p>
+<p>&#x5728;&#x4E86;&#x89E3;&#x4E86; dependencies &#x7684;&#x5FC5;&#x8981;&#x5B57;&#x6BB5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;&#x3002;</p>
+<h4 id="&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;">&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;</h4>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>helm dependency</strong> &#x5B50;&#x547D;&#x4EE4;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x5B50;&#x547D;&#x4EE4;&#x5217;&#x8868;&#x5982;&#x4E0B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x547D;&#x4EE4;</th>
+<th>&#x4F5C;&#x7528;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>helm dependency build</td>
+<td>&#x57FA;&#x4E8E; Chart.lock &#x6587;&#x4EF6;&#x91CD;&#x5EFA; chart/ &#x76EE;&#x5F55;&#xFF0C;&#x5982;&#x679C; Chart.lock &#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x6267;&#x884C; &quot;helm dependency update&quot; &#x547D;&#x4EE4;&#x3002;</td>
+</tr>
+<tr>
+<td>helm dependency list</td>
+<td>&#x5217;&#x51FA;&#x56FE;&#x8868;&#x7684;&#x4F9D;&#x8D56;&#x9879;&#x3002;</td>
+</tr>
+<tr>
+<td>helm dependency update</td>
+<td>&#x57FA;&#x4E8E; Chart.yaml &#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x66F4;&#x65B0; chart/ &#x76EE;&#x5F55;&#xFF0C;&#x5E76;&#x751F;&#x6210; Chart.lock &#x6587;&#x4EF6;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x7B2C;&#x4E00;&#x6B21;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>helm dependency update</strong> &#x547D;&#x4EE4;&#xFF0C;&#x5B83;&#x4F1A;&#x5C06;&#x6BCF;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x4E0B;&#x8F7D;&#x5230;&#x6307;&#x5B9A;&#x56FE;&#x8868;&#x7684; charts/ &#x76EE;&#x5F55;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm dependency update <span class="token variable">$CHART_PATH</span>
+</code></pre>
+<p><strong>helm dependency update</strong> &#x547D;&#x4EE4;&#x4ECE;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#x4E0B;&#x8F7D; .tgz &#x6269;&#x5C55;&#x540D;&#x7684; GZip &#x683C;&#x5F0F;&#x538B;&#x7F29;&#x7684;&#x4F9D;&#x8D56;&#x9879;&#x3002;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x8FD8;&#x4F1A;&#x751F;&#x6210; Chart.lock &#x7684;&#x6587;&#x4EF6;&#x3002;Chart.lock &#x6587;&#x4EF6;&#x7C7B;&#x4F3C; Chart.yaml &#x6587;&#x4EF6;&#x3002;Chart.yaml &#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x662F;&#x5426;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;Chart.lock &#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x4F9D;&#x8D56;&#x9879;&#x7684;&#x5B9E;&#x9645;&#x72B6;&#x6001;&#x3002;</p>
+<p>Chart.lock &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> mariadb
+  <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//charts.bitnami.com
+  <span class="token key atrule">version</span><span class="token punctuation">:</span> 9.3.11
+<span class="token key atrule">digest</span><span class="token punctuation">:</span> xxxxx
+<span class="token key atrule">generated</span><span class="token punctuation">:</span> <span class="token string">&quot;2021-xxxx&quot;</span>
+</code></pre>
+<p>&#x4E0E;&#x5176;&#x5BF9;&#x5E94;&#x7684; Chart.yaml &#x6587;&#x4EF6;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v2
+<span class="token key atrule">version</span><span class="token punctuation">:</span> 0.0.1
+<span class="token key atrule">name</span><span class="token punctuation">:</span> dependencies<span class="token punctuation">-</span>demonstration
+<span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> mariadb
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> 9.x.x
+    <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//charts.bitnami.com
+</code></pre>
+<p>&#x5728; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6307;&#x5B9A;&#x4F9D;&#x8D56;&#x7684; mariadb &#x7248;&#x672C;&#x662F; 9.x.x&#xFF0C;&#x4F46;&#x5728; Chart.lock &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x7248;&#x672C;&#x662F; 9.3.11&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A; Chart.yaml &#x6587;&#x4EF6;&#x7528;&#x4E86;&#x901A;&#x914D;&#x7B26;&#x5B9A;&#x4E49;&#x7248;&#x672C;&#xFF0C;Helm &#x4F1A;&#x4E0B;&#x8F7D; 9.x.x &#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x800C;&#x5F53;&#x524D;&#x6700;&#x65B0;&#x7248;&#x672C;&#x6B63;&#x662F; 9.3.11&#x3002;</p>
+<p>&#x6839;&#x636E; Chart.lock &#x6587;&#x4EF6;&#xFF0C;Helm &#x53EF;&#x4EE5;&#x5728; charts/ &#x76EE;&#x5F55;&#x88AB;&#x5220;&#x9664;&#x6216;&#x8005;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6784;&#x5EFA;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm dependency build <span class="token variable">$CHART_PATH</span>
+</code></pre>
+<p>&#x65E2;&#x7136;&#x80FD;&#x591F;&#x901A;&#x8FC7; <strong>helm dependency build</strong> &#x547D;&#x4EE4;&#x4E0B;&#x8F7D;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x6211;&#x4EEC;&#x7684;&#x56FE;&#x8868;&#x6E90;&#x7801;&#x4E2D;&#x5220;&#x9664; charts/ &#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x51CF;&#x5C11;&#x4EE3;&#x7801;&#x4ED3;&#x5E93;&#x7684;&#x5927;&#x5C0F;&#x3002;</p>
+<p>&#x968F;&#x7740;&#x529F;&#x80FD;&#x8FED;&#x4EE3;&#xFF0C;&#x603B;&#x4F1A;&#x4EA7;&#x751F;&#x65B0;&#x7684;&#x7248;&#x672C;&#x3002;&#x8FD9;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>helm dependency update</strong> &#x547D;&#x4EE4;&#x66F4;&#x65B0;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x5B83;&#x4F1A;&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7684;&#x53EF;&#x7528;&#x7248;&#xFF0C;&#x5E76;&#x91CD;&#x65B0;&#x751F;&#x6210; Chart.lock &#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x5C06;&#x6765;&#x8981;&#x4E0B;&#x8F7D; 10.x.x &#x7248;&#x672C;&#xFF0C;&#x6216;&#x8005;&#x5E0C;&#x671B;&#x5C06;&#x4F9D;&#x8D56;&#x9879;&#x56FA;&#x5B9A;&#x5230;&#x7279;&#x5B9A;&#x7248;&#x672C;&#xFF0C;&#x5982; 9.0.0&#xFF0C;&#x53EF;&#x4EE5;&#x5728; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C; <strong>helm dependency update</strong> &#x547D;&#x4EE4;&#x3002;</p>
+<p><strong>helm dependency list</strong> &#x547D;&#x4EE4;&#x53EF;&#x7528;&#x4E8E;&#x67E5;&#x770B;&#x4E0B;&#x8F7D;&#x5E76;&#x4FDD;&#x5B58;&#x5728;&#x672C;&#x5730;&#x4E3B;&#x673A;&#x4E0A;&#x7684; Helm &#x56FE;&#x8868;&#x4F9D;&#x8D56;&#x9879;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 testChart<span class="token punctuation">]</span>$ helm dependency list wordpress
+NAME         VERSION    REPOSITORY                            STATUS
+mariadb      <span class="token number">9</span>.x.x      https://charts.bitnami.com/bitnami    ok    
+memcached    <span class="token number">5</span>.x.x      https://charts.bitnami.com/bitnami    ok    
+common       <span class="token number">1</span>.x.x      https://charts.bitnami.com/bitnami    ok
+</code></pre>
+<p>STATUS &#x5217;&#x8868;&#x793A;&#x4F9D;&#x8D56;&#x9879;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x4E0B;&#x8F7D;&#x5230; charts/ &#x76EE;&#x5F55;&#x3002;&#x5982;&#x679C;&#x72B6;&#x6001;&#x663E;&#x793A;&#x4E3A; ok&#xFF0C;&#x8868;&#x793A;&#x4F9D;&#x8D56;&#x9879;&#x5DF2;&#x4E0B;&#x8F7D;&#x3002;&#x5982;&#x679C;&#x72B6;&#x6001;&#x4E3A;missing&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8BE5;&#x4F9D;&#x8D56;&#x9879;&#x8FD8;&#x6CA1;&#x6709;&#x88AB;&#x4E0B;&#x8F7D;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x4F1A;&#x4E0B;&#x8F7D; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; dependencies &#x5757;&#x63D0;&#x4F9B;&#x7684; condition &#x6216;&#x8005; tags &#x5B57;&#x6BB5;&#x9009;&#x62E9;&#x4E0B;&#x8F7D;&#x54EA;&#x4E9B;&#x4F9D;&#x8D56;&#x3002;</p>
+<h4 id="&#x9009;&#x62E9;&#x4F9D;&#x8D56;&#x9879;">&#x9009;&#x62E9;&#x4F9D;&#x8D56;&#x9879;</h4>
+<p>&#x4F7F;&#x7528; condition &#x548C; tags &#x5B57;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5B89;&#x88C5;&#x6216;&#x5347;&#x7EA7;&#x65F6;&#xFF0C;&#x6709;&#x6761;&#x4EF6;&#x5730;&#x9009;&#x62E9;&#x4F9D;&#x8D56;&#x9879;&#x3002;&#x4EE5;&#x4E0B;&#x662F; Chart.yaml &#x6587;&#x4EF6;&#x7684; dependencies &#x5757;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> dependency1
+  <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//example.com
+  <span class="token key atrule">version</span><span class="token punctuation">:</span> 1.x.x
+  <span class="token key atrule">condition</span><span class="token punctuation">:</span> dependency1.enabled
+  <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> monitoring
+<span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> dependency2
+  <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//example.com
+  <span class="token key atrule">version</span><span class="token punctuation">:</span> 2.x.x
+  <span class="token key atrule">condition</span><span class="token punctuation">:</span> dependency2.enabled
+  <span class="token key atrule">tags</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> monitoring
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C; dependencies &#x5757;&#x589E;&#x52A0;&#x4E86; condition &#x548C; tags &#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;condition &#x5B57;&#x6BB5;&#x7684;&#x503C;&#x7531;&#x7528;&#x6237;&#x6216;&#x56FE;&#x8868;&#x7684; values.yaml &#x6587;&#x4EF6;&#x63D0;&#x4F9B;&#x3002;&#x5982;&#x679C;&#x8BC4;&#x4F30;&#x7ED3;&#x679C;&#x4E3A; true&#xFF0C;&#x4F9D;&#x8D56;&#x9879;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#xFF1B;&#x5982;&#x679C;&#x4E3A; false&#xFF0C;&#x5219;&#x4E0D;&#x5305;&#x542B;&#x8BE5;&#x4F9D;&#x8D56;&#x9879;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x9017;&#x53F7; (<strong>,</strong>) &#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">condition</span><span class="token punctuation">:</span> dependency1.enabled<span class="token punctuation">,</span> global.dependency1.enabled
+</code></pre>
+<p>condition &#x7684;&#x8BBE;&#x7F6E;&#x5E94;&#x9075;&#x5FAA; chartname.enabled &#x7684;&#x547D;&#x540D;&#x89C4;&#x8303;&#xFF0C;&#x6BCF;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x90FD;&#x5E94;&#x6839;&#x636E;&#x4F9D;&#x8D56;&#x7684;&#x56FE;&#x8868;&#x540D;&#x79F0;&#x8BBE;&#x7F6E;&#x552F;&#x4E00;&#x6761;&#x4EF6;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x8BA9;&#x7528;&#x6237;&#x66F4;&#x76F4;&#x89C2;&#x7684;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x67D0;&#x4E2A;&#x56FE;&#x8868;&#x4F9D;&#x8D56;&#x3002;&#x5982;&#x679C;&#x6761;&#x4EF6;&#x503C;&#x672A;&#x5305;&#x542B;&#x5728; values.yaml &#x6587;&#x4EF6;&#x4E2D;&#x3001;&#x6216;&#x8005;&#x7528;&#x6237;&#x672A;&#x63D0;&#x4F9B;&#xFF0C;&#x5219;&#x5C06;&#x5FFD;&#x7565; condition &#x5B57;&#x6BB5;&#x3002;</p>
+<p>condition &#x5B57;&#x6BB5;&#x7528;&#x4E8E;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x67D0;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x800C; tags &#x5B57;&#x6BB5;&#x7528;&#x4E8E;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x4F9D;&#x8D56;&#x9879;&#x7EC4;&#x3002;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;dependencies &#x5757;&#x4E2D;&#x7684;&#x4E24;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x90FD;&#x914D;&#x7F6E;&#x4E86; monitoring &#x6807;&#x7B7E;(tag)&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5982;&#x679C;&#x542F;&#x7528;&#x4E86; monitoring &#x6807;&#x7B7E;&#xFF0C;&#x4E24;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x90FD;&#x4F1A;&#x5305;&#x542B;&#x5728;&#x5185;&#x3002;&#x5982;&#x679C; monitoring &#x8BBE;&#x7F6E;&#x4E3A; false&#xFF0C;&#x5219;&#x5FFD;&#x7565;&#x8FD9;&#x4E24;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x3002;&#x901A;&#x8FC7;&#x5728;&#x7236;&#x56FE;&#x8868;&#x7684; values.yaml &#x6587;&#x4EF6;&#x4E2D;&#x7684; tags &#x5BF9;&#x8C61;&#x4E0B;&#xFF0C;&#x8BBE;&#x7F6E;&#x6807;&#x7B7E;&#x662F;&#x542F;&#x7528;&#x8FD8;&#x662F;&#x7981;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">tags</span><span class="token punctuation">:</span>
+  <span class="token key atrule">monitoring</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+</code></pre>
+<p>&#x5728; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x9075;&#x5FAA; YAML list &#x8BED;&#x6CD5;&#xFF0C;&#x4F9D;&#x8D56;&#x9879;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x6807;&#x7B7E;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x4E3A; true&#xFF0C;&#x6B64;&#x4F9D;&#x8D56;&#x9879;&#x5C31;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#x3002;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x4F9D;&#x8D56;&#x9879;&#x7684;&#x6240;&#x6709;&#x6807;&#x7B7E;&#x90FD;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x90A3;&#x4E48;&#x4F9D;&#x8D56;&#x9879;&#x5C06;&#x88AB;&#x9ED8;&#x8BA4;&#x5305;&#x542B;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8BA8;&#x8BBA;&#x4E86;&#x5982;&#x4F55;&#x6709;&#x6761;&#x4EF6;&#x5730;&#x58F0;&#x660E;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x8BA8;&#x8BBA;&#x5982;&#x4F55;&#x8986;&#x76D6;&#x548C;&#x5F15;&#x7528;&#x4F9D;&#x8D56;&#x9879;&#x4E2D;&#x7684;&#x503C;&#x3002;</p>
+<h4 id="&#x8986;&#x76D6;&#x548C;&#x5F15;&#x7528;&#x5B50;&#x56FE;&#x8868;&#x4E2D;&#x7684;&#x503C;">&#x8986;&#x76D6;&#x548C;&#x5F15;&#x7528;&#x5B50;&#x56FE;&#x8868;&#x4E2D;&#x7684;&#x503C;</h4>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x5F15;&#x7528;&#x6216;&#x8986;&#x76D6;&#x4F9D;&#x8D56;&#x9879;(&#x5B50;&#x56FE;&#x8868;) &#x7684;&#x503C;&#xFF0C;&#x65B9;&#x6CD5;&#x662F;&#x5C06;&#x8FD9;&#x4E9B;&#x503C;&#x5305;&#x88C5;&#x5230;&#x4E0E;&#x5B50;&#x56FE;&#x8868;&#x540C;&#x540D;&#x7684;&#x6620;&#x5C04;(map)&#x4E2D;&#x3002;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; my-dep &#x7684;&#x5B50;&#x56FE;&#x8868;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment">## &#x5B50;&#x56FE;&#x8868;&#x4E2D;&#x7684;&#x914D;&#x7F6E;</span>
+<span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+<span class="token key atrule">servicePorts</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token number">8080</span>
+  <span class="token punctuation">-</span> <span class="token number">8443</span>
+</code></pre>
+<p>&#x5F53; my-dep &#x56FE;&#x8868;&#x4F5C;&#x4E3A;&#x4F9D;&#x8D56;&#x9879;&#x5B89;&#x88C5;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7236;&#x56FE;&#x8868;&#x7684; my-dep YAML &#x5BF9;&#x8C61;&#x4E2D;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E9B;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment">## &#x7236;&#x56FE;&#x8868;&#x7684;&#x914D;&#x7F6E;</span>
+<span class="token key atrule">my-dep</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token key atrule">servicePorts</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token number">8080</span>
+    <span class="token punctuation">-</span> <span class="token number">8443</span>
+    <span class="token punctuation">-</span> <span class="token number">8881</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x8986;&#x76D6;&#x4E86; my-dep &#x56FE;&#x8868;&#x4E2D;&#x5B9A;&#x4E49;&#x7684; replicas &#x548C; servicePorts &#x7684;&#x503C;&#xFF0C;&#x5C06; replicas &#x8BBE;&#x7F6E;&#x4E3A; 3&#xFF0C;&#x5E76;&#x5411; servicePorts &#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A; 8881 &#x7684;&#x7AEF;&#x53E3;&#x3002;&#x8FD9;&#x4E9B;&#x503C;&#x53EF;&#x4EE5;&#x5728;&#x7236;&#x56FE;&#x8868;&#x7684;&#x6A21;&#x677F;&#x4E2D;&#x5F15;&#x7528;&#xFF0C;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528;&#x70B9;&#x53F7;(.)&#xFF0C;&#x4F8B;&#x5982; my-dep.replicas&#x3002;&#x9664;&#x4E86;&#x8986;&#x76D6;&#x548C;&#x5F15;&#x7528;&#x503C;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; import-values &#x5B57;&#x6BB5;&#x76F4;&#x63A5;&#x5BFC;&#x5165;&#x4F9D;&#x8D56;&#x9879;&#x7684;&#x503C;&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;-import-values-&#x5BFC;&#x5165;&#x503C;">&#x4F7F;&#x7528; import-values &#x5BFC;&#x5165;&#x503C;</h4>
+<p>Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x7684; dependencies &#x5757;&#x652F;&#x6301; import-values &#x5B57;&#x6BB5;&#xFF0C;&#x7528;&#x6765;&#x5728;&#x7236;&#x56FE;&#x8868;&#x4E2D;&#x5BFC;&#x5165;&#x5B50;&#x56FE;&#x8868;&#x7684;&#x503C;&#x3002;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x6709;&#x51E0;&#x79CD;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x662F;&#x63D0;&#x4F9B;&#x8981;&#x4ECE;&#x5B50;&#x56FE;&#x8868;&#x5BFC;&#x5165;&#x7684;&#x952E;&#x7684;&#x5217;&#x8868;&#x3002;&#x8981;&#x786E;&#x4FDD;&#x5176;&#x80FD;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#xFF0C;&#x5B50;&#x56FE;&#x8868;&#x5FC5;&#x987B;&#x5728; exports &#x5757;&#x4E0B;&#x58F0;&#x660E;&#x4E86;&#x8BE5;&#x503C;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">exports</span><span class="token punctuation">:</span>
+  <span class="token key atrule">image</span><span class="token punctuation">:</span>
+    <span class="token key atrule">registry</span><span class="token punctuation">:</span> <span class="token string">&apos;my-registry.io&apos;</span>
+    <span class="token key atrule">name</span><span class="token punctuation">:</span> learnhelm/my<span class="token punctuation">-</span>image
+    <span class="token key atrule">tag</span><span class="token punctuation">:</span> latest
+</code></pre>
+<p>&#x7136;&#x540E;&#x7236;&#x56FE;&#x8868;&#x53EF;&#x4EE5;&#x5728; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49; import-values &#x5B57;&#x6BB5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> mariadb
+    <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//charts.bitnami.com/bitnami
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> 7.x.x
+    <span class="token key atrule">import-values</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> image
+</code></pre>
+<p>&#x5B50;&#x56FE;&#x8868;&#x4E2D; exports.image &#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4F1A;&#x5728;&#x7236;&#x56FE;&#x8868;&#x4E2D;&#x88AB;&#x5F15;&#x7528;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">registry</span><span class="token punctuation">:</span> <span class="token string">&apos;my-registry.io&apos;</span>
+<span class="token key atrule">name</span><span class="token punctuation">:</span> learnhelm/my<span class="token punctuation">-</span>image
+<span class="token key atrule">tag</span><span class="token punctuation">:</span> latest
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8FD9;&#x79CD;&#x5BFC;&#x5165;&#x65B9;&#x5F0F;&#xFF0C;&#x5220;&#x9664;&#x4E86; image &#x6620;&#x5C04;&#xFF0C;&#x53EA;&#x4FDD;&#x7559;&#x4E86;&#x5B83;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x3002;&#x5982;&#x679C;&#x8981;&#x4FDD;&#x7559; image&#xFF0C;&#x53EF;&#x4EE5;&#x5728; import-values &#x5B57;&#x6BB5;&#x91CC;&#x4F7F;&#x7528; child-parent &#x683C;&#x5F0F;&#x3002;&#x5B83;&#x4F1A;&#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x5B50;&#x56FE;&#x8868;&#x4E2D;&#x5BFC;&#x5165;&#x503C;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x5B83;&#x4EEC;&#x5728;&#x7236;&#x56FE;&#x8868;&#x4E2D;&#x5E94;&#x5F15;&#x7528;&#x7684;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">dependencies</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> mariadb
+    <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//charts.bitnami.com/bitnami
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> 7.x.x
+    <span class="token key atrule">import-values</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">child</span><span class="token punctuation">:</span> image
+        <span class="token key atrule">parent</span><span class="token punctuation">:</span> image
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4F1A;&#x83B7;&#x53D6;&#x5B50;&#x56FE;&#x8868;&#x4E2D; image &#x5757;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x5BFC;&#x5165;&#x7236;&#x56FE;&#x8868;&#x7684; image &#x5757;&#x4E2D;&#x3002;</p>
+<p>&#x4F7F;&#x7528; import-values &#x5B57;&#x6BB5;&#x5BFC;&#x5165;&#x7684;&#x503C;&#x4E0D;&#x80FD;&#x5728;&#x7236;&#x56FE;&#x8868;&#x4E2D;&#x88AB;&#x8986;&#x76D6;&#x3002;&#x5982;&#x679C;&#x5B50;&#x56FE;&#x8868;&#x4E2D;&#x7684;&#x503C;&#x9700;&#x8981;&#x8986;&#x76D6;&#xFF0C;&#x5219;&#x4E0D;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; import-values &#x5B57;&#x6BB5;&#xFF0C;&#x800C;&#x662F;&#x5E94;&#x8BE5;&#x901A;&#x8FC7;&#x5728;&#x6BCF;&#x4E2A;&#x5B50;&#x56FE;&#x8868;&#x7684;&#x540D;&#x79F0;&#x524D;&#x6DFB;&#x52A0;&#x524D;&#x7F00;&#x6765;&#x8986;&#x76D6;&#x6240;&#x9700;&#x503C;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8BA8;&#x8BBA;&#x4E86;&#x5982;&#x4F55;&#x5728; Chart.yaml &#x6587;&#x4EF6;&#x4E2D;&#x7BA1;&#x7406;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x63A5;&#x7740;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x5728; Helm &#x56FE;&#x8868;&#x4E2D;&#x5B9A;&#x4E49; release &#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;&#x94A9;&#x5B50;(hooks)&#x3002;</p>
+<h3 id="release-&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;">Release &#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;</h3>
+<p>Helm &#x56FE;&#x8868;&#x7684;&#x529F;&#x80FD;&#x4E4B;&#x4E00;&#x662F;&#x80FD;&#x591F;&#x7BA1;&#x7406; Kubernetes &#x4E0A;&#x7684;&#x590D;&#x6742;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x6BCF;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684; release &#x90FD;&#x4F1A;&#x7ECF;&#x5386;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x5404;&#x4E2A;&#x9636;&#x6BB5;&#x3002;&#x4E3A;&#x4E86;&#x5BF9; release &#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF0C;Helm &#x63D0;&#x4F9B;&#x4E86;&#x94A9;&#x5B50;(hooks)&#x673A;&#x5236;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728; release &#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x4E0D;&#x540C;&#x9636;&#x6BB5;&#x6267;&#x884C;&#x64CD;&#x4F5C;&#x3002;&#x5728;&#x672C;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4F1A;&#x4ECB;&#x7ECD;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x4E0D;&#x540C;&#x9636;&#x6BB5;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x94A9;&#x5B50;&#x4E0E; release &#x53CA;&#x6574;&#x4E2A; Kubernetes &#x96C6;&#x7FA4;&#x4EA4;&#x4E92;&#x3002;</p>
+<p>&#x5728;&#x7B2C;&#x4E09;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4ECB;&#x7ECD;&#x4E86; Helm release &#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x51E0;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x5305;&#x62EC;&#x5B89;&#x88C5;&#x3001;&#x5347;&#x7EA7;&#x3001;&#x5220;&#x9664;&#x548C;&#x56DE;&#x9000;&#x3002;&#x6709;&#x7684; Helm &#x56FE;&#x8868;&#x5F88;&#x590D;&#x6742;&#xFF0C;&#x5B83;&#x4EEC;&#x7BA1;&#x7406;&#x5C06;&#x8981;&#x90E8;&#x7F72;&#x5230; Kubernetes &#x7684;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x9664;&#x4E86;&#x90E8;&#x7F72;&#x8D44;&#x6E90;&#x4E4B;&#x5916;&#xFF0C;&#x5F80;&#x5F80;&#x8FD8;&#x6709;&#x5176;&#x5B83;&#x64CD;&#x4F5C;&#xFF0C;&#x5982;&#xFF1A;</p>
+<ul>
+<li>&#x5B8C;&#x6210;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6240;&#x9700;&#x7684;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;&#x7BA1;&#x7406;&#x8BC1;&#x4E66;&#x6216;&#x8005; secrets</li>
+<li>&#x5728;&#x5347;&#x7EA7;&#x56FE;&#x8868;&#x524D;&#xFF0C;&#x6267;&#x884C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5907;&#x4EFD;&#x3001;&#x6062;&#x590D;&#x64CD;&#x4F5C;</li>
+<li>&#x5728;&#x5220;&#x9664;&#x56FE;&#x8868;&#x524D;&#xFF0C;&#x6E05;&#x7406;&#x90E8;&#x7F72;&#x7684;&#x8D44;&#x6E90;</li>
+</ul>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x8FD8;&#x4F1A;&#x6709;&#x5F88;&#x591A;&#x5177;&#x4F53;&#x64CD;&#x4F5C;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x8981;&#x4E86;&#x89E3; Helm &#x94A9;&#x5B50;&#x7684;&#x57FA;&#x672C;&#x77E5;&#x8BC6;&#x4EE5;&#x53CA;&#x4F55;&#x65F6;&#x6267;&#x884C;&#x94A9;&#x5B50;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x6211;&#x4EEC;&#x4E0B;&#x4E00;&#x8282;&#x7684;&#x76EE;&#x6807;&#x3002;</p>
+<h4 id="&#x94A9;&#x5B50;&#x57FA;&#x7840;&#x77E5;&#x8BC6;">&#x94A9;&#x5B50;&#x57FA;&#x7840;&#x77E5;&#x8BC6;</h4>
+<p>&#x94A9;&#x5B50;&#x5728; release &#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x6307;&#x5B9A;&#x9636;&#x6BB5;&#x4F5C;&#x4E3A;&#x4E00;&#x6B21;&#x6027;&#x52A8;&#x4F5C;&#x6267;&#x884C;&#xFF0C;&#x4E0E; Helm &#x4E2D;&#x7684;&#x5927;&#x591A;&#x6570;&#x7279;&#x6027;&#x4E00;&#x6837;&#xFF0C;&#x94A9;&#x5B50;&#x4E5F;&#x662F;&#x4F5C;&#x4E3A; Kubernetes &#x7684;&#x8D44;&#x6E90;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x66F4;&#x5177;&#x4F53;&#x5730;&#x8BF4;&#x662F;&#x5728;&#x5BB9;&#x5668;&#x4E2D;&#x5B9E;&#x73B0;&#x7684;&#x3002;&#x867D;&#x7136; Kubernetes &#x4E2D;&#x5927;&#x591A;&#x6570;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x90FD;&#x662F;&#x4E3A;&#x957F;&#x671F;&#x5B58;&#x5728;&#x7684;&#x8FDB;&#x7A0B;&#x800C;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x63D0;&#x4F9B; API &#x8BF7;&#x6C42;&#x670D;&#x52A1;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x4E5F;&#x53EF;&#x4EE5;&#x7531;&#x5355;&#x4E2A;&#x4EFB;&#x52A1;&#x6216;&#x4E00;&#x7EC4;&#x4EFB;&#x52A1;&#x7EC4;&#x6210;&#xFF0C;&#x8FD9;&#x4E9B;&#x4EFB;&#x52A1;&#x4F7F;&#x7528;&#x811A;&#x672C;&#x6267;&#x884C;&#xFF0C;&#x5E76;&#x5728;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#x663E;&#x793A;&#x6210;&#x529F;&#x6216;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x521B;&#x5EFA;&#x77ED;&#x671F;&#x4EFB;&#x52A1;&#x901A;&#x5E38;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;&#x88F8; Pod &#x6216;&#x8005; Job&#x3002;&#x88F8; Pod &#x662F;&#x4E00;&#x79CD;&#x8FD0;&#x884C;&#x5B8C;&#x6210;&#x5373;&#x7EC8;&#x6B62;&#x7684; Pod&#xFF0C;&#x7F3A;&#x9677;&#x662F;&#x5982;&#x679C;&#x5DE5;&#x4F5C;(Worker)&#x8282;&#x70B9;&#x53D1;&#x751F;&#x6545;&#x969C;&#xFF0C;&#x88F8; Pod &#x4E0D;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x8C03;&#x5EA6;&#x3002;&#x7531;&#x4E8E;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#xFF0C;&#x6700;&#x597D;&#x5C06;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;&#x4F5C;&#x4E3A; Job &#x8FD0;&#x884C;&#xFF0C;&#x8FD9;&#x6837;&#x5DE5;&#x4F5C;&#x8282;&#x70B9;&#x6545;&#x969C;&#x65F6;&#xFF0C;&#x94A9;&#x5B50;&#x4F9D;&#x7136;&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x8C03;&#x5EA6;&#x3002;</p>
+<p>&#x94A9;&#x5B50;&#x88AB;&#x5B9A;&#x4E49;&#x4E3A; Kubernetes &#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5B58;&#x653E;&#x5728; templates/ &#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x5E76;&#x7528; helm.sh/hook &#x6CE8;&#x89E3;(Annotations)&#x3002;&#x6B64;&#x6CE8;&#x89E3;&#x786E;&#x4FDD;&#x5728;&#x6807;&#x51C6;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x94A9;&#x5B50;&#x4E0D;&#x4F1A;&#x4E0E; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x4E00;&#x8D77;&#x6E32;&#x67D3;&#x3002;helm.sh/hook &#x6CE8;&#x89E3;&#x51B3;&#x5B9A;&#x4E86;&#x94A9;&#x5B50;&#x4F55;&#x65F6;&#x4F5C;&#x4E3A; release &#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5C06;&#x94A9;&#x5B50;&#x5B9A;&#x4E49;&#x4E3A; Job &#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> batch/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Job
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> helm<span class="token punctuation">-</span>auditing
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">&apos;helm.sh/hook&apos;</span><span class="token punctuation">:</span> pre<span class="token punctuation">-</span>install<span class="token punctuation">,</span>post<span class="token punctuation">-</span>install
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">template</span><span class="token punctuation">:</span>
+    <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> helm<span class="token punctuation">-</span>auditing
+    <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+      <span class="token key atrule">restartPolicy</span><span class="token punctuation">:</span> Never
+      <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> helm<span class="token punctuation">-</span>auditing
+        <span class="token key atrule">command</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;/bin/sh&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;-c&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;echo Hook Executed at $(date)&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;sleep 10&quot;</span><span class="token punctuation">]</span>
+        <span class="token key atrule">image</span><span class="token punctuation">:</span> alpine
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x793A;&#x4F8B;&#x4F1A;&#x6253;&#x5370;&#x5BB9;&#x5668;&#x5F53;&#x524D;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#xFF0C;&#x7136;&#x540E;&#x4F11;&#x7720; 10 &#x79D2;&#x949F;&#x3002;Helm &#x5728;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x524D;(pre-install)&#x548C;&#x5B89;&#x88C5;&#x540E;(post-install)&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x94A9;&#x5B50;&#x3002;&#x8FD9;&#x7C7B;&#x94A9;&#x5B50;&#x53EF;&#x4EE5;&#x7ED1;&#x5B9A;&#x5230;&#x4E00;&#x4E2A;&#x5BA1;&#x8BA1;&#x7CFB;&#x7EDF;&#xFF0C;&#x8DDF;&#x8E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x5B89;&#x88C5;&#x8FDB;&#x5EA6;&#xFF0C;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x89E6;&#x53D1;&#x94A9;&#x5B50;&#xFF0C;&#x7EDF;&#x8BA1;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x6240;&#x8017;&#x8D39;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x4ECB;&#x7ECD;&#x4E86;&#x94A9;&#x5B50;&#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x5982;&#x4F55;&#x5728; Helm &#x4E2D;&#x5B9A;&#x4E49;&#x94A9;&#x5B50;&#x3002;</p>
+<h4 id="&#x6267;&#x884C;&#x94A9;&#x5B50;">&#x6267;&#x884C;&#x94A9;&#x5B50;</h4>
+<p>&#x6B63;&#x5982;&#x4F60;&#x5728;&#x4E0A;&#x4E00;&#x8282;&#x7684;&#x201C;&#x5C06;&#x94A9;&#x5B50;&#x5B9A;&#x4E49;&#x4E3A; Job&#x201D;&#x7684;&#x793A;&#x4F8B;&#x4E2D;&#x770B;&#x5230;&#x7684;&#xFF0C;helm.sh/hook &#x6CE8;&#x89E3;&#x7684;&#x503C;&#x662F; pre-install&#x3002;pre-install &#x662F; Helm &#x56FE;&#x8868;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x94A9;&#x5B50;&#x7684;&#x4E00;&#x4E2A;&#x70B9;&#x3002;</p>
+<p>&#x4E0B;&#x8868;&#x5217;&#x51FA;&#x4E86; helm.sh/hook &#x6CE8;&#x91CA;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF0C;&#x5B83;&#x4EEC;&#x51B3;&#x5B9A;&#x4E86;&#x4F55;&#x65F6;&#x6267;&#x884C;&#x94A9;&#x5B50;&#x3002;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x6765;&#x81EA; Helm &#x5B98;&#x65B9;&#x6587;&#x6863;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; <a href="https://helm.sh/docs/topics/charts_hooks/#the-available-hooks" target="_blank">https://helm.sh/docs/topics/charts_hooks/#the-available-hooks</a> &#x9875;&#x9762;&#x67E5;&#x770B;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6CE8;&#x89E3;&#x503C;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pre-install</td>
+<td>&#x5728;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x540E;&#x3001;Kubernetes &#x521B;&#x5EFA;&#x8D44;&#x6E90;&#x524D;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>post-install</td>
+<td>&#x5728; Kubernetes &#x521B;&#x5EFA;&#x8D44;&#x6E90;&#x540E;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>pre-delete</td>
+<td>&#x5728; Kubernetes &#x5220;&#x9664;&#x8D44;&#x6E90;&#x524D;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>post-delete</td>
+<td>&#x5728;&#x8BE5; release &#x76F8;&#x5173;&#x7684;&#x8D44;&#x6E90;&#x88AB;&#x5220;&#x9664;&#x540E;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>pre-upgrade</td>
+<td>&#x5728;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x540E;&#x3001;&#x4EFB;&#x4F55;&#x8D44;&#x6E90;&#x66F4;&#x65B0;&#x524D;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>post-upgrade</td>
+<td>&#x5728;&#x6240;&#x6709;&#x8D44;&#x6E90;&#x66F4;&#x65B0;&#x540E;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>pre-rollback</td>
+<td>&#x5728;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x540E;&#x3001;&#x4EFB;&#x4F55;&#x8D44;&#x6E90;&#x56DE;&#x9000;&#x524D;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>post-rollback</td>
+<td>&#x5728;&#x6240;&#x6709;&#x8D44;&#x6E90;&#x56DE;&#x9000;&#x540E;&#x6267;&#x884C;</td>
+</tr>
+<tr>
+<td>test</td>
+<td>&#x5F53;&#x8FD0;&#x884C; <strong>helm test</strong> &#x5B50;&#x547D;&#x4EE4;&#x65F6;&#x6267;&#x884C;</td>
+</tr>
+</tbody>
+</table>
+<p>helm.sh/hook &#x6CE8;&#x89E3;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x8FD9;&#x4E9B;&#x503C;&#x5B9A;&#x4E49;&#x4E86;&#x540C;&#x4E00;&#x8D44;&#x6E90;&#x5728;&#x56FE;&#x8868;&#x53D1;&#x5E03;&#x5468;&#x671F;&#x5185;&#x7684;&#x4E0D;&#x540C;&#x65F6;&#x95F4;&#x70B9;&#x6267;&#x884C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x5728;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x524D;&#x540E;&#x6267;&#x884C;&#x94A9;&#x5B50;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; Pod &#x6216; Job &#x4E0A;&#x5B9A;&#x4E49;&#x4EE5;&#x4E0B;&#x6CE8;&#x89E3;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+  <span class="token key atrule">&apos;helm.sh/hook&apos;</span><span class="token punctuation">:</span> pre<span class="token punctuation">-</span>install<span class="token punctuation">,</span>post<span class="token punctuation">-</span>install
+</code></pre>
+<p>&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x6267;&#x884C;&#x94A9;&#x5B50;&#x3001;&#x4EE5;&#x53CA;&#x5728;&#x56FE;&#x8868;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x7684;&#x54EA;&#x4E2A;&#x9636;&#x6BB5;&#x6267;&#x884C;&#x94A9;&#x5B50;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x3002;&#x5982;&#x4E0A;&#x9762;&#x793A;&#x4F8B;&#xFF0C;&#x5F53;&#x6307;&#x5B9A;&#x5728; pre-install &#x548C; post-install &#x94A9;&#x5B50;&#x4E4B;&#x95F4;&#x6267;&#x884C; <strong>helm install</strong> &#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x4F1A;&#x53D1;&#x751F;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ol>
+<li>&#x7528;&#x6237;&#x5B89;&#x88C5;&#x4E00;&#x4E2A; Helm &#x56FE;&#x8868;(&#x4F8B;&#x5982;&#xFF0C;<strong>helm install bitnami/wordpress --version 11.0.5</strong>)&#x3002;</li>
+<li>Helm API &#x88AB;&#x8C03;&#x7528;&#x3002;</li>
+<li>crds/ &#x76EE;&#x5F55;&#x4E2D;&#x7684; CRDs &#x88AB;&#x52A0;&#x8F7D;&#x5230; Kubernetes &#x4E2D;&#x3002;</li>
+<li>&#x6267;&#x884C;&#x56FE;&#x8868;&#x6A21;&#x677F;&#x8D44;&#x6E90;&#x9A8C;&#x8BC1;&#xFF0C;&#x5E76;&#x6E32;&#x67D3;&#x8D44;&#x6E90;&#x3002;</li>
+<li>pre-install &#x94A9;&#x5B50;&#x6309;&#x6743;&#x91CD;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x88AB;&#x6E32;&#x67D3;&#x5E76;&#x52A0;&#x8F7D;&#x5230; Kubernetes &#x4E2D;&#x3002;</li>
+<li>Helm &#x7B49;&#x5F85; pre-install &#x94A9;&#x5B50;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x3002;</li>
+<li>&#x6A21;&#x677F;&#x8D44;&#x6E90;&#x88AB;&#x6E32;&#x67D3;&#x5E76;&#x5E94;&#x7528;&#x5230; Kubernetes &#x73AF;&#x5883;&#x3002;</li>
+<li>post-install &#x94A9;&#x5B50;&#x88AB;&#x6267;&#x884C;&#x3002;</li>
+<li>Helm &#x7B49;&#x5F85; post-install &#x94A9;&#x5B50;&#x5B8C;&#x6210;&#x3002;</li>
+<li>&#x8FD4;&#x56DE; <strong>helm install</strong> &#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x3002;</li>
+</ol>
+<p>&#x5728;&#x4E86;&#x89E3;&#x4E86; Helm &#x94A9;&#x5B50;&#x6267;&#x884C;&#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x5B66;&#x4E60; Helm &#x94A9;&#x5B50;&#x7684;&#x9AD8;&#x7EA7;&#x77E5;&#x8BC6;&#x3002;</p>
+<h4 id="&#x94A9;&#x5B50;&#x8FDB;&#x9636;">&#x94A9;&#x5B50;&#x8FDB;&#x9636;</h4>
+<p>&#x5728; Helm &#x56FE;&#x8868;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x5185;&#x6267;&#x884C;&#x7684;&#x94A9;&#x5B50;&#x6570;&#x91CF;&#x662F;&#x6CA1;&#x6709;&#x9650;&#x5236;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x4E3A;&#x540C;&#x4E00;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x67D0;&#x4E2A;&#x9636;&#x6BB5;&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#x94A9;&#x5B50;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x94A9;&#x5B50;&#x7684;&#x9ED8;&#x8BA4;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F;&#x6309;&#x7167;&#x94A9;&#x5B50;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x3002;&#x901A;&#x8FC7; helm.sh/weight &#x6CE8;&#x89E3;&#x53EF;&#x4EE5;&#x4E3A;&#x6BCF;&#x4E2A;&#x94A9;&#x5B50;&#x8BBE;&#x7F6E;&#x6743;&#x91CD;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x6309;&#x6743;&#x91CD;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x94A9;&#x5B50;&#x3002;&#x6743;&#x91CD;&#x6309;&#x5347;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x5982;&#x679C;&#x591A;&#x4E2A;&#x94A9;&#x5B50;&#x7684;&#x6743;&#x91CD;&#x503C;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x7EE7;&#x7EED;&#x6309;&#x540D;&#x79F0;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x94A9;&#x5B50;&#x63D0;&#x4F9B;&#x4E86;&#x7BA1;&#x7406; Helm &#x56FE;&#x8868;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x4F46;&#x4E0E;&#x6A21;&#x677F;&#x8D44;&#x6E90;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x94A9;&#x5B50;&#x4E0D;&#x4F1A;&#x88AB; Helm &#x8DDF;&#x8E2A;&#x548C;&#x7BA1;&#x7406;&#xFF0C;&#x5728;&#x6267;&#x884C; <strong>helm uninstall</strong> &#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x94A9;&#x5B50;&#x4E0D;&#x4F1A;&#x968F;&#x7740;&#x56FE;&#x8868;&#x4E00;&#x8D77;&#x5220;&#x9664;&#x3002;&#x6709;&#x4E24;&#x79CD;&#x65B9;&#x6848;&#x5220;&#x9664; release &#x751F;&#x547D;&#x5468;&#x671F;&#x4E2D;&#x7684;&#x94A9;&#x5B50;&#xFF1A;&#x914D;&#x7F6E;&#x5220;&#x9664;&#x7B56;&#x7565;&#x548C;&#x5728; Job &#x4E0A;&#x8BBE;&#x7F6E;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x63A7;&#x5236;&#x5668;(TTL,time to live controller)&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x94A9;&#x5B50;&#x5173;&#x8054;&#x7684; Pod &#x6216;&#x8005; Job &#x4E0A;&#x6DFB;&#x52A0; helm.sh/hook-delete-policy &#x6CE8;&#x89E3;&#xFF0C;&#x8BE5;&#x6CE8;&#x89E3;&#x5B9A;&#x4E49;&#x4E86; Helm &#x5E94;&#x4F55;&#x65F6;&#x4ECE; Kubernetes &#x4E2D;&#x5220;&#x9664;&#x8D44;&#x6E90;&#x3002;&#x4E0B;&#x8868;&#x662F;&#x5177;&#x4F53;&#x7684;&#x6CE8;&#x89E3;&#x503C;(<a href="https://helm.sh/docs/topics/charts_hooks/#hook-deletion-policies)&#xFF1A;" target="_blank">https://helm.sh/docs/topics/charts_hooks/#hook-deletion-policies)&#xFF1A;</a></p>
+<table>
+<thead>
+<tr>
+<th>&#x6CE8;&#x91CA;&#x503C;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>before-hook-creation</td>
+<td>&#x5728;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x94A9;&#x5B50;&#x524D;&#x5220;&#x9664;&#x4E4B;&#x524D;&#x7684;&#x8D44;&#x6E90;&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;</td>
+</tr>
+<tr>
+<td>hook-succeeded</td>
+<td>&#x94A9;&#x5B50;&#x6267;&#x884C;&#x6210;&#x529F;&#x540E;&#x5220;&#x9664;&#x8D44;&#x6E90;</td>
+</tr>
+<tr>
+<td>hook-failed</td>
+<td>&#x5982;&#x679C;&#x94A9;&#x5B50;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x5220;&#x9664;&#x8D44;&#x6E90;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6B64;&#x5916;&#xFF0C;Kubernetes &#x7684;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x63A7;&#x5236;&#x5668;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x751F;&#x5B58;&#x65F6;&#x95F4;(TTL)&#x673A;&#x5236;&#xFF0C;&#x9650;&#x5236;&#x5DF2;&#x5B8C;&#x6210;&#x6267;&#x884C;&#x7684;&#x8D44;&#x6E90;&#x5BF9;&#x8C61;&#x7684;&#x5BFF;&#x547D;&#x3002;&#x751F;&#x5B58;&#x65F6;&#x95F4;&#x63A7;&#x5236;&#x5668;&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301; Job&#xFF0C;&#x4F7F;&#x7528; Job &#x7684; ttlSecondsAfterFinished &#x5C5E;&#x6027;&#x6765;&#x63A7;&#x5236;&#x8D44;&#x6E90;&#x5B8C;&#x6210;&#x540E;&#x7684;&#x4FDD;&#x7559;&#x65F6;&#x95F4;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> batch/v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Job
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> ttl<span class="token punctuation">-</span>job
+  <span class="token key atrule">annotations</span><span class="token punctuation">:</span>
+    <span class="token key atrule">&apos;helm.sh/hook&apos;</span><span class="token punctuation">:</span> post<span class="token punctuation">-</span>install
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">ttlSecondsAfterFinished</span><span class="token punctuation">:</span> <span class="token number">60</span>
+</code></pre>
+<p>&#x5728;&#x672C;&#x4F8B;&#x4E2D;&#xFF0C;&#x94A9;&#x5B50;&#x8D44;&#x6E90;&#x5728;&#x5B8C;&#x6210;&#x6216;&#x5931;&#x8D25;&#x540E;60&#x79D2;&#x5185;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x5220;&#x9664;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F; release &#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x5C3D;&#x7BA1; <strong>helm uninstall</strong> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x5DF2;&#x5B89;&#x88C5;&#x7684;&#x56FE;&#x8868;&#xFF0C;&#x4F46;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x4FDD;&#x7559;&#x67D0;&#x4E9B;&#x8D44;&#x6E90;&#xFF0C;&#x6BD4;&#x5982;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x751F;&#x547D;&#x5468;&#x671F;&#x5F00;&#x59CB;&#x65F6;&#xFF0C;&#x901A;&#x8FC7; PersistentVolumeClaim &#x521B;&#x5EFA;&#x7684;&#x6301;&#x4E45;&#x5377;&#xFF0C;&#x4FDD;&#x7559;&#x7740;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x671F;&#x95F4;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E0D;&#x5E94;&#x8BE5;&#x4E00;&#x8D77;&#x88AB;&#x5220;&#x9664;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; helm.sh/resource-policy &#x6CE8;&#x89E3;&#x5BF9;&#x6B64;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">&apos;helm.sh/resource-policy&apos;</span><span class="token punctuation">:</span> keep
+</code></pre>
+<p>&#x8FD9;&#x65F6;&#x518D;&#x6267;&#x884C; <strong>helm uninstall</strong> &#x547D;&#x4EE4;&#xFF0C;&#x6301;&#x4E45;&#x5377;&#x5C31;&#x4E0D;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x4E86;&#x3002;&#x4F46;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8BE5;&#x8D44;&#x6E90;&#x4F1A;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x5B64;&#x7ACB;&#x8D44;&#x6E90;&#x3002;&#x5982;&#x679C;&#x518D;&#x6B21;&#x4F7F;&#x7528; <strong>helm install</strong> &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x8001;&#x8D44;&#x6E90;&#x672A;&#x5220;&#x9664;&#x800C;&#x5BFC;&#x81F4;&#x7684;&#x8D44;&#x6E90;&#x540D;&#x5B57;&#x51B2;&#x7A81;&#xFF0C;&#x8FDB;&#x800C;&#x90E8;&#x7F72;&#x5931;&#x8D25;&#x7684;&#x73B0;&#x8C61;&#x3002;&#x5220;&#x9664;&#x5B64;&#x7ACB;&#x8D44;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>kubectl delete</strong> &#x547D;&#x4EE4;&#xFF0C;&#x624B;&#x52A8;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x672C;&#x8282;&#x4ECB;&#x7ECD;&#x4E86;&#x94A9;&#x5B50;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x81EA;&#x52A8;&#x5316;&#x7BA1;&#x7406;&#x56FE;&#x8868;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4F1A;&#x4ECB;&#x7ECD;&#x7F16;&#x5199; Helm &#x56FE;&#x8868;&#x6587;&#x6863;&#x7684;&#x8F6F;&#x6280;&#x80FD;&#x3002;&#x63CF;&#x8FF0;&#x51C6;&#x786E;&#x7684;&#x6587;&#x6863;&#xFF0C;&#x6709;&#x52A9;&#x4E8E;&#x7528;&#x6237;&#x83B7;&#x5F97;&#x6D41;&#x7545;&#x7684;&#x4F7F;&#x7528;&#x4F53;&#x9A8C;&#x3002;</p>
+<h3 id="&#x56FE;&#x8868;&#x6587;&#x6863;">&#x56FE;&#x8868;&#x6587;&#x6863;</h3>
+<p>&#x5B8C;&#x5584;&#x7684;&#x6587;&#x6863;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x66F4;&#x4FBF;&#x6377;&#x7684;&#x4F7F;&#x7528; Helm &#x56FE;&#x8868;&#x3002;Helm &#x56FE;&#x8868;&#x7ED3;&#x6784;&#x652F;&#x6301;&#x4F7F;&#x7528;&#x81EA;&#x8FF0;&#x6587;&#x4EF6;(README.md)&#x8BB0;&#x5F55;&#x56FE;&#x8868;&#x7684;&#x7528;&#x6CD5;&#x3001;LICENSE &#x6587;&#x4EF6;&#x6388;&#x6743;&#x4F7F;&#x7528;&#x3001;tepmlate/NOTES.txt &#x6587;&#x4EF6;&#x5728;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x8F93;&#x51FA;&#x4F7F;&#x7528;&#x8BF4;&#x660E;&#x3002;</p>
+<h4 id="readmemd">README.md</h4>
+<p>&#x81EA;&#x8FF0;&#x6587;&#x4EF6;(README.md)&#x662F;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x63CF;&#x8FF0;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x90E8;&#x7F72;&#x3001;&#x4F7F;&#x7528;&#x53CA;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#x3002;Helm &#x56FE;&#x8868;&#x7684; README &#x6587;&#x4EF6;&#x901A;&#x5E38;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x4FE1;&#x606F;&#xFF1A;</p>
+<ul>
+<li><strong>Prerequisites</strong>&#xFF1A;&#x5B89;&#x88C5;&#x56FE;&#x8868;(&#x5E94;&#x7528;&#x7A0B;&#x5E8F;)&#x7684;&#x5148;&#x51B3;&#x6761;&#x4EF6;&#x3002;&#x5E38;&#x89C1;&#x793A;&#x4F8B;&#x662F;&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x5B89;&#x88C5;&#x56FE;&#x8868;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x521B;&#x5EFA; Secret&#x3002;&#x901A;&#x8FC7; README &#x6587;&#x4EF6;&#xFF0C;&#x7528;&#x6237;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x8FD9;&#x4E00;&#x8981;&#x6C42;&#x3002;</li>
+<li><strong>Values</strong>&#xFF1A;&#x56FE;&#x8868;&#x901A;&#x5E38;&#x5305;&#x542B;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF0C;&#x6BCF;&#x4E2A;&#x503C;&#x90FD;&#x5E94;&#x5728; README &#x6587;&#x4EF6;&#x4E2D;&#x8FDB;&#x884C;&#x8BF4;&#x660E;&#x3002;&#x5305;&#x62EC;&#x503C;&#x7684;&#x540D;&#x79F0;&#x3001;&#x63CF;&#x8FF0;&#x4FE1;&#x606F;&#x3001;&#x9ED8;&#x8BA4;&#x503C;&#x3001;&#x5728;&#x5B89;&#x88C5;&#x6216;&#x5347;&#x7EA7;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x662F;&#x5426;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x8BE5;&#x503C;&#x7B49;&#x3002;</li>
+<li><strong>Application-specific information</strong>&#xFF1A;&#x4F7F;&#x7528; Helm &#x56FE;&#x8868;&#x5B89;&#x88C5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x540E;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x81EA;&#x8EAB;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4F8B;&#x5982;&#x8BE5;&#x5982;&#x4F55;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x3002;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; README &#x6587;&#x4EF6;&#x4E2D;&#x63D0;&#x4F9B;&#x3002;</li>
+</ul>
+<p>Helm README &#x6587;&#x4EF6;&#x4F7F;&#x7528; Markdown &#x683C;&#x5F0F;&#x8BED;&#x6CD5;&#x7F16;&#x5199;&#xFF0C;Markdown &#x901A;&#x5E38;&#x5728; GitHub &#x9879;&#x76EE;&#x548C;&#x5F00;&#x653E;&#x6E90;&#x4EE3;&#x7801;&#x8F6F;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x8F7B;&#x677E;&#x7F16;&#x5199;&#x6587;&#x672C;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4EE5;&#x4F18;&#x96C5;&#x7684;&#x683C;&#x5F0F;&#x663E;&#x793A;&#x6587;&#x672C;&#x3002;&#x5728; Markdown &#x6307;&#x5357;&#x7F51;&#x7AD9;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x5B66;&#x4E60;&#x66F4;&#x591A; Markdown &#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x7F51;&#x5740;&#x4E3A; <a href="https://www.markdownguide.org&#x3002;" target="_blank">https://www.markdownguide.org&#x3002;</a></p>
+<h4 id="license">LICENSE</h4>
+<p>&#x9664;&#x4E86;&#x5305;&#x542B;&#x6280;&#x672F;&#x8BF4;&#x660E;&#x7684; README &#x6587;&#x4EF6;&#xFF0C;&#x6709;&#x65F6;&#x56FE;&#x8868;&#x4E2D;&#x4E5F;&#x4F1A;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x8BB8;&#x53EF;&#x6587;&#x4EF6;&#xFF0C;&#x8BF4;&#x660E;&#x56FE;&#x8868;&#x7684;&#x4F7F;&#x7528;&#x548C;&#x5206;&#x53D1;&#x6743;&#x9650;&#x3002;&#x8BB8;&#x53EF;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x662F; LICENSE&#xFF0C;&#x5728;&#x56FE;&#x8868;&#x7684;&#x9876;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<p>LICENSE &#x6587;&#x4EF6;&#x662F;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x8F6F;&#x4EF6;&#x8BB8;&#x53EF;&#x8BC1;&#x7684;&#x7EAF;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x8BB8;&#x53EF;&#x8BC1;&#x53EF;&#x4EE5;&#x662F;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x8BB8;&#x53EF;&#x8BC1;&#x526F;&#x672C;&#xFF0C;&#x4F8B;&#x5982; &#x201C;Apache License 2.0&#x201D; &#x6216;&#x8005; &#x201C;MIT License&#x201D;&#x3002; &#x5982;&#x679C;&#x4F60;&#x60F3;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x8BB8;&#x53EF;&#x8BC1;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE; <a href="https://choosealicense.com" target="_blank">https://choosealicense.com</a> &#x7F51;&#x7AD9;&#x3002;</p>
+<h4 id="templatesnotestxt">templates/NOTES.txt</h4>
+<p>&#x7C7B;&#x4F3C; README.md &#x6587;&#x4EF6;&#xFF0C;templates/NOTES.txt &#x6587;&#x4EF6;&#x7528;&#x4E8E;&#x5728;&#x4F7F;&#x7528; Helm &#x5B89;&#x88C5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x540E;&#x63D0;&#x4F9B;&#x4F7F;&#x7528;&#x8BF4;&#x660E;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;README.md &#x6587;&#x4EF6;&#x662F;&#x9759;&#x6001;&#x7684;&#xFF0C;NOTES.txt &#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; Go &#x6A21;&#x677F;&#x52A8;&#x6001;&#x751F;&#x6210;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x4E00;&#x4E2A; Helm &#x56FE;&#x8868;&#x7684; values.yaml &#x6587;&#x4EF6;&#x5305;&#x542B;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment">## serviceType can be set to NodePort or LoadBalancer</span>
+<span class="token key atrule">serviceType</span><span class="token punctuation">:</span> NodePort
+</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7684; Service &#x7C7B;&#x578B;&#xFF0C;&#x5E94;&#x7528;&#x7684;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#x4F1A;&#x6709;&#x6240;&#x4E0D;&#x540C;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x7684; Service &#x7C7B;&#x578B;&#x4E3A; Nodeport&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x4EFB;&#x4E00;&#x8282;&#x70B9;&#x7684; IP:NodePort &#x8BBF;&#x95EE;&#x3002;&#x5982;&#x679C; Service &#x7684;&#x7C7B;&#x578B;&#x4E3A; LoadBalancer&#xFF0C;&#x5219;&#x5C06;&#x4F7F;&#x7528;&#x5728;&#x521B;&#x5EFA; Service &#x65F6;&#x81EA;&#x52A8;&#x8BBE;&#x7F6E;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5668;&#x7684;&#x5730;&#x5740;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5BF9;&#x4E8E;&#x7ECF;&#x9A8C;&#x6B20;&#x7F3A;&#x7684; Kubernetes &#x7528;&#x6237;&#x6765;&#x8BF4;&#xFF0C;&#x7406;&#x89E3;&#x5982;&#x4F55;&#x57FA;&#x4E8E; Service &#x7C7B;&#x578B;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x5F88;&#x56F0;&#x96BE;&#xFF0C;&#x56E0;&#x6B64;&#x56FE;&#x8868;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&#x5E94;&#x8BE5;&#x5728; templates/ &#x76EE;&#x5F55;&#x4E0B;&#x63D0;&#x4F9B; NOTES.txt &#x6587;&#x4EF6;&#xFF0C;&#x6765;&#x8BF4;&#x660E;&#x8BE5;&#x5982;&#x4F55;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml">&#x8BF7;&#x6309;&#x7167;&#x4E0B;&#x8FF0;&#x8BF4;&#x660E;&#x8BBF;&#x95EE;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF1A;
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> if eq .Values.serviceType &apos;NodePort&apos; <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+export NODE_PORT=$(kubectl get <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Namespace <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span> <span class="token punctuation">-</span>o jsonpath=&apos;<span class="token punctuation">{</span>.spec.ports<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.nodePort<span class="token punctuation">}</span>&apos; services <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span>.Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span>)
+
+export NODE_IP=$(kubectl get nodes <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Namespace <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span> <span class="token punctuation">-</span>o jsonpath=&apos;<span class="token punctuation">{</span>.items<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.status.addresses<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>.address<span class="token punctuation">}</span>&apos;)
+
+<span class="token key atrule">echo &quot;URL</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//$NODE_IP<span class="token punctuation">:</span>$NODE_PORT&quot;
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> else <span class="token punctuation">}</span><span class="token punctuation">}</span>
+
+export SERVICE_IP=$(kubectl get svc <span class="token punctuation">-</span><span class="token punctuation">-</span>namespace <span class="token punctuation">{</span>% raw %<span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> .Release.Name <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span>% endraw %<span class="token punctuation">}</span> wordpress <span class="token punctuation">-</span><span class="token punctuation">-</span>template &apos;<span class="token punctuation">{</span><span class="token punctuation">{</span> range (index .status.loadBalancer.ingress 0) <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span>.<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">{</span><span class="token punctuation">{</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>&apos;)
+
+<span class="token key atrule">echo &quot;URL</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//$SERVICE_IP&quot;
+
+<span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">-</span> end <span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8BE5;&#x5185;&#x5BB9;&#x4F1A;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B89;&#x88C5;&#x3001;&#x5347;&#x7EA7;&#x3001;&#x56DE;&#x9000;&#x65F6;&#x751F;&#x6210;&#x5E76;&#x8F93;&#x51FA;&#x5230;&#x7EC8;&#x7AEF;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>helm get notes</strong> &#x547D;&#x4EE4;&#x83B7;&#x53D6;&#x3002;&#x901A;&#x8FC7;&#x663E;&#x793A;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6307;&#x5BFC;&#x7528;&#x6237;&#x5982;&#x4F55;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x5DF2;&#x7ECF;&#x4ECB;&#x7ECD;&#x4E86; Helm &#x56FE;&#x8868;&#x7684;&#x5927;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#xFF0C;&#x9664;&#x4E86;&#x5C06;&#x56FE;&#x8868;&#x6253;&#x5305;&#x3002;&#x5305;&#x4F7F;&#x56FE;&#x8868;&#x6613;&#x4E8E;&#x5206;&#x53D1;&#xFF0C;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x8BA8;&#x8BBA;&#x5305;&#x7684;&#x6982;&#x5FF5;&#x3002;</p>
+<h3 id="&#x56FE;&#x8868;&#x7684;&#x538B;&#x7F29;&#x5305;">&#x56FE;&#x8868;&#x7684;&#x538B;&#x7F29;&#x5305;</h3>
+<p>&#x867D;&#x7136; Helm &#x56FE;&#x8868;&#x9075;&#x5FAA;&#x901A;&#x7528;&#x7684;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#xFF0C;&#x4F46;&#x8003;&#x8651;&#x5230;&#x5206;&#x53D1;&#x4E0E;&#x4F20;&#x64AD;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x628A;&#x56FE;&#x8868;&#x6253;&#x6210; tgz &#x683C;&#x5F0F;&#x7684;&#x538B;&#x7F29;&#x5305;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; bash &#x4E2D;&#x7684; <strong>tar</strong> &#x547D;&#x4EE4;&#x624B;&#x52A8;&#x5B8C;&#x6210;&#xFF0C;&#x4E0D;&#x8FC7; Helm &#x63D0;&#x4F9B;&#x4E86; <strong>helm package</strong> &#x547D;&#x4EE4;&#xFF0C;&#x7B80;&#x5316;&#x4E86;&#x6253;&#x5305;&#x7684;&#x8FC7;&#x7A0B;&#x3002;<strong>helm package</strong> &#x547D;&#x4EE4;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm package <span class="token punctuation">[</span>CHART_NAME<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token punctuation">..</span>.<span class="token punctuation">]</span> <span class="token punctuation">[</span>flags<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x6267;&#x884C; <strong>helm package</strong> &#x547D;&#x4EE4;&#x65F6;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x6253;&#x5305;&#x7684;&#x672C;&#x5730;&#x56FE;&#x8868;&#x76EE;&#x5F55;&#x3002;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5C06;&#x751F;&#x6210;&#x4E00;&#x4E2A; tgz &#x7684;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ CHART_NAME-<span class="token variable">$CHART_VERSION</span>.tgz
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x628A;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x63A8;&#x9001;&#x5230;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x4E2D;&#xFF0C;&#x5176;&#x4ED6;&#x4EBA;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x5E93;&#x4E2D;&#x83B7;&#x53D6;&#x5E76;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x56FE;&#x8868;&#x4E86;&#xFF0C;&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x4F7F;&#x7528; WordPress &#x56FE;&#x8868;&#x4E00;&#x6837;&#x3002;&#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x6211;&#x4F1A;&#x5728;&#x7B2C;&#x4E94;&#x7AE0;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<p><strong>helm package</strong> &#x547D;&#x4EE4;&#x4F1A;&#x6253;&#x5305;&#x56FE;&#x8868;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x6709;&#x65F6;&#x56FE;&#x8868;&#x76EE;&#x5F55;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x975E;&#x5FC5;&#x987B;&#x6253;&#x5305;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#xFF0C;&#x5728;&#x6253;&#x5305;&#x65F6;&#x6700;&#x597D;&#x628A;&#x5B83;&#x4EEC;&#x8FC7;&#x6EE4;&#x6389;&#x3002;&#x6BD4;&#x5982; .git &#x76EE;&#x5F55;&#xFF0C;&#x5B83;&#x5B58;&#x5728;&#x4E8E; Git SCM &#x7BA1;&#x7406;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x628A;&#x5B83;&#x6253;&#x5305;&#x8FDB; tgz &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#xFF0C;&#x8FD8;&#x4F1A;&#x589E;&#x52A0;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x9020;&#x6210;&#x8D44;&#x6E90;&#x6D6A;&#x8D39;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; .helmignore &#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x6253;&#x5305;&#x65F6;&#x5FFD;&#x7565;&#x67D0;&#x4E9B;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x3002;.helmignore &#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># &#x5FFD;&#x7565; .git/ &#x76EE;&#x5F55;&#x548C; .gitignore &#x6587;&#x4EF6;.</span>
+.git/
+.gitignore
+</code></pre>
+<p>&#x5305;&#x542B;&#x5728; .helmignore &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x76EE;&#x5F55;&#x6216;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x4F1A;&#x88AB; <strong>helm package</strong> &#x547D;&#x4EE4;&#x5FFD;&#x7565;&#xFF0C;&#x4E0D;&#x4F1A;&#x88AB;&#x6253;&#x5305;&#x8FDB; tgz &#x538B;&#x7F29;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x4EE5;<code>#</code> &#x5F00;&#x5934;&#x7684;&#x884C;&#x4E3A;&#x6CE8;&#x91CA;&#x884C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x56FE;&#x8868;&#x76EE;&#x5F55;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x4E0E; helm &#x56FE;&#x8868;&#x529F;&#x80FD;&#x65E0;&#x5173;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD;&#x4F7F;&#x7528; .helmignore &#x6587;&#x4EF6;&#x5C06;&#x5176;&#x8FC7;&#x6EE4;&#x6389;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/weiwendi" target="_blank">&#x9B4F;&#x6587;&#x5F1F;</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0 &#x56FD;&#x9645;&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2021-08-26 18:03:49 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="anzhuangcharts.html" class="navigation navigation-prev " aria-label="Previous page: 安装 Helm 图表">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="kaifacharts.html" class="navigation navigation-next " aria-label="Next page: 开发 Helm 图表">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Helm 图表进阶","level":"2.4","depth":1,"next":{"title":"开发 Helm 图表","level":"2.5","depth":1,"path":"helm/kaifacharts.md","ref":"helm/kaifacharts.md","articles":[]},"previous":{"title":"安装 Helm 图表","level":"2.3","depth":1,"path":"helm/anzhuangcharts.md","ref":"helm/anzhuangcharts.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-lunr","-search","prism","prism-themes","github","donate","codesnippet","ga","adsense","github-buttons@2.1.0","splitter","simple-page-toc","page-toc-button","image-captions","back-to-top-button","search-plus","sharing-plus","favicon","theme-default","page-footer-ex","search-pro","code","auto-scroll-table","advanced-emoji","flexible-alerts","editlink"],"ignores":["_book","node_modules"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/weiwendi/cloudnative-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/weiwendi/cloudnative-handbook/tree/main"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"page-footer-ex":{"copyright":"By [魏文弟](https://github.com/weiwendi)，使用[知识共享 署名-相同方式共享 4.0 国际协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"adsense":{"client":"pub-8736620102237076","slot":"","format":"auto","element":".page-inner section","position":"bottom"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/sretech/images/raw/master/pays/alipay.jpg","alipayText":"支付宝","button":"请杯咖啡","title":"","wechat":"https://gitee.com/sretech/images/raw/master/pays/wechatpay.jpg","wechatText":"微信"},"codesnippet":{},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://gitee.com/sretech/images/raw/master/favicon/favicon.ico","bookmark":"https://gitee.com/sretech/images/raw/master/favicon/favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"user":"weiwendi","repo":"cloudnative-handbook","types":["star"],"size":"small"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"ga":{"configuration":"auto","token":"UA-174057096-1"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","linkedin","twitter","weibo","messenger","qq","qzone"],"facebook":false,"weibo":false,"instapaper":false,"twitter":false,"vk":false,"google":false,"qzone":true},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"魏文弟","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"helm/jieshao.html#fig2.1.1","level":"2.1","list_caption":"Figure: 1.2dtcreate","alt":"1.2dtcreate","nro":1,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.2dtcreate.jpg","index":1,"caption_template":"_CAPTION_","label":"1.2dtcreate","attributes":{},"skip":false,"key":"2.1.1"},{"backlink":"helm/jieshao.html#fig2.1.2","level":"2.1","list_caption":"Figure: 1.3Service","alt":"1.3Service","nro":2,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.3Service.jpg","index":2,"caption_template":"_CAPTION_","label":"1.3Service","attributes":{},"skip":false,"key":"2.1.2"},{"backlink":"helm/jieshao.html#fig2.1.3","level":"2.1","list_caption":"Figure: 1.4-storageclass","alt":"1.4-storageclass","nro":3,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.4-storageclass.jpg","index":3,"caption_template":"_CAPTION_","label":"1.4-storageclass","attributes":{},"skip":false,"key":"2.1.3"},{"backlink":"helm/jieshao.html#fig2.1.4","level":"2.1","list_caption":"Figure: 1.6-Upgrade","alt":"1.6-Upgrade","nro":4,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.6-Upgrade.jpg","index":4,"caption_template":"_CAPTION_","label":"1.6-Upgrade","attributes":{},"skip":false,"key":"2.1.4"},{"backlink":"helm/bushu.html#fig2.2.1","level":"2.2","list_caption":"Figure: 2.1versions","alt":"2.1versions","nro":5,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/2.1versions.png","index":1,"caption_template":"_CAPTION_","label":"2.1versions","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"helm/bushu.html#fig2.2.2","level":"2.2","list_caption":"Figure: 2.2minikubeDrivers","alt":"2.2minikubeDrivers","nro":6,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/2.2minikubeDrivers.jpg","index":2,"caption_template":"_CAPTION_","label":"2.2minikubeDrivers","attributes":{},"skip":false,"key":"2.2.2"},{"backlink":"helm/anzhuangcharts.html#fig2.3.1","level":"2.3","list_caption":"Figure: 3.1 helm search hub wordpress outputs","alt":"3.1 helm search hub wordpress outputs","nro":7,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.1hubouts.jpg","index":1,"caption_template":"_CAPTION_","label":"3.1 helm search hub wordpress outputs","attributes":{},"skip":false,"key":"2.3.1"},{"backlink":"helm/anzhuangcharts.html#fig2.3.2","level":"2.3","list_caption":"Figure: 3.2 helm search hub wordpress yaml outputs","alt":"3.2 helm search hub wordpress yaml outputs","nro":8,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.2hubyamloutps.png","index":2,"caption_template":"_CAPTION_","label":"3.2 helm search hub wordpress yaml outputs","attributes":{},"skip":false,"key":"2.3.2"},{"backlink":"helm/anzhuangcharts.html#fig2.3.3","level":"2.3","list_caption":"Figure: 3.3 wordpress page details","alt":"3.3 wordpress page details","nro":9,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.3wordpressdetails.jpg","index":3,"caption_template":"_CAPTION_","label":"3.3 wordpress page details","attributes":{},"skip":false,"key":"2.3.3"},{"backlink":"helm/anzhuangcharts.html#fig2.3.4","level":"2.3","list_caption":"Figure: 3.4 bitnami wordpress","alt":"3.4 bitnami wordpress","nro":10,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.4bitnamiwordpress.jpg","index":4,"caption_template":"_CAPTION_","label":"3.4 bitnami wordpress","attributes":{},"skip":false,"key":"2.3.4"},{"backlink":"helm/anzhuangcharts.html#fig2.3.5","level":"2.3","list_caption":"Figure: 3.5 show chart","alt":"3.5 show chart","nro":11,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.5showchart.jpg","index":5,"caption_template":"_CAPTION_","label":"3.5 show chart","attributes":{},"skip":false,"key":"2.3.5"},{"backlink":"helm/anzhuangcharts.html#fig2.3.6","level":"2.3","list_caption":"Figure: 3.6 wordpress 首页","alt":"3.6 wordpress 首页","nro":12,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.8wordpresspage.jpg","index":6,"caption_template":"_CAPTION_","label":"3.6 wordpress 首页","attributes":{},"skip":false,"key":"2.3.6"},{"backlink":"helm/anzhuangcharts.html#fig2.3.7","level":"2.3","list_caption":"Figure: 3.7 admin pages","alt":"3.7 admin pages","nro":13,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.9adminpage.jpg","index":7,"caption_template":"_CAPTION_","label":"3.7 admin pages","attributes":{},"skip":false,"key":"2.3.7"},{"backlink":"helm/anzhuangcharts.html#fig2.3.8","level":"2.3","list_caption":"Figure: 3.8 dashboard","alt":"3.8 dashboard","nro":14,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.10adminpage2.png","index":8,"caption_template":"_CAPTION_","label":"3.8 dashboard","attributes":{},"skip":false,"key":"2.3.8"},{"backlink":"helm/kaifacharts.html#fig2.5.1","level":"2.5","list_caption":"Figure: 5.1 player stats page","alt":"5.1 player stats page","nro":15,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/5.1player-stats.jpg","index":1,"caption_template":"_CAPTION_","label":"5.1 player stats page","attributes":{},"skip":false,"key":"2.5.1"},{"backlink":"helm/helmcicd.html#fig2.7.1","level":"2.7","list_caption":"Figure: 7.1 fork","alt":"7.1 fork","nro":16,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.1fork.png","index":1,"caption_template":"_CAPTION_","label":"7.1 fork","attributes":{},"skip":false,"key":"2.7.1"},{"backlink":"helm/helmcicd.html#fig2.7.2","level":"2.7","list_caption":"Figure: 7.2 delete tar and index file","alt":"7.2 delete tar and index file","nro":17,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.2delete.jpg","index":2,"caption_template":"_CAPTION_","label":"7.2 delete tar and index file","attributes":{},"skip":false,"key":"2.7.2"},{"backlink":"helm/helmcicd.html#fig2.7.3","level":"2.7","list_caption":"Figure: 7.3 create github token.","alt":"7.3 create github token.","nro":18,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.3%20create%20github%20token.jpg","index":3,"caption_template":"_CAPTION_","label":"7.3 create github token.","attributes":{},"skip":false,"key":"2.7.3"},{"backlink":"helm/helmcicd.html#fig2.7.4","level":"2.7","list_caption":"Figure: 7.4 create jenkins github credentials","alt":"7.4 create jenkins github credentials","nro":19,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.4%20create%20github%20credentials.jpg","index":4,"caption_template":"_CAPTION_","label":"7.4 create jenkins github credentials","attributes":{},"skip":false,"key":"2.7.4"},{"backlink":"helm/helmcicd.html#fig2.7.5","level":"2.7","list_caption":"Figure: 7.5 create jenkins kubeconfig credentials","alt":"7.5 create jenkins kubeconfig credentials","nro":20,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.5%20create%20kubernetes%20credentials.jpg","index":5,"caption_template":"_CAPTION_","label":"7.5 create jenkins kubeconfig credentials","attributes":{},"skip":false,"key":"2.7.5"},{"backlink":"helm/helmcicd.html#fig2.7.6","level":"2.7","list_caption":"Figure: 7.6 add repo","alt":"7.6 add repo","nro":21,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.6%20add%20https%20github%20repository.png","index":6,"caption_template":"_CAPTION_","label":"7.6 add repo","attributes":{},"skip":false,"key":"2.7.6"},{"backlink":"helm/helmcicd.html#fig2.7.7","level":"2.7","list_caption":"Figure: 7.8 scan repo","alt":"7.8 scan repo","nro":22,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.8%20scan%20repository%20build.jpg","index":7,"caption_template":"_CAPTION_","label":"7.8 scan repo","attributes":{},"skip":false,"key":"2.7.7"},{"backlink":"helm/helmcicd.html#fig2.7.8","level":"2.7","list_caption":"Figure: 7.9 charts repo list","alt":"7.9 charts repo list","nro":23,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.9%20charts%20repo%20list.jpg","index":8,"caption_template":"_CAPTION_","label":"7.9 charts repo list","attributes":{},"skip":false,"key":"2.7.8"},{"backlink":"helm/helmcicd.html#fig2.7.9","level":"2.7","list_caption":"Figure: 7.10 stable list","alt":"7.10 stable list","nro":24,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.10%20stable%20list.jpg","index":9,"caption_template":"_CAPTION_","label":"7.10 stable list","attributes":{},"skip":false,"key":"2.7.9"},{"backlink":"helm/helmcicd.html#fig2.7.10","level":"2.7","list_caption":"Figure: 7.11 Proceed or Abort","alt":"7.11 Proceed or Abort","nro":25,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/Figure_7.17.jpg","index":10,"caption_template":"_CAPTION_","label":"7.11 Proceed or Abort","attributes":{},"skip":false,"key":"2.7.10"},{"backlink":"helm/operator.html#fig2.8.1","level":"2.8","list_caption":"Figure: 8.1 cr install helm chart","alt":"8.1 cr install helm chart","nro":26,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.1%20cr%20install%20chart.jpg","index":1,"caption_template":"_CAPTION_","label":"8.1 cr install helm chart","attributes":{},"skip":false,"key":"2.8.1"},{"backlink":"helm/operator.html#fig2.8.2","level":"2.8","list_caption":"Figure: 8.2 create quay image repo","alt":"8.2 create quay image repo","nro":27,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.2%20create%20quay%20image%20repo.jpg","index":2,"caption_template":"_CAPTION_","label":"8.2 create quay image repo","attributes":{},"skip":false,"key":"2.8.2"},{"backlink":"helm/operator.html#fig2.8.3","level":"2.8","list_caption":"Figure: 8.3 create public image repository","alt":"8.3 create public image repository","nro":28,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.3%20create%20public%20image%20repository.jpg","index":3,"caption_template":"_CAPTION_","label":"8.3 create public image repository","attributes":{},"skip":false,"key":"2.8.3"},{"backlink":"helm/operator.html#fig2.8.4","level":"2.8","list_caption":"Figure: 8.4 player stats operator image","alt":"8.4 player stats operator image","nro":29,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.4%20player%20stats%20operator%20image.jpg","index":4,"caption_template":"_CAPTION_","label":"8.4 player stats operator image","attributes":{},"skip":false,"key":"2.8.4"},{"backlink":"helm/security.html#fig2.10.1","level":"2.10","list_caption":"Figure: 9.1 gpg outputs","alt":"9.1 gpg outputs","nro":30,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.1%20gpg%20infors.jpg","index":1,"caption_template":"_CAPTION_","label":"9.1 gpg outputs","attributes":{},"skip":false,"key":"2.10.1"},{"backlink":"helm/security.html#fig2.10.2","level":"2.10","list_caption":"Figure: 9.2 helm versions","alt":"9.2 helm versions","nro":31,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.2%20helm%20release%20download.jpg","index":2,"caption_template":"_CAPTION_","label":"9.2 helm versions","attributes":{},"skip":false,"key":"2.10.2"},{"backlink":"helm/security.html#fig2.10.3","level":"2.10","list_caption":"Figure: 9.3 digital signature","alt":"9.3 digital signature","nro":32,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.3%20digital%20signature.jpg","index":3,"caption_template":"_CAPTION_","label":"9.3 digital signature","attributes":{},"skip":false,"key":"2.10.3"}]},"title":"云原生运维指南","language":"zh-hans","links":{"sidebar":{"博客":"https://www.aiops.red","公众号: sretech":"https://gitee.com/sretech/images/raw/master/wechatpublic.jpg"}},"gitbook":"*","description":"从理论到实践系统介绍云原生环境下的运维"},"file":{"path":"helm/chartsjinjie.md","mtime":"2021-08-26T10:03:49.300Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-01T09:21:34.056Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

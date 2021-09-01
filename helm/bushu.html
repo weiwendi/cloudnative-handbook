@@ -1,0 +1,968 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Helm 部署 · 云原生运维指南</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="魏文弟">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-image-captions/image-captions.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-auto-scroll-table/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="anzhuangcharts.html" />
+    
+    
+    <link rel="prev" href="jieshao.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../https:/gitee.com/sretech/images/raw/master/favicon/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../https:/gitee.com/sretech/images/raw/master/favicon/favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"user":"weiwendi","repo":"cloudnative-handbook","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.aiops.red" target="_blank" class="custom-link">博客</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://gitee.com/sretech/images/raw/master/wechatpublic.jpg" target="_blank" class="custom-link">公众号: sretech</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        <li class="header">云原生运维指南</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../cloudnative/jieshao.html">
+            
+                <a href="../cloudnative/jieshao.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    课程介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Helm 最佳实践</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="jieshao.html">
+            
+                <a href="jieshao.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Kubernetes and Helm 介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="bushu.html">
+            
+                <a href="bushu.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Helm 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="anzhuangcharts.html">
+            
+                <a href="anzhuangcharts.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    安装 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="chartsjinjie.html">
+            
+                <a href="chartsjinjie.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Helm 图表进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="kaifacharts.html">
+            
+                <a href="kaifacharts.html">
+            
+                    
+                        <b>2.5.</b>
+                    
+                    开发 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ceshicharts.html">
+            
+                <a href="ceshicharts.html">
+            
+                    
+                        <b>2.6.</b>
+                    
+                    测试 Helm 图表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="helmcicd.html">
+            
+                <a href="helmcicd.html">
+            
+                    
+                        <b>2.7.</b>
+                    
+                    使用 CI/CD 和 GitOps 实现 Helm 自动化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                        <b>2.8.</b>
+                    
+                    Helm 与 Operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                        <b>2.9.</b>
+                    
+                    Helm 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="security.html">
+            
+                <a href="security.html">
+            
+                    
+                        <b>2.10.</b>
+                    
+                    Helm 安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Helm 部署</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x90E8;&#x7F72;-kubernetes-&#x548C;-helm-&#x73AF;&#x5883;">&#x90E8;&#x7F72; Kubernetes &#x548C; Helm &#x73AF;&#x5883;</h1>
+<p>Helm &#x80FD;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x5F88;&#x591A;&#x5E2E;&#x52A9;&#xFF0C;&#x4F46;&#x5728;&#x4F7F;&#x7528; Helm &#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x6709; Kubernetes &#x73AF;&#x5883;&#x3002;&#x642D;&#x5EFA;&#x9AD8;&#x53EF;&#x7528;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x9700;&#x8981;&#x7684;&#x4E3B;&#x673A;&#x8D44;&#x6E90;&#x6BD4;&#x8F83;&#x591A;&#xFF0C;&#x642D;&#x5EFA;&#x8FC7;&#x7A0B;&#x4E5F;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x6240;&#x5E78;&#x4F7F;&#x7528; Minikube &#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x5355;&#x673A;&#x7248;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#xFF0C;&#x53C8;&#x4E0D;&#x5931;&#x771F;&#x5B9E;&#x6027;&#x3002; </p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x5B89;&#x88C5;&#x9AD8;&#x53EF;&#x7528;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x611F;&#x5174;&#x8DA3;&#xFF0C;&#x6216;&#x8005;&#x60F3;&#x8981;&#x5B66;&#x4E60; Kubernetes &#x76F8;&#x5173;&#x77E5;&#x8BC6;&#xFF0C;&#x53EF;&#x4EE5;&#x9605;&#x8BFB;&#x6211;&#x7684; &#x300A;Kubernetes &#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#x300B;&#x3002;</p>
+</blockquote>
+<h2 id="&#x4F7F;&#x7528;-minikube-&#x90E8;&#x7F72;-kubernetes">&#x4F7F;&#x7528; Minikube &#x90E8;&#x7F72; Kubernetes</h2>
+<p>&#x6CA1;&#x6709; Kubernetes &#x96C6;&#x7FA4;&#xFF0C;Helm &#x5168;&#x65E0;&#x7528;&#x6B66;&#x4E4B;&#x5730;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x4F7F;&#x7528; Minikube &#x642D;&#x5EFA;&#x5355;&#x673A;&#x7248;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x3002;</p>
+<p>Minikube &#x662F;&#x793E;&#x533A;&#x9A71;&#x52A8;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x4F7F;&#x7528;&#x5B83;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#x90E8;&#x7F72;&#x4E00;&#x4E2A;&#x5355;&#x8282;&#x70B9;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x53F0;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x7528;&#x6765;&#x4F5C;&#x4E3A;&#x90E8;&#x7F72; Kubernetes &#x7684;&#x4E3B;&#x673A;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;-minikube">&#x5B89;&#x88C5; Minikube</h3>
+<p>Minikube &#x652F;&#x6301; Windows&#x3001;MacOS &#x548C; Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; GitHub &#x9875;&#x9762;&#x4E0A;&#x4E0B;&#x8F7D;&#x5BF9;&#x5E94;&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5305;&#x3002;&#x672C;&#x4E66;&#x7684;&#x793A;&#x4F8B;&#x90FD;&#x662F;&#x5728; Rcoky Linux &#x4E0A;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5; Linux &#x7248;&#x672C;&#x7684; Minikube&#x3002;</p>
+<ol>
+<li><p>&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/kubernetes/minikube/releases/&#x3002;&#x5728;&#x8BE5;&#x9875;&#x9762;" target="_blank">https://github.com/kubernetes/minikube/releases/&#x3002;&#x5728;&#x8BE5;&#x9875;&#x9762;</a> &#x201C;Latest release&#x201D; &#x7684; &#x201C;Assets&#x201D; &#x90E8;&#x5206;&#xFF0C;&#x67E5;&#x770B;&#x5E76;&#x4E0B;&#x8F7D;&#x5BF9;&#x5E94;&#x7248;&#x672C;&#x3002;&#x5982;&#x56FE;&#xFF1A;</p>
+<figure id="fig2.2.1"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/2.1versions.png" alt="2.1versions" style="zoom:80%;"><figcaption>2.1versions</figcaption></figure>
+<p>&#x56FE;2.1 - GitHub &#x9875;&#x9762;&#x4E2D;&#x7684; Minikube &#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x56FE;&#x4EC5;&#x5C55;&#x793A;&#x4E86; &#x201C;Assets&#x201D; &#x7684;&#x90E8;&#x5206;&#x5185;&#x5BB9;</p>
+<p>&#x4E0B;&#x8F7D;&#x4E0E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5BF9;&#x5E94;&#x7248;&#x672C;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># wget https://github.com/kubernetes/minikube/releases/download/v1.20.0/minikube-linux-amd64</span>
+</code></pre>
+</li>
+<li><p>&#x4E0B;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5C06;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;&#x4E3A; minikube&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x7684;&#x662F; Linux &#x7CFB;&#x7EDF;&#xFF0C;&#x9700;&#x8981;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># mv minikube-linux-amd64 minikube</span>
+</code></pre>
+</li>
+<li><p>&#x8981;&#x6267;&#x884C; minikube&#xFF0C;Linux &#x548C; macOS &#x7528;&#x6237;&#x9700;&#x8981;&#x4E3A;&#x8BE5;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x53EF;&#x6267;&#x884C;&#x6743;&#x9650;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># chmod a+x</span>
+</code></pre>
+</li>
+<li><p>&#x5C06; minikube &#x653E;&#x7F6E; PATH &#x53D8;&#x91CF;&#x7BA1;&#x7406;&#x7684;&#x8DEF;&#x5F84;&#x4E2D;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x6267;&#x3002;PATH &#x53D8;&#x91CF;&#x7684;&#x5185;&#x5BB9;&#x53D6;&#x51B3;&#x4E8E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3002;Linux &#x548C; macOS &#x7528;&#x6237;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x7EC8;&#x7AEF;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x8DEF;&#x5F84;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># echo $PATH</span>
+</code></pre>
+<p>Windows &#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5728;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#x6216;&#x8005; PowerShell &#x4E2D;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell">env: PATH
+</code></pre>
+</li>
+<li><p>&#x5C06; minikube &#x79FB;&#x52A8;&#x5230; /usr/local/bin/ &#x76EE;&#x5F55;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># mv minikube /usr/local/bin/</span>
+</code></pre>
+</li>
+<li><p>&#x9A8C;&#x8BC1;&#x547D;&#x4EE4;&#x662F;&#x5426;&#x80FD;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># minikube version</span>
+<span class="token comment"># &#x8FD4;&#x56DE;&#x7C7B;&#x4F3C;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;</span>
+minikube version: v1.20.0
+commit: c61663e942ec43b20e8e70839dcca52e44cd85ae
+</code></pre>
+</li>
+</ol>
+<p>Minikube &#x5DF2;&#x7ECF;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981; hypervisor &#x5DE5;&#x5177;&#x7BA1;&#x7406;&#x672C;&#x5730; Kubernetes &#x96C6;&#x7FA4;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528; VirtualBox&#x3002;</p>
+<h3 id="minikube-&#x9A71;&#x52A8;">Minikube &#x9A71;&#x52A8;</h3>
+<p>Minikube &#x4F9D;&#x8D56;&#x9A71;&#x52A8;&#x5B89;&#x88C5; Kubernetes &#x96C6;&#x7FA4;&#x3002;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0D;&#x540C;&#xFF0C;Minikube &#x652F;&#x6301;&#x7684;&#x9A71;&#x52A8;&#x4E5F;&#x4E0D;&#x540C;&#x3002;&#x4E0B;&#x56FE;&#x662F; Minikube &#x5728;&#x4E0D;&#x540C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x652F;&#x6301;&#x7684;&#x9A71;&#x52A8;&#xFF1A;</p>
+<figure id="fig2.2.2"><img src="https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/2.2minikubeDrivers.jpg" alt="2.2minikubeDrivers" style="zoom:100%;"><figcaption>2.2minikubeDrivers</figcaption></figure>
+<p>&#x9488;&#x5BF9;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;Minikube &#x90FD;&#x6709;&#x63A8;&#x8350;&#x7684;&#x9A71;&#x52A8;&#x5668;&#x3002;&#x5728;&#x672C;&#x4E66;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x6211;&#x4F7F;&#x7528; VirtualBox &#x9A71;&#x52A8;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C1D;&#x8BD5;&#x5176;&#x5B83;&#x9A71;&#x52A8;&#xFF0C;&#x4F5C;&#x4E3A;&#x6280;&#x672F;&#x62D3;&#x5C55;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;-virtualbox">&#x5B89;&#x88C5; VirtualBox</h3>
+<p>Minikube &#x4F9D;&#x8D56; hypervisors (&#x865A;&#x62DF;&#x673A;&#x7BA1;&#x7406;&#x5668;) &#x5C06; Kubernetes &#x96C6;&#x7FA4;&#x5B89;&#x88C5;&#x5230; VM (&#x865A;&#x62DF;&#x673A;)&#x4E0A;&#x3002;&#x5728;&#x672C;&#x4E66;&#x6211;&#x4EEC;&#x4F7F;&#x7528; VirtualBox&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x540C;&#x65F6;&#x652F;&#x6301; Windows&#x3001;macOS &#x548C; Linux &#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3002;</p>
+<ul>
+<li><p>Windows &#x4E0A;&#x5B89;&#x88C5; VirtualBox&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell">&gt; choco install virtualbox
+</code></pre>
+</li>
+<li><p>macOS &#x4E0A;&#x5B89;&#x88C5; VirtualBox&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ brew cask <span class="token function">install</span> virtualbox
+</code></pre>
+</li>
+<li><p>Debian Linux &#x4E0A;&#x5B89;&#x88C5; VirtualBox&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token function">apt-get</span> <span class="token function">install</span> virtualbox
+</code></pre>
+</li>
+<li><p>&#x57FA;&#x4E8E; RHEL &#x7684; Linux &#x4E0A;&#x5B89;&#x88C5; VirtualBox&#xFF0C;Rocky Linux &#x548C; CentOS &#x90FD;&#x662F;&#x57FA;&#x4E8E; RHEL &#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># dnf config-manager --add-repo=https://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo</span>
+</code></pre>
+<pre class="language-"><code class="lang-shell">root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># dnf search virtualbox</span>
+VirtualBox-5.2.x86_64 <span class="token builtin class-name">:</span> Oracle VM VirtualBox
+VirtualBox-6.0.x86_64 <span class="token builtin class-name">:</span> Oracle VM VirtualBox
+VirtualBox-6.1.x86_64 <span class="token builtin class-name">:</span> Oracle VM VirtualBox
+</code></pre>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># dnf -y install VirtualBox-6.1</span>
+</code></pre>
+</li>
+</ul>
+<p>&#x66F4;&#x591A;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728; VirtualBox &#x5B98;&#x7F51;&#x67E5;&#x770B;&#xFF1A;<a href="https://www.virtualbox.org/wiki/Downloads&#x3002;" target="_blank">https://www.virtualbox.org/wiki/Downloads&#x3002;</a></p>
+<p>&#x5B89;&#x88C5; VirtualBox &#x540E;&#xFF0C;&#x987B;&#x5C06; Minikube &#x7684;&#x9ED8;&#x8BA4; hypervisor &#x8BBE;&#x7F6E;&#x4E3A; VirtualBox&#x3002;</p>
+<h3 id="&#x8BBE;&#x7F6E;-virtualbox-&#x4E3A;&#x9ED8;&#x8BA4;-hypervisor">&#x8BBE;&#x7F6E; VirtualBox &#x4E3A;&#x9ED8;&#x8BA4; hypervisor</h3>
+<p>&#x8BBE;&#x7F6E; minikube &#x7684; vm-driver &#x4E3A; VirtualBox&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># minikube config set vm-driver virtualbox</span>
+</code></pre>
+<p>&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x6253;&#x5370;&#x51FA;&#x4EE5;&#x4E0B;&#x8B66;&#x544A;&#xFF1A;</p>
+<p><code>! These changes will take effect upon a minikube delete and then a minikube start</code></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x6CA1;&#x6709;&#x901A;&#x8FC7; Minikube &#x521B;&#x5EFA;&#x96C6;&#x7FA4;&#xFF0C;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x6B64;&#x6D88;&#x606F;&#x3002;&#x8FD9;&#x53E5;&#x8BDD;&#x7684;&#x610F;&#x601D;&#x662F;&#xFF1A;&#x5728;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#x524D;&#x521B;&#x5EFA;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x90FD;&#x4E0D;&#x4F1A;&#x4EE5; VirtualBox &#x4F5C;&#x4E3A; hypervisor&#x3002;</p>
+<p>&#x67E5;&#x770B; vm-driver &#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># minikube config get vm-drivervirtualbox</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E00;&#x5207;&#x6B63;&#x5E38;&#xFF0C;&#x4F1A;&#x8F93;&#x51FA; VirtualBox&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x914D;&#x7F6E;&#x9ED8;&#x8BA4; hypervisor &#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x5206;&#x914D;&#x7ED9; Minikube &#x96C6;&#x7FA4;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<h3 id="&#x8BBE;&#x7F6E;-minikube-&#x8D44;&#x6E90;">&#x8BBE;&#x7F6E; Minikube &#x8D44;&#x6E90;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Minikube &#x4F1A;&#x4E3A;&#x865A;&#x62DF;&#x673A;&#x5206;&#x914D; 2 &#x6838; CPU &#x548C; 2GB &#x5185;&#x5B58;&#x7684;&#x8D44;&#x6E90;&#x3002;&#x8FD9;&#x4E9B;&#x8D44;&#x6E90;&#x8DB3;&#x4EE5;&#x8FD0;&#x884C;&#x672C;&#x4E66;&#x4E2D;&#x5927;&#x90E8;&#x5206;&#x793A;&#x4F8B;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x4E3B;&#x673A;&#x8D44;&#x6E90;&#x5145;&#x8DB3;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5185;&#x5B58;&#x6539;&#x4E3A; 4GB&#xFF0C;CPU&#x4E0D;&#x53D8;&#x3002;</p>
+<p>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06; Minikube &#x9ED8;&#x8BA4;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#x6539;&#x4E3A; 4GB&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># minikube config set memory 4000</span>
+</code></pre>
+<p>&#x8FD0;&#x884C; <strong>minikube config get memory</strong> &#x547D;&#x4EE4;&#x9A8C;&#x8BC1;&#x5BF9;&#x5185;&#x5B58;&#x7684;&#x8BBE;&#x7F6E;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x524D;&#x9762;&#x9A8C;&#x8BC1; vm-driver &#x7684;&#x66F4;&#x6539;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># minikube config get memory</span>
+</code></pre>
+<h3 id="minikube-&#x57FA;&#x672C;&#x7528;&#x6CD5;">Minikube &#x57FA;&#x672C;&#x7528;&#x6CD5;</h3>
+<p>Minikube &#x662F;&#x4E00;&#x4E2A;&#x5165;&#x95E8;&#x7B80;&#x5355;&#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x5B83;&#x7684;&#x4E09;&#x4E2A;&#x5E38;&#x7528;&#x547D;&#x4EE4;&#xFF1A;</p>
+<ul>
+<li><strong>start</strong></li>
+<li><strong>stop</strong></li>
+<li><strong>delete</strong></li>
+</ul>
+<p><strong>start</strong> &#x5B50;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x5355;&#x8282;&#x70B9;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x3002;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#xFF0C;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x53F0;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x5E76;&#x5728;&#x5176;&#x4E2D;&#x5B89;&#x88C5; Kubernetes &#x96C6;&#x7FA4;&#xFF0C;&#x96C6;&#x7FA4;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#xFF0C;&#x547D;&#x4EE4;&#x4F1A;&#x7ED3;&#x675F;&#x6267;&#x884C;&#x3002;</p>
+<p>&#x5728;&#x6267;&#x884C; <strong>start</strong> &#x5B50;&#x547D;&#x4EE4;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x8D26;&#x6237;&#xFF0C;&#x5E76;&#x5207;&#x6362;&#x5230;&#x666E;&#x901A;&#x8D26;&#x6237;&#x6267;&#x884C;&#xFF0C;&#x56E0;&#x4E3A; VirtualBox &#x9A71;&#x52A8;&#x4E0D;&#x80FD;&#x4EE5; root &#x7528;&#x6237;&#xFF0C;&#x4F7F;&#x7528; root &#x7528;&#x6237;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7279;&#x522B;&#x8BF4;&#x660E;&#xFF0C;&#x4EE5;&#x540E;&#x7684;&#x793A;&#x4F8B;&#x90FD;&#x4F1A;&#x4F7F;&#x7528;&#x8BE5;&#x666E;&#x901A;&#x8D26;&#x53F7;&#x3002;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># useradd aiops</span>
+<span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># su - aiops</span>
+</code></pre>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ minikube start
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x7F51;&#x7EDC;&#x56E0;&#x7D20;&#xFF0C;&#x4E2D;&#x56FD;&#x7528;&#x6237;&#x5728;&#x542F;&#x52A8; minikube &#x65F6;&#xFF0C;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x51E0;&#x4E2A;&#x9009;&#x9879;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ minikube start --image-mirror-country<span class="token operator">=</span><span class="token string">&apos;cn&apos;</span> <span class="token punctuation">\</span>
+    --iso-url<span class="token operator">=</span>https://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/iso/minikube-v1.20.0.iso
+
+<span class="token comment"># &#x4EE5;&#x4E0B;&#x662F;&#x5B89;&#x88C5;&#x65F6;&#x7684;&#x6B63;&#x5E38;&#x8F93;&#x51FA;</span>
+* minikube v1.20.0 on Rocky <span class="token number">8.3</span>
+* Automatically selected the virtualbox driver
+* Using image repository registry.cn-hangzhou.aliyuncs.com/google_containers
+* Starting control plane node minikube <span class="token keyword">in</span> cluster minikube
+* Creating virtualbox VM <span class="token punctuation">(</span>CPUs<span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">Memory</span><span class="token operator">=</span>2200MB, <span class="token assign-left variable">Disk</span><span class="token operator">=</span>20000MB<span class="token punctuation">)</span> <span class="token punctuation">..</span>.
+    <span class="token operator">&gt;</span> kubelet.sha256: <span class="token number">64</span> B / <span class="token number">64</span> B <span class="token punctuation">[</span>--------------------------<span class="token punctuation">]</span> <span class="token number">100.00</span>% ? p/s 0s
+    <span class="token operator">&gt;</span> kubelet: <span class="token number">108.73</span> MiB / <span class="token number">108.73</span> MiB <span class="token punctuation">[</span>----------<span class="token punctuation">]</span> <span class="token number">100.00</span>% <span class="token number">611.48</span> KiB p/s 3m2s             
+  - Generating certificates and keys <span class="token punctuation">..</span>.
+  - Booting up control plane <span class="token punctuation">..</span>.
+  - Configuring RBAC rules <span class="token punctuation">..</span>.
+* Verifying Kubernetes components<span class="token punctuation">..</span>.
+  - Using image registry.cn-hangzhou.aliyuncs.com/google_containers/k8s-minikube/storage-provisioner:v5 <span class="token punctuation">(</span>global image repository<span class="token punctuation">)</span>
+* Enabled addons: storage-provisioner, default-storageclass
+* kubectl not found. If you need it, try: <span class="token string">&apos;minikube kubectl -- get pods -A&apos;</span>
+* Done<span class="token operator">!</span> kubectl is now configured to use <span class="token string">&quot;minikube&quot;</span> cluster and <span class="token string">&quot;default&quot;</span> namespace by default
+</code></pre>
+<blockquote>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;</p>
+<p>&#x5728;&#x6267;&#x884C; <strong>minikube start</strong> &#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x4EE5;&#x4E0B;&#x95EE;&#x9898;&#xFF1A;</p>
+<ol>
+<li><p><em>! Startup with virtualbox driver failed, trying with alternate driver ssh: Failed to start host: creating host: create: precreate: We support Virtualbox starting with version 5. Your VirtualBox install is &quot;WARNING: The vboxdrv kernel module is not loaded. Either there is no module\n</em></p>
+<p>&#x8FD9;&#x662F;&#x56E0;&#x4E3A; VirtualBox &#x7684;&#x5185;&#x6838;&#x7EC4;&#x4EF6;&#x672A;&#x52A0;&#x8F7D;&#xFF0C;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># dnf -y install gcc make perl kernel-devel elfutils-libelf-devel</span>
+ <span class="token punctuation">[</span>root@aiops0113 ~<span class="token punctuation">]</span><span class="token comment"># rcvboxdrv setup</span>
+ vboxdrv.sh: Stopping VirtualBox services.
+ vboxdrv.sh: Starting VirtualBox services.
+ vboxdrv.sh: Building VirtualBox kernel modules.
+</code></pre>
+</li>
+<li><p><em>Failed to start host: creating host: create: precreate: This computer doesn&apos;t have VT-X/AMD-v enabled. Enabling it in the BIOS is mandatory</em></p>
+<p>&#x9700;&#x8981;&#x5F00;&#x542F; <strong>VT-X/AMD</strong>&#x3002;&#x5982;&#x679C;&#x4F60;&#x76F4;&#x63A5;&#x5728;&#x4E2A;&#x4EBA;&#x7535;&#x8111;&#x7684;&#x7CFB;&#x7EDF;&#x4E0A;&#x5B89;&#x88C5;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E; <strong>BIOS</strong> &#x7684; <strong>Intel Virtual Technology</strong>(&#x8FD9;&#x4E2A;&#x662F; Intel CPU&#x7684;&#x8BBE;&#x7F6E;) &#x7684;&#x503C;&#x662F;&#x5426;&#x4E3A; <strong>Enable</strong>&#xFF1B;&#x5982;&#x679C;&#x4F60;&#x662F;&#x5728; VMware Workstation &#x6216;&#x8005; VirtualBox &#x4E2D;&#x5D4C;&#x5957;&#x7684;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5904;&#x7406;&#x5668;&#x865A;&#x62DF;&#x5316;&#x8BBE;&#x7F6E;&#x4E2D;&#x52FE;&#x9009; <strong>VT-X/AMD-v</strong> &#x3002;</p>
+</li>
+</ol>
+</blockquote>
+<p><strong>stop</strong> &#x5B50;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5173;&#x95ED;&#x96C6;&#x7FA4;&#x548C;&#x865A;&#x62DF;&#x673A;&#x3002;&#x96C6;&#x7FA4;&#x548C;&#x865A;&#x62DF;&#x673A;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#x4F1A;&#x4FDD;&#x5B58;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x4E0B;&#x6B21;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <strong>start</strong> &#x5B50;&#x547D;&#x4EE4;&#x5FEB;&#x901F;&#x542F;&#x52A8;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x865A;&#x62DF;&#x673A;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">$ minikube stop
+</code></pre>
+<p><strong>delete</strong> &#x5B50;&#x547D;&#x4EE4;&#x7528;&#x4E8E;&#x5220;&#x9664;&#x96C6;&#x7FA4;&#x548C;&#x865A;&#x62DF;&#x673A;&#x3002;&#x6B64;&#x547D;&#x4EE4;&#x4F1A;&#x5220;&#x9664;&#x96C6;&#x7FA4;&#x548C;&#x865A;&#x62DF;&#x673A;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x91CA;&#x653E;&#x5206;&#x914D;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x3002;&#x4E0B;&#x6B21;&#x6267;&#x884C; <strong>minikube start</strong> &#x65F6;&#xFF0C;&#x5C06;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x65B0;&#x96C6;&#x7FA4;&#x548C;&#x865A;&#x62DF;&#x673A;&#x3002;</p>
+<pre class="language-"><code class="lang-shell">$ minikube delete
+</code></pre>
+<p>Minikube &#x8FD8;&#x6709;&#x5176;&#x4ED6;&#x5B50;&#x547D;&#x4EE4;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x672C;&#x4E66;&#x4E2D;&#x4F7F;&#x7528;&#x751A;&#x5C11;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x7814;&#x7A76;&#x4E0B;&#x3002;</p>
+<p>&#x5F53; <strong>minikube start</strong> &#x547D;&#x4EE4;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF0C;Kubernetes &#x96C6;&#x7FA4;&#x5C31;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4E86;&#xFF0C;&#x4F46;&#x5B89;&#x88C5;&#x65F6;&#x6253;&#x5370;&#x7684;&#x5185;&#x5BB9;&#x663E;&#x793A;&#xFF1A;<strong>kubectl not found</strong>&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5B89;&#x88C5; kubectl &#x547D;&#x4EE4;&#x884C;&#x5DE5;&#x5177;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;-kubectl">&#x5B89;&#x88C5; kubectl</h3>
+<p>&#x6709;&#x4E86; <strong>kubectl</strong>&#xFF0C;&#x7528;&#x6237;&#x5C31;&#x65E0;&#x9700;&#x76F4;&#x63A5;&#x901A;&#x8FC7; Kubernetes API &#x7AEF;&#x70B9;&#x6267;&#x884C;&#x5404;&#x79CD;&#x64CD;&#x4F5C;&#x4E86;(&#x5982; &#x521B;&#x5EFA;&#x3001;&#x67E5;&#x8BE2;&#x3001;&#x5220;&#x9664;&#x8D44;&#x6E90;)&#xFF0C;&#x5927;&#x5927;&#x63D0;&#x9AD8;&#x4E86;&#x64CD;&#x4F5C; Kubernetes &#x96C6;&#x7FA4;&#x4FBF;&#x6377;&#x6027;&#x3002;</p>
+<p>&#x7F16;&#x5199;&#x6B64;&#x6587;&#x6863;&#x65F6;&#xFF0C;&#x6700;&#x65B0;&#x7684; <strong>kubectl</strong> &#x7248;&#x672C;&#x662F; xxx&#xFF0C;&#x5728;&#x6574;&#x672C;&#x4E66;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4EE5;&#x6B64;&#x7248;&#x672C;&#x4E3A;&#x4F8B;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Minikube &#x5B89;&#x88C5; <strong>kubectl</strong>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5305;&#x7BA1;&#x7406;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x5B89;&#x88C5;&#x3002;</p>
+<h4 id="&#x4F7F;&#x7528;-minikube-&#x5B89;&#x88C5;">&#x4F7F;&#x7528; Minikube &#x5B89;&#x88C5;</h4>
+<p>Minikube &#x63D0;&#x4F9B;&#x4E86; <strong>kubectl</strong> &#x7684;&#x5B50;&#x547D;&#x4EE4;&#xFF0C;&#x6267;&#x884C;&#x5B50;&#x547D;&#x4EE4;&#x4F1A;&#x4E0B;&#x8F7D; kubectl &#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ minikube kubectl version
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x628A; <strong>kubectl</strong> &#x5B89;&#x88C5;&#x5230; $HOME/.minikube/cache/linux/v1.20.2/ &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;<strong>kubectl</strong> &#x7248;&#x672C;&#x53D6;&#x51B3;&#x4E8E; Minikube &#x7248;&#x672C;&#xFF0C;&#x4F60;&#x7684;&#x8DEF;&#x5F84;&#x4E2D;&#x7684; linux/v1.20.2/ &#x90E8;&#x5206;&#xFF0C;&#x53EF;&#x80FD;&#x548C;&#x6211;&#x7684;&#x4E0D;&#x540C;&#x3002;</p>
+<p><strong>minikube kubectl</strong> &#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ minikube kubectl <span class="token operator">&lt;</span>subcommand<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>flags<span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ minikube kubectl version client
+</code></pre>
+<p>&#x867D;&#x7136; <strong>minikube kubectl</strong> &#x5B9E;&#x73B0;&#x4E86; kubectl &#x7684;&#x6240;&#x6709;&#x529F;&#x80FD;&#xFF0C;&#x4F46;&#x5B83;&#x8BED;&#x6CD5;&#x6BD4;&#x76F4;&#x63A5;&#x4F7F;&#x7528; <strong>kubectl</strong> &#x7E41;&#x7410;&#x3002;&#x53EF;&#x4EE5;&#x628A; <strong>kubectl</strong> &#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4ECE; Minikube &#x7F13;&#x5B58;&#x76EE;&#x5F55;&#x62F7;&#x8D1D;&#x5230; <strong>$PATH</strong> &#x7BA1;&#x7406;&#x7684;&#x8DEF;&#x5F84;&#x3002;&#x5728; Linux &#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6267;&#x884C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token function">sudo</span> <span class="token function">cp</span> ~/.minikube/cache/linux/v1.20.2/kubectl /usr/local/bin/
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;kubectl &#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ kubectl version client
+</code></pre>
+<h4 id="&#x5305;&#x7BA1;&#x7406;&#x5668;&#x5B89;&#x88C5;">&#x5305;&#x7BA1;&#x7406;&#x5668;&#x5B89;&#x88C5;</h4>
+<p>&#x4E0D;&#x540C;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528;&#x7684;&#x5305;&#x7BA1;&#x7406;&#x4E0D;&#x540C;&#xFF0C;&#x5B89;&#x88C5;&#x65B9;&#x5F0F;&#x4E5F;&#x7565;&#x6709;&#x5DEE;&#x5F02;&#xFF1A;</p>
+<ul>
+<li><p>&#x5728; Windows &#x4E0A;&#x5B89;&#x88C5; kubectl</p>
+<pre class="language-"><code class="lang-shell"><span class="token operator">&gt;</span> choco <span class="token function">install</span> kubernetes-cli
+</code></pre>
+</li>
+<li><p>&#x5728; macOS &#x4E0A;&#x5B89;&#x88C5; kubectl</p>
+<pre class="language-"><code class="lang-shell">$ brew <span class="token function">install</span> kubernetes-cli
+</code></pre>
+</li>
+<li><p>&#x5728;&#x57FA;&#x4E8E; Debian &#x7684; Linux &#x4E0A;&#x5B89;&#x88C5; kubectl&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token function">sudo</span> <span class="token function">apt-get</span> update <span class="token operator">&amp;&amp;</span> <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y apt-transport-https gnupg2
+$ <span class="token function">curl</span> -s https://packages.cloud.google.com/apt/doc/apt-key.gpg <span class="token operator">|</span> <span class="token function">sudo</span> apt-key <span class="token function">add</span> -
+$ <span class="token builtin class-name">echo</span> <span class="token string">&apos;deb https://apt.kubernetes.io/ kubernetes-xenial main&apos;</span> <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> -a /etc/apt/sources.list.d/kubernetes.list
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> update
+$ <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> -y kubectl
+</code></pre>
+</li>
+<li><p>&#x5728;&#x57FA;&#x4E8E; RHEL &#x7684; Linux &#x4E0A;&#x5B89;&#x88C5; kubectl&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ <span class="token function">sudo</span> <span class="token function">cat</span> <span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">&gt;</span> /etc/yum.repos.d/kubernetes.repo</span>
+[kubernetes]
+name=Kubernetes
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64/
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+EOF</span>
+
+<span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ <span class="token function">sudo</span> dnf -y <span class="token function">install</span> kubectl
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x4E8C;&#x8FDB;&#x5236;&#x5B89;&#x88C5;">&#x4E8C;&#x8FDB;&#x5236;&#x5B89;&#x88C5;</h4>
+<p>&#x8FD9;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x548C;&#x4ECB;&#x7ECD;&#x7684;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#x76F8;&#x4F3C;&#xFF0C;&#x53EA;&#x662F;&#x4EE5;&#x4E0D;&#x540C;&#x65B9;&#x5F0F;&#x4E0B;&#x8F7D;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7A33;&#x5B9A;&#x7248; kubectl &#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ <span class="token function">curl</span> -LO <span class="token string">&quot;https://dl.k8s.io/release/<span class="token variable"><span class="token variable">$(</span><span class="token function">curl</span> -L -s https://dl.k8s.io/release/stable.txt<span class="token variable">)</span></span>/bin/linux/amd64/kubectl&quot;</span>
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x6267;&#x884C;&#x6743;&#x9650;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ <span class="token function">chmod</span> +x kubectl
+</code></pre>
+<p>&#x79FB;&#x52A8;&#x5230; /usr/local/bin/ &#x76EE;&#x5F55;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>aiops@aiops0113 ~<span class="token punctuation">]</span>$ <span class="token function">sudo</span> <span class="token function">mv</span> kubectl /usr/local/bin/
+</code></pre>
+<p>&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ kubectl version client
+</code></pre>
+<h2 id="&#x5B89;&#x88C5;-helm">&#x5B89;&#x88C5; Helm</h2>
+<p>Windows &#x7684; Chocolatey &#x548C; macOS &#x7684; Homebrew &#x5305;&#x7BA1;&#x7406;&#x5668;&#x4E2D;&#x5DF2;&#x7ECF;&#x6709;&#x4E86; Helm &#x5305;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#xFF1A;</p>
+<ul>
+<li><p>Windows &#x5B89;&#x88C5; Helm&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell">&gt; choco install kubernetes<span class="token operator">-</span>helm
+</code></pre>
+</li>
+<li><p>macOS &#x5B89;&#x88C5; Helm&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ brew <span class="token function">install</span> helm
+</code></pre>
+</li>
+</ul>
+<p>Linux &#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x8F7D;&#x9875;&#x9762;&#xFF0C;&#x4E0B;&#x8F7D; Helm &#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF1A;</p>
+<ol>
+<li><p>&#x5728; <a href="https://github.com/helm/helm/releases" target="_blank">https://github.com/helm/helm/releases</a> &#x9875;&#x9762;&#x4E0B;&#x8F7D;&#x5BF9;&#x5E94;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#xFF1B;</p>
+</li>
+<li><p>&#x4F7F;&#x7528; tar &#x547D;&#x4EE4;&#xFF0C;&#x89E3;&#x538B;&#x538B;&#x7F29;&#x5305;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token function">tar</span> zxf helm-v3.5.4-linux-amd64.tar.gz
+</code></pre>
+</li>
+<li><p>&#x5C06;&#x89E3;&#x538B;&#x540E;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x79FB;&#x52A8;&#x5230; PATH &#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token function">sudo</span> <span class="token function">mv</span> linux-amd64/helm /usr/local/bin/
+</code></pre>
+</li>
+</ol>
+<h2 id="&#x914D;&#x7F6E;-helm">&#x914D;&#x7F6E; Helm</h2>
+<p>Helm &#x63D0;&#x4F9B;&#x4E86;&#x5927;&#x91CF;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#xFF0C;&#x5B9E;&#x73B0;&#x4E86;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x3002;&#x4F46;&#x4E3A;&#x4E86;&#x4F7F;&#x7528;&#x4E0A;&#x66F4;&#x4FBF;&#x5229;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4E0B;&#x9762;&#x51E0;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<h3 id="&#x6DFB;&#x52A0;&#x5B58;&#x50A8;&#x5E93;">&#x6DFB;&#x52A0;&#x5B58;&#x50A8;&#x5E93;</h3>
+<p>&#x5728;&#x201C;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x5B89;&#x88C5;&#x201D;&#x5C0F;&#x8282;&#x4E2D;&#x4ECB;&#x7ECD;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x5B89;&#x88C5; kubectl &#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x4E3A;&#x5305;&#x7BA1;&#x7406;&#x5668;&#x6DFB;&#x52A0;&#x4E86;&#x8F6F;&#x4EF6;&#x5305;&#x4ED3;&#x5E93;&#xFF0C;&#x7528;&#x6765;&#x5B89;&#x88C5; kubectl&#x3002;Helm &#x4F5C;&#x4E3A; Kubernetes &#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;&#x5404;&#x79CD;&#x53EF;&#x9760;&#x7684;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#xFF0C;&#x7528;&#x4EE5;&#x5728; Kubernetes &#x96C6;&#x7FA4;&#x4E2D;&#x5B89;&#x88C5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<p>Helm &#x63D0;&#x4F9B;&#x4E86; <strong>repo</strong> &#x5B50;&#x547D;&#x4EE4;&#x7BA1;&#x7406;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;&#x3002;<strong>repo</strong> &#x5B50;&#x547D;&#x4EE4;&#x53C8;&#x5305;&#x542B;&#x5B50;&#x547D;&#x4EE4;&#xFF0C;&#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x6307;&#x5B9A;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x3002;&#x4EE5;&#x4E0B;&#x662F; <strong>repo</strong> &#x7684;&#x4E94;&#x4E2A;&#x5B50;&#x547D;&#x4EE4;&#xFF1A;</p>
+<ul>
+<li><strong>add</strong>&#xFF1A;&#x6DFB;&#x52A0;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;</li>
+<li><strong>list</strong>&#xFF1A;&#x5217;&#x51FA;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;</li>
+<li><strong>remove</strong>&#xFF1A;&#x5220;&#x9664;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x56FE;&#x8868;&#x5B58;&#x50A8;&#x5E93;</li>
+<li><strong>update</strong>&#xFF1A;&#x56FE;&#x8868;&#x5B89;&#x88C5;&#x540E;&#xFF0C;&#x5B83;&#x7684;&#x5143;&#x6570;&#x636E;&#x88AB;&#x7F13;&#x5B58;&#x5230;&#x672C;&#x5730;&#xFF0C;<strong>update</strong> &#x5B50;&#x547D;&#x4EE4;&#x4ECE;&#x56FE;&#x8868;&#x5E93;&#x4E2D;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x5230;&#x672C;&#x5730;</li>
+<li><strong>index</strong>&#xFF1A;&#x5728;&#x6253;&#x5305;&#x7684;&#x56FE;&#x8868;&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x7D22;&#x5F15;&#x6587;&#x4EF6;</li>
+</ul>
+<p>repo add &#x5B50;&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm repo <span class="token function">add</span> <span class="token variable">$REPO_NAME</span> <span class="token variable">$REPO_URL</span>
+</code></pre>
+<p>repo list &#x5B50;&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm repo list
+</code></pre>
+<p>repo update &#x5B50;&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm repo update
+</code></pre>
+<p>repo remove &#x5B50;&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ helm repo remove <span class="token variable">$REPO_NAME</span>
+</code></pre>
+<p><strong>helm repo index</strong> &#x547D;&#x4EE4;&#x4F1A;&#x5728;&#x5F00;&#x53D1;&#x56FE;&#x8868;&#x7684;&#x65F6;&#x5019;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h3 id="&#x6DFB;&#x52A0;&#x63D2;&#x4EF6;">&#x6DFB;&#x52A0;&#x63D2;&#x4EF6;</h3>
+<p>Helm &#x63D2;&#x4EF6;&#x7531;&#x5176;&#x793E;&#x533A;&#x7EF4;&#x62A4;&#xFF0C;&#x7528;&#x4EE5;&#x589E;&#x5F3A; Helm &#x7684;&#x529F;&#x80FD;&#x3002;&#x63D2;&#x4EF6;&#x5217;&#x8868;&#x5730;&#x5740;&#xFF1A; <a href="https://helm.sh/docs/community/related/" target="_blank">https://helm.sh/docs/community/related/</a></p>
+<p>Helm &#x63D0;&#x4F9B;&#x4E86; <strong>plugin</strong> &#x5B50;&#x547D;&#x4EE4;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#xFF0C;<strong>plugin</strong> &#x5305;&#x542B;&#x7684;&#x5B50;&#x547D;&#x4EE4;&#x5982;&#x4E0B;&#x8868;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>plugin &#x5B50;&#x547D;&#x4EE4;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>&#x8BED;&#x6CD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>install</td>
+<td>&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; Helm &#x63D2;&#x4EF6;</td>
+<td>helm plugin install $URL</td>
+</tr>
+<tr>
+<td>list</td>
+<td>&#x67E5;&#x8BE2;&#x5DF2;&#x5B89;&#x88C5;&#x7684; &#x63D2;&#x4EF6;</td>
+<td>helm plugin list</td>
+</tr>
+<tr>
+<td>uninstall</td>
+<td>&#x5378;&#x8F7D;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5DF2;&#x5B89;&#x88C5;&#x7684;&#x63D2;&#x4EF6;</td>
+<td>helm plugin uninstall $PLUGIN</td>
+</tr>
+<tr>
+<td>update</td>
+<td>&#x66F4;&#x65B0;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5DF2;&#x5B89;&#x88C5;&#x7684;&#x63D2;&#x4EF6;</td>
+<td>helm plugin update $PLUGIN</td>
+</tr>
+</tbody>
+</table>
+<p>&#x63D2;&#x4EF6;&#x589E;&#x5F3A;&#x4E86; Helm &#x529F;&#x80FD;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x51E0;&#x4E2A;&#x63D2;&#x4EF6;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<ul>
+<li><strong>helm diff</strong>&#xFF1A;&#x5BF9;&#x6BD4;&#x5DF2;&#x90E8;&#x7F72;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;&#x5DEE;&#x5F02;</li>
+<li><strong>helm secrets</strong>&#xFF1A;Used to help conceal secrets from Helm charts  &#x52A0;&#x5BC6; helm charts</li>
+<li><strong>helm monitor</strong>&#xFF1A;&#x76D1;&#x63A7;&#x53D1;&#x5E03;&#x8FC7;&#x7A0B;&#xFF0C;&#x5E76;&#x5728;&#x51FA;&#x73B0;&#x67D0;&#x4E9B;&#x4E8B;&#x4EF6;&#x65F6;&#x56DE;&#x6EDA;</li>
+<li><strong>helm unittest</strong>&#xFF1A;&#x7528;&#x4E8E;&#x5728; Helm &#x56FE;&#x8868;&#x4E0A;&#x6267;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;</li>
+</ul>
+<p>&#x5728;&#x672C;&#x4E66;&#x7684;&#x540E;&#x9762;&#xFF0C;&#x4F1A;&#x6709;&#x4E13;&#x95E8;&#x4E00;&#x4E2A;&#x7AE0;&#x8282;&#x4ECB;&#x7ECD;&#x63D2;&#x4EF6;&#x3002;</p>
+<h3 id="&#x73AF;&#x5883;&#x53D8;&#x91CF;">&#x73AF;&#x5883;&#x53D8;&#x91CF;</h3>
+<p>Helm &#x7684;&#x4E00;&#x4E9B;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x914D;&#x7F6E;&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x516D;&#x4E2A;&#x4E3B;&#x8981;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1A;</p>
+<ul>
+<li>XDG_CACHE_HOME&#xFF1A;&#x8BBE;&#x7F6E;&#x7F13;&#x5B58;&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x50A8;&#x76EE;&#x5F55;</li>
+<li>XDG_CONFIG_HOME&#xFF1A;&#x8BBE;&#x7F6E; helm &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+<li>XDG_DATA_HOME&#xFF1A;&#x8BBE;&#x7F6E;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x76EE;&#x5F55;</li>
+<li>HELM_DRIVER&#xFF1A;&#x8BBE;&#x7F6E;&#x540E;&#x7AEF;&#x5B58;&#x50A8;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</li>
+<li>HELM_NO_PLUGINS&#xFF1A;&#x7981;&#x7528;&#x63D2;&#x4EF6;</li>
+<li>KUBECONFIG&#xFF1A;&#x8BBE;&#x7F6E; Kubernetes &#x914D;&#x7F6E;&#x6587;&#x4EF6;</li>
+</ul>
+<p>Helm &#x9075;&#x5FAA; XDG &#x76EE;&#x5F55;&#x89C4;&#x8303;&#xFF0C;&#x8BE5;&#x89C4;&#x8303;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x5957;&#x6307;&#x5411;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x53D8;&#x91CF;&#x6307;&#x660E;&#x4E86;&#x8FD9;&#x4E9B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5E94;&#x8BE5;&#x5B58;&#x50A8;&#x7684;&#x57FA;&#x51C6;&#x76EE;&#x5F55;&#x3002;&#x6839;&#x636E; XDG &#x89C4;&#x8303;&#xFF0C;Helm &#x4F1A;&#x6839;&#x636E;&#x9700;&#x8981;&#xFF0C;&#x5728;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E0A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x4E09;&#x4E2A;&#x9ED8;&#x8BA4;&#x76EE;&#x5F55;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</th>
+<th>&#x7F13;&#x5B58;&#x76EE;&#x5F55;</th>
+<th>&#x914D;&#x7F6E;&#x76EE;&#x5F55;</th>
+<th>&#x6570;&#x636E;&#x76EE;&#x5F55;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>%TEMP%\helm</td>
+<td>%APPDATA%\helm</td>
+<td>%APPDATA%\helm</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>$HOME/Library/Caches/helm</td>
+<td>$HOME/Library/Preferences/helm</td>
+<td>$HOME/Library/helm</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td>$HOME/.cache/helm</td>
+<td>$HOME/.config/helm</td>
+<td>%HOME/.local/share/helm</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6362;&#x6210;&#x76EE;&#x5F55;&#x7F13;&#x5B58; helm &#x4ECE; Charts &#x4ED3;&#x5E93;&#x4E2D;&#x4E0B;&#x8F7D;&#x7684;charts&#xFF0C;&#x5DF2;&#x5B89;&#x88C5;&#x7684; charts &#x4F1A;&#x88AB;&#x7F13;&#x5B58;&#x5230;&#x8BE5;&#x76EE;&#x5F55;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E0B;&#x6B21;&#x80FD;&#x591F;&#x5FEB;&#x901F;&#x5B89;&#x88C5;&#x3002;&#x5982;&#x9700;&#x66F4;&#x65B0;&#x7F13;&#x5B58;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>helm repo update</strong> &#x547D;&#x4EE4;&#xFF0C;&#x5B83;&#x4F1A;&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7684;&#x53EF;&#x7528;charts&#xFF0C;&#x66F4;&#x65B0;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x3002;</p>
+<p>&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x4FDD;&#x5B58;&#x901A;&#x8FC7; <strong>helm repo add</strong> &#x547D;&#x4EE4;&#x6DFB;&#x52A0;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x4FE1;&#x606F;&#x3002;&#x5B89;&#x88C5;&#x5C1A;&#x672A;&#x7F13;&#x5B58;&#x5230;&#x672C;&#x5730;&#x7684; Charts &#x65F6;&#xFF0C;Helm &#x4F1A;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x7684;&#x8DEF;&#x5F84;&#x67E5;&#x8BE2; Charts &#x5B58;&#x50A8;&#x5E93;&#x7684; RUL&#xFF0C;&#x901A;&#x8FC7; URL &#x627E;&#x5230;&#x6240;&#x9700;&#x7684; Charts&#x3002;</p>
+<p>&#x6570;&#x636E;&#x76EE;&#x5F55;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528; <strong>helm plugin install</strong> &#x547D;&#x4EE4;&#x5B89;&#x88C5;&#x7684;&#x63D2;&#x4EF6;&#x6570;&#x636E;&#x4F1A;&#x5B58;&#x50A8;&#x5728;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><strong>HELM_DRIVER</strong> &#x5B9A;&#x4E49;&#x53D1;&#x5E03;&#x72B6;&#x6001;&#x5982;&#x4F55;&#x5B58;&#x50A8;&#x5728; Kubernetes &#x4E2D;&#xFF0C;&#x9ED8;&#x8BA4;&#x503C;&#x662F; <strong>secret</strong>&#xFF0C;&#x4E5F;&#x662F;&#x63A8;&#x8350;&#x503C;&#xFF0C;&#x5B83;&#x5C06;&#x72B6;&#x6001;&#x5B58;&#x50A8;&#x5728; Kubernetes Secret&#x4E2D;&#xFF0C;Secret &#x662F; Base64 &#x7F16;&#x7801;&#xFF1B;&#x8BE5;&#x503C;&#x4E5F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E3A; <strong>configmap</strong>&#xFF0C;&#x5B83;&#x5C06;&#x72B6;&#x6001;&#x4EE5;&#x7EAF;&#x6587;&#x672C;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x5728; Kubernetes ConfigMap &#x4E2D;&#xFF1B;&#x5982;&#x679C;&#x8BE5;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; <strong>memory</strong>&#xFF0C;&#x72B6;&#x6001;&#x4FE1;&#x606F;&#x5C06;&#x5B58;&#x50A8;&#x5728;&#x672C;&#x5730;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5B58;&#x50A8;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4E0D;&#x9002;&#x7528;&#x4E8E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x3002;</p>
+<p><strong>HELM_NO_PLUGINS</strong> &#x53D8;&#x91CF;&#x7528;&#x6765;&#x7981;&#x7528;&#x63D2;&#x4EF6;&#xFF0C;&#x63D2;&#x4EF6;&#x9ED8;&#x8BA4;&#x4E3A;&#x542F;&#x7528;&#x72B6;&#x6001;&#xFF0C;&#x5176;&#x503C;&#x4E3A; 0&#x3002;&#x5982;&#x9700;&#x7981;&#x7528;&#x63D2;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A; 1&#x3002;</p>
+<p><strong>KUBECONFIG</strong> &#x53D8;&#x91CF;&#x8BBE;&#x7F6E;&#x8BA4;&#x8BC1; Kubernetes &#x96C6;&#x7FA4;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x672A;&#x8BBE;&#x7F6E;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A; <em>~/.kube/config</em>&#x3002;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7528;&#x6237;&#x65E0;&#x9700;&#x4FEE;&#x6539;&#x6B64;&#x503C;&#x3002;</p>
+<h3 id="&#x547D;&#x4EE4;&#x8865;&#x5168;">&#x547D;&#x4EE4;&#x8865;&#x5168;</h3>
+<p>Bash &#x548C; Z Shell &#x7528;&#x6237;&#x53EF;&#x4EE5;&#x542F;&#x7528; Tab&#x952E; &#x8865;&#x5168;&#x547D;&#x4EE4;&#xFF0C;&#x65E2;&#x80FD;&#x7B80;&#x5316;&#x547D;&#x4EE4;&#x8F93;&#x5165;&#xFF0C;&#x53C8;&#x80FD;&#x6709;&#x6548;&#x907F;&#x514D;&#x8F93;&#x591A;&#x624B;&#x8BEF;&#x3002;&#x5F53;&#x6309;&#x4E0B; Tab&#x952E; &#x65F6;&#xFF0C;&#x7EC8;&#x7AEF;&#x4F1A;&#x901A;&#x8FC7;&#x8F93;&#x5165;&#x547D;&#x4EE4;&#x7684;&#x72B6;&#x6001;&#x731C;&#x6D4B;&#x4E0B;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<em>cd /usr/local/b</em>&#xFF0C;&#x8F93;&#x5165; Tab&#x952E;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x8865;&#x5168;&#x4E3A; <em>cd /usr/local/bin</em>&#xFF0C;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x6267;&#x884C; <em>helm upgrade hello-</em>&#xFF0C;&#x6309;&#x4E0B; Tab&#x952E;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x8865;&#x5168;&#x4E3A; <em>helm upgrade hello-world</em>&#x3002;</p>
+<p>&#x542F;&#x7528; Tab&#x952E; &#x8865;&#x5168;&#x529F;&#x80FD;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ <span class="token builtin class-name">source</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span>helm completion <span class="token environment constant">$SHELL</span><span class="token punctuation">)</span>
+<span class="token comment"># &#x9700;&#x8981;&#x5C06; $SHELL &#x66FF;&#x6362;&#x4E3A; bash or zsh.</span>
+</code></pre>
+<p><strong>$SHELL</strong> &#x5FC5;&#x987B;&#x662F; bash &#x6216; zsh&#x3002;&#x81EA;&#x52A8;&#x8865;&#x5168;&#x4EC5;&#x5728;&#x6267;&#x884C;&#x4E86;&#x6B64;&#x547D;&#x4EE4;&#x7684;&#x7A97;&#x53E3;&#x4E2D;&#x6709;&#x6548;&#xFF0C;&#x5176;&#x4ED6;&#x7A97;&#x53E3;&#x5219;&#x65E0;&#x6548;&#x3002;</p>
+<h3 id="&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;">&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;</h3>
+<p>Helm &#x9700;&#x8981;&#x901A;&#x8FC7; Kubernetes &#x96C6;&#x7FA4;&#x7684;&#x9A8C;&#x8BC1;&#xFF0C;&#x624D;&#x80FD;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x901A;&#x8FC7; <strong>kubeconfig</strong> &#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF0C;&#x8BE5;&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A; Kubernetes &#x96C6;&#x7FA4;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;</p>
+<p>&#x4F7F;&#x7528; Minikube &#x5B89;&#x88C5;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x4E0D;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x6B21;&#x521B;&#x5EFA;&#x96C6;&#x7FA4;&#x65F6;&#xFF0C;Minikube &#x90FD;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A; <strong>kubeconfig</strong> &#x6587;&#x4EF6;&#x3002;&#x4F46;&#x90A3;&#x4E9B;&#x6CA1;&#x6709;&#x8FD0;&#x884C; Minikube &#x7684;&#x7528;&#x6237;&#x9700;&#x8981;&#x521B;&#x5EFA;(&#x63D0;&#x4F9B;)&#x4E00;&#x4E2A; kubeconfig &#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x4F60;&#x7684; Kubernetes &#x96C6;&#x7FA4;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4E09;&#x4E2A; kubectl &#x547D;&#x4EE4;&#x521B;&#x5EFA; <strong>kubeconfig</strong> &#x6587;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li><p>&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x662F; set-cluster&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">kubectl config set-cluster
+</code></pre>
+<p><strong>set-cluster</strong> &#x547D;&#x4EE4;&#x5728; <strong>kubeconfig</strong> &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x96C6;&#x7FA4;&#x6761;&#x76EE;&#xFF0C;&#x786E;&#x5B9A; Kubernetes &#x96C6;&#x7FA4;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x6216; IP &#x5730;&#x5740;&#xFF0C;&#x4EE5;&#x53CA;&#x5B83;&#x7684;&#x8BC1;&#x4E66;&#x9881;&#x53D1;&#x673A;&#x6784;&#x3002;</p>
+</li>
+<li><p>&#x7B2C;&#x4E8C;&#x4E2A;&#x547D;&#x4EE4;&#x662F; set-credentials&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">kubectl config set-credentials
+</code></pre>
+<p><strong>set-credentials</strong> &#x547D;&#x4EE4;&#x5B9A;&#x4E49;&#x7528;&#x6237;&#x540D;&#x53CA;&#x5176;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x65B9;&#x6CD5;&#x548C;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;&#x8BE5;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x5BF9;&#x3001;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&#x3001;&#x627F;&#x8F7D;&#x4EE4;&#x724C;&#x6216;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x63D0;&#x4F9B;&#x8005;&#xFF0C;&#x7528;&#x6237;&#x548C;&#x7BA1;&#x7406;&#x5458;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E0D;&#x540C;&#x7684;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x65B9;&#x6CD5;&#x3002;</p>
+</li>
+<li><p>&#x7B2C;&#x4E09;&#x4E2A;&#x547D;&#x4EE4;&#x662F; set-context&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">kubectl config set-context
+</code></pre>
+<p><strong>set-context</strong> &#x547D;&#x4EE4;&#x5C06;&#x51ED;&#x8BC1;&#x5173;&#x8054;&#x5230;&#x96C6;&#x7FA4;&#x3002;&#x4E00;&#x65E6;&#x51ED;&#x8BC1;&#x548C;&#x96C6;&#x7FA4;&#x5EFA;&#x7ACB;&#x4E86;&#x5173;&#x8054;&#xFF0C;&#x7528;&#x6237;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x51ED;&#x8BC1;&#x7684;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x65B9;&#x6CD5;&#x5BF9;&#x6307;&#x5B9A;&#x7684;&#x96C6;&#x7FA4;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;</p>
+</li>
+</ul>
+<p><strong>kubectl config view</strong> &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B; <strong>kubeconfig</strong> &#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x6709;&#x4E86; kubeconfig &#x6587;&#x4EF6;&#xFF0C;Kubectl &#x548C; Helm &#x5C31;&#x53EF;&#x4EE5;&#x4E0E; Kubernetes &#x96C6;&#x7FA4;&#x4EA4;&#x4E92;&#x4E86;&#x3002;</p>
+<p>&#x5728;&#x4E0B;&#x4E00;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x9488;&#x5BF9; Kubernetes &#x96C6;&#x7FA4;&#x8FDB;&#x884C;&#x6388;&#x6743;&#x3002;</p>
+<h3 id="authorizationrbac">Authorization/RBAC</h3>
+<p>&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x662F;&#x786E;&#x8BA4;&#x8EAB;&#x4EFD;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x800C;&#x6388;&#x6743;&#x5B9A;&#x4E49;&#x4E86;&#x5141;&#x8BB8;&#x7ECF;&#x8FC7;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x7528;&#x6237;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x3002;Kubernetes &#x4F7F;&#x7528;&#x57FA;&#x4E8E;&#x89D2;&#x8272;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#xFF08;RBAC&#xFF09;&#x6267;&#x884C;&#x6388;&#x6743;&#x7684;&#x3002;RBAC &#x662F;&#x4E00;&#x4E2A;&#x8BBE;&#x8BA1;&#x89D2;&#x8272;&#x548C;&#x6743;&#x9650;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x89D2;&#x8272;&#x548C;&#x6743;&#x9650;&#x5206;&#x914D;&#x7ED9;&#x6307;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x6216;&#x7528;&#x6237;&#x7EC4;&#x3002;&#x7528;&#x6237;&#x88AB;&#x5141;&#x8BB8;&#x5728; Kubernetes &#x4E0A;&#x6267;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x53D6;&#x51B3;&#x4E8E;&#x7528;&#x6237;&#x88AB;&#x5206;&#x914D;&#x7684;&#x89D2;&#x8272;&#x3002;</p>
+<p>Kubernetes &#x63D0;&#x4F9B;&#x4E86;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x89D2;&#x8272;&#xFF0C;&#x8FD9;&#x91CC;&#x5217;&#x51FA;&#x4E86;&#x4E09;&#x79CD;&#x5E38;&#x89C1;&#x7684;&#x89D2;&#x8272;&#xFF1A;</p>
+<ul>
+<li>cluster-admin&#xFF1A;&#x7BA1;&#x7406;&#x5458;&#x89D2;&#x8272;&#xFF0C;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x5BF9;&#x6574;&#x4E2A;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x8D44;&#x6E90;&#x6267;&#x884C;&#x4EFB;&#x4F55;&#x64CD;&#x4F5C;&#x3002;</li>
+<li>edit&#xFF1A;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x8BFB;&#x5199; namespace &#x6216;&#x903B;&#x8F91;&#x5206;&#x7EC4;&#x4E2D;&#x7684;&#x5927;&#x591A;&#x6570; Kubernetes &#x7684;&#x8D44;&#x6E90;&#x3002;</li>
+<li>view&#xFF1A;&#x7981;&#x6B62;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x8D44;&#x6E90;&#xFF0C;&#x4EC5;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x8BFB;&#x53D6; namespace &#x5185;&#x7684;&#x8D44;&#x6E90;&#x3002;</li>
+</ul>
+<p>&#x7531;&#x4E8E; Helm &#x4F7F;&#x7528; <strong>kubeconfig</strong> &#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x51ED;&#x636E;&#x5BF9; Kubernetes &#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF0C;&#x56E0;&#x6B64; Helm &#x88AB;&#x8D4B;&#x4E88;&#x4E86;&#x4E0E;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x7528;&#x6237;&#x76F8;&#x540C;&#x7684;&#x8BBF;&#x95EE;&#x7EA7;&#x522B;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x7684; <strong>edit</strong> &#x6743;&#x9650;&#xFF0C;Helm &#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x62E5;&#x6709;&#x5B89;&#x88C5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x8DB3;&#x591F;&#x6743;&#x9650;&#x3002;&#x5982;&#x679C;&#x662F; <strong>view</strong> &#x6743;&#x9650;&#xFF0C;Helm &#x5C06;&#x4E0D;&#x80FD;&#x5B89;&#x88C5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E2A;&#x89D2;&#x8272;&#x662F;&#x53EA;&#x8BFB;&#x7684;&#x3002;</p>
+<p>Minikube &#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x7684;&#x662F; <strong>cluster-admin</strong> &#x6743;&#x9650;&#xFF0C;&#x867D;&#x7136;&#x8FD9;&#x4E0D;&#x662F;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E2D;&#x7684;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;&#xFF0C;&#x4F46;&#x5BF9;&#x4E8E;&#x5B66;&#x4E60;&#x548C;&#x8BD5;&#x9A8C;&#x6765;&#x8BF4;&#x662F;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x7684;&#x3002;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x5B89;&#x88C5; Kubernetes &#x96C6;&#x7FA4;&#x7684;&#x8BFB;&#x8005;&#xFF0C;&#x6CE8;&#x610F;&#x81F3;&#x5C11;&#x8981;&#x5206;&#x914D; <strong>edit</strong> &#x89D2;&#x8272;&#xFF0C;&#x4EE5;&#x4FBF; Helm &#x80FD;&#x591F;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x90E8;&#x7F72;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-shell">$ kubectl create clusterrolebinding  <span class="token environment constant">$USER</span> -edit --clusterrole<span class="token operator">=</span>edit --user<span class="token operator">=</span><span class="token environment constant">$USER</span>
+</code></pre>
+<p>&#x5728;&#x201C;Helm &#x5B89;&#x5168;&#x201D;&#x4E00;&#x7AE0;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x8BE6;&#x7EC6;&#x8BA8;&#x8BBA; RBAC&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5206;&#x914D;&#x5408;&#x9002;&#x7684;&#x89D2;&#x8272;&#xFF0C;&#x4EE5;&#x9632;&#x6B62;&#x9519;&#x8BEF;&#x6216;&#x6076;&#x610F;&#x610F;&#x56FE;&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="https://github.com/weiwendi" target="_blank">&#x9B4F;&#x6587;&#x5F1F;</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0 &#x56FD;&#x9645;&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <i>updated</i> 2021-08-10 18:19:14 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="jieshao.html" class="navigation navigation-prev " aria-label="Previous page: Kubernetes and Helm 介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="anzhuangcharts.html" class="navigation navigation-next " aria-label="Next page: 安装 Helm 图表">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Helm 部署","level":"2.2","depth":1,"next":{"title":"安装 Helm 图表","level":"2.3","depth":1,"path":"helm/anzhuangcharts.md","ref":"helm/anzhuangcharts.md","articles":[]},"previous":{"title":"Kubernetes and Helm 介绍","level":"2.1","depth":1,"path":"helm/jieshao.md","ref":"helm/jieshao.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","-lunr","-search","prism","prism-themes","github","donate","codesnippet","ga","adsense","github-buttons@2.1.0","splitter","simple-page-toc","page-toc-button","image-captions","back-to-top-button","search-plus","sharing-plus","favicon","theme-default","page-footer-ex","search-pro","code","auto-scroll-table","advanced-emoji","flexible-alerts","editlink"],"ignores":["_book","node_modules"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/weiwendi/cloudnative-handbook"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/weiwendi/cloudnative-handbook/tree/main"},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"page-footer-ex":{"copyright":"By [魏文弟](https://github.com/weiwendi)，使用[知识共享 署名-相同方式共享 4.0 国际协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<i>updated</i>"},"splitter":{},"search-pro":{},"adsense":{"client":"pub-8736620102237076","slot":"","format":"auto","element":".page-inner section","position":"bottom"},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"auto-scroll-table":{},"code":{"copyButtons":true},"donate":{"alipay":"https://gitee.com/sretech/images/raw/master/pays/alipay.jpg","alipayText":"支付宝","button":"请杯咖啡","title":"","wechat":"https://gitee.com/sretech/images/raw/master/pays/wechatpay.jpg","wechatText":"微信"},"codesnippet":{},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"https://gitee.com/sretech/images/raw/master/favicon/favicon.ico","bookmark":"https://gitee.com/sretech/images/raw/master/favicon/favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"user":"weiwendi","repo":"cloudnative-handbook","types":["star"],"size":"small"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"ga":{"configuration":"auto","token":"UA-174057096-1"},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":true,"all":["douban","facebook","google","linkedin","twitter","weibo","messenger","qq","qzone"],"facebook":false,"weibo":false,"instapaper":false,"twitter":false,"vk":false,"google":false,"qzone":true},"theme-default":{"showLevel":true,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"_CAPTION_","variable_name":"_pictures"}},"theme":"default","author":"魏文弟","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"_pictures":[{"backlink":"helm/jieshao.html#fig2.1.1","level":"2.1","list_caption":"Figure: 1.2dtcreate","alt":"1.2dtcreate","nro":1,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.2dtcreate.jpg","index":1,"caption_template":"_CAPTION_","label":"1.2dtcreate","attributes":{},"skip":false,"key":"2.1.1"},{"backlink":"helm/jieshao.html#fig2.1.2","level":"2.1","list_caption":"Figure: 1.3Service","alt":"1.3Service","nro":2,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.3Service.jpg","index":2,"caption_template":"_CAPTION_","label":"1.3Service","attributes":{},"skip":false,"key":"2.1.2"},{"backlink":"helm/jieshao.html#fig2.1.3","level":"2.1","list_caption":"Figure: 1.4-storageclass","alt":"1.4-storageclass","nro":3,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.4-storageclass.jpg","index":3,"caption_template":"_CAPTION_","label":"1.4-storageclass","attributes":{},"skip":false,"key":"2.1.3"},{"backlink":"helm/jieshao.html#fig2.1.4","level":"2.1","list_caption":"Figure: 1.6-Upgrade","alt":"1.6-Upgrade","nro":4,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/1.6-Upgrade.jpg","index":4,"caption_template":"_CAPTION_","label":"1.6-Upgrade","attributes":{},"skip":false,"key":"2.1.4"},{"backlink":"helm/bushu.html#fig2.2.1","level":"2.2","list_caption":"Figure: 2.1versions","alt":"2.1versions","nro":5,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/2.1versions.png","index":1,"caption_template":"_CAPTION_","label":"2.1versions","attributes":{},"skip":false,"key":"2.2.1"},{"backlink":"helm/bushu.html#fig2.2.2","level":"2.2","list_caption":"Figure: 2.2minikubeDrivers","alt":"2.2minikubeDrivers","nro":6,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/2.2minikubeDrivers.jpg","index":2,"caption_template":"_CAPTION_","label":"2.2minikubeDrivers","attributes":{},"skip":false,"key":"2.2.2"},{"backlink":"helm/anzhuangcharts.html#fig2.3.1","level":"2.3","list_caption":"Figure: 3.1 helm search hub wordpress outputs","alt":"3.1 helm search hub wordpress outputs","nro":7,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.1hubouts.jpg","index":1,"caption_template":"_CAPTION_","label":"3.1 helm search hub wordpress outputs","attributes":{},"skip":false,"key":"2.3.1"},{"backlink":"helm/anzhuangcharts.html#fig2.3.2","level":"2.3","list_caption":"Figure: 3.2 helm search hub wordpress yaml outputs","alt":"3.2 helm search hub wordpress yaml outputs","nro":8,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.2hubyamloutps.png","index":2,"caption_template":"_CAPTION_","label":"3.2 helm search hub wordpress yaml outputs","attributes":{},"skip":false,"key":"2.3.2"},{"backlink":"helm/anzhuangcharts.html#fig2.3.3","level":"2.3","list_caption":"Figure: 3.3 wordpress page details","alt":"3.3 wordpress page details","nro":9,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.3wordpressdetails.jpg","index":3,"caption_template":"_CAPTION_","label":"3.3 wordpress page details","attributes":{},"skip":false,"key":"2.3.3"},{"backlink":"helm/anzhuangcharts.html#fig2.3.4","level":"2.3","list_caption":"Figure: 3.4 bitnami wordpress","alt":"3.4 bitnami wordpress","nro":10,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.4bitnamiwordpress.jpg","index":4,"caption_template":"_CAPTION_","label":"3.4 bitnami wordpress","attributes":{},"skip":false,"key":"2.3.4"},{"backlink":"helm/anzhuangcharts.html#fig2.3.5","level":"2.3","list_caption":"Figure: 3.5 show chart","alt":"3.5 show chart","nro":11,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.5showchart.jpg","index":5,"caption_template":"_CAPTION_","label":"3.5 show chart","attributes":{},"skip":false,"key":"2.3.5"},{"backlink":"helm/anzhuangcharts.html#fig2.3.6","level":"2.3","list_caption":"Figure: 3.6 wordpress 首页","alt":"3.6 wordpress 首页","nro":12,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.8wordpresspage.jpg","index":6,"caption_template":"_CAPTION_","label":"3.6 wordpress 首页","attributes":{},"skip":false,"key":"2.3.6"},{"backlink":"helm/anzhuangcharts.html#fig2.3.7","level":"2.3","list_caption":"Figure: 3.7 admin pages","alt":"3.7 admin pages","nro":13,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.9adminpage.jpg","index":7,"caption_template":"_CAPTION_","label":"3.7 admin pages","attributes":{},"skip":false,"key":"2.3.7"},{"backlink":"helm/anzhuangcharts.html#fig2.3.8","level":"2.3","list_caption":"Figure: 3.8 dashboard","alt":"3.8 dashboard","nro":14,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/3.10adminpage2.png","index":8,"caption_template":"_CAPTION_","label":"3.8 dashboard","attributes":{},"skip":false,"key":"2.3.8"},{"backlink":"helm/kaifacharts.html#fig2.5.1","level":"2.5","list_caption":"Figure: 5.1 player stats page","alt":"5.1 player stats page","nro":15,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/5.1player-stats.jpg","index":1,"caption_template":"_CAPTION_","label":"5.1 player stats page","attributes":{},"skip":false,"key":"2.5.1"},{"backlink":"helm/helmcicd.html#fig2.7.1","level":"2.7","list_caption":"Figure: 7.1 fork","alt":"7.1 fork","nro":16,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.1fork.png","index":1,"caption_template":"_CAPTION_","label":"7.1 fork","attributes":{},"skip":false,"key":"2.7.1"},{"backlink":"helm/helmcicd.html#fig2.7.2","level":"2.7","list_caption":"Figure: 7.2 delete tar and index file","alt":"7.2 delete tar and index file","nro":17,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.2delete.jpg","index":2,"caption_template":"_CAPTION_","label":"7.2 delete tar and index file","attributes":{},"skip":false,"key":"2.7.2"},{"backlink":"helm/helmcicd.html#fig2.7.3","level":"2.7","list_caption":"Figure: 7.3 create github token.","alt":"7.3 create github token.","nro":18,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.3%20create%20github%20token.jpg","index":3,"caption_template":"_CAPTION_","label":"7.3 create github token.","attributes":{},"skip":false,"key":"2.7.3"},{"backlink":"helm/helmcicd.html#fig2.7.4","level":"2.7","list_caption":"Figure: 7.4 create jenkins github credentials","alt":"7.4 create jenkins github credentials","nro":19,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.4%20create%20github%20credentials.jpg","index":4,"caption_template":"_CAPTION_","label":"7.4 create jenkins github credentials","attributes":{},"skip":false,"key":"2.7.4"},{"backlink":"helm/helmcicd.html#fig2.7.5","level":"2.7","list_caption":"Figure: 7.5 create jenkins kubeconfig credentials","alt":"7.5 create jenkins kubeconfig credentials","nro":20,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.5%20create%20kubernetes%20credentials.jpg","index":5,"caption_template":"_CAPTION_","label":"7.5 create jenkins kubeconfig credentials","attributes":{},"skip":false,"key":"2.7.5"},{"backlink":"helm/helmcicd.html#fig2.7.6","level":"2.7","list_caption":"Figure: 7.6 add repo","alt":"7.6 add repo","nro":21,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.6%20add%20https%20github%20repository.png","index":6,"caption_template":"_CAPTION_","label":"7.6 add repo","attributes":{},"skip":false,"key":"2.7.6"},{"backlink":"helm/helmcicd.html#fig2.7.7","level":"2.7","list_caption":"Figure: 7.8 scan repo","alt":"7.8 scan repo","nro":22,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.8%20scan%20repository%20build.jpg","index":7,"caption_template":"_CAPTION_","label":"7.8 scan repo","attributes":{},"skip":false,"key":"2.7.7"},{"backlink":"helm/helmcicd.html#fig2.7.8","level":"2.7","list_caption":"Figure: 7.9 charts repo list","alt":"7.9 charts repo list","nro":23,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.9%20charts%20repo%20list.jpg","index":8,"caption_template":"_CAPTION_","label":"7.9 charts repo list","attributes":{},"skip":false,"key":"2.7.8"},{"backlink":"helm/helmcicd.html#fig2.7.9","level":"2.7","list_caption":"Figure: 7.10 stable list","alt":"7.10 stable list","nro":24,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/7.10%20stable%20list.jpg","index":9,"caption_template":"_CAPTION_","label":"7.10 stable list","attributes":{},"skip":false,"key":"2.7.9"},{"backlink":"helm/helmcicd.html#fig2.7.10","level":"2.7","list_caption":"Figure: 7.11 Proceed or Abort","alt":"7.11 Proceed or Abort","nro":25,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/Figure_7.17.jpg","index":10,"caption_template":"_CAPTION_","label":"7.11 Proceed or Abort","attributes":{},"skip":false,"key":"2.7.10"},{"backlink":"helm/operator.html#fig2.8.1","level":"2.8","list_caption":"Figure: 8.1 cr install helm chart","alt":"8.1 cr install helm chart","nro":26,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.1%20cr%20install%20chart.jpg","index":1,"caption_template":"_CAPTION_","label":"8.1 cr install helm chart","attributes":{},"skip":false,"key":"2.8.1"},{"backlink":"helm/operator.html#fig2.8.2","level":"2.8","list_caption":"Figure: 8.2 create quay image repo","alt":"8.2 create quay image repo","nro":27,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.2%20create%20quay%20image%20repo.jpg","index":2,"caption_template":"_CAPTION_","label":"8.2 create quay image repo","attributes":{},"skip":false,"key":"2.8.2"},{"backlink":"helm/operator.html#fig2.8.3","level":"2.8","list_caption":"Figure: 8.3 create public image repository","alt":"8.3 create public image repository","nro":28,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.3%20create%20public%20image%20repository.jpg","index":3,"caption_template":"_CAPTION_","label":"8.3 create public image repository","attributes":{},"skip":false,"key":"2.8.3"},{"backlink":"helm/operator.html#fig2.8.4","level":"2.8","list_caption":"Figure: 8.4 player stats operator image","alt":"8.4 player stats operator image","nro":29,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/8.4%20player%20stats%20operator%20image.jpg","index":4,"caption_template":"_CAPTION_","label":"8.4 player stats operator image","attributes":{},"skip":false,"key":"2.8.4"},{"backlink":"helm/security.html#fig2.10.1","level":"2.10","list_caption":"Figure: 9.1 gpg outputs","alt":"9.1 gpg outputs","nro":30,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.1%20gpg%20infors.jpg","index":1,"caption_template":"_CAPTION_","label":"9.1 gpg outputs","attributes":{},"skip":false,"key":"2.10.1"},{"backlink":"helm/security.html#fig2.10.2","level":"2.10","list_caption":"Figure: 9.2 helm versions","alt":"9.2 helm versions","nro":31,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.2%20helm%20release%20download.jpg","index":2,"caption_template":"_CAPTION_","label":"9.2 helm versions","attributes":{},"skip":false,"key":"2.10.2"},{"backlink":"helm/security.html#fig2.10.3","level":"2.10","list_caption":"Figure: 9.3 digital signature","alt":"9.3 digital signature","nro":32,"url":"https://gitee.com/sretech/images/raw/master/cloudnative-handbook/helm/9.3%20digital%20signature.jpg","index":3,"caption_template":"_CAPTION_","label":"9.3 digital signature","attributes":{},"skip":false,"key":"2.10.3"}]},"title":"云原生运维指南","language":"zh-hans","links":{"sidebar":{"博客":"https://www.aiops.red","公众号: sretech":"https://gitee.com/sretech/images/raw/master/wechatpublic.jpg"}},"gitbook":"*","description":"从理论到实践系统介绍云原生环境下的运维"},"file":{"path":"helm/bushu.md","mtime":"2021-08-10T10:19:14.097Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-09-01T09:21:34.056Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-auto-scroll-table/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
